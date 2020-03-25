@@ -1,8 +1,3 @@
-新手引导： https://code.vipkid.com.cn/xyz/docs/blob/master/docs/guide/guide.md
-
-接入learning-stages: http://wiki.vipkid.com.cn/pages/viewpage.action?pageId=112459993
-
-
 ## 待完成文档的负责人：
 
 ## 关于vf @刘军立 
