@@ -13,4 +13,4 @@
 > 可能引擎创建未完成，推荐在接收到信令历史消息后，延迟120毫秒尝试。
 
 ## 互动课件中 -signal 与 -kb 文件的区别
-> 主要是声音的区别，可参考 http://wiki.vipkid.com.cn/pages/viewpage.action?pageId=72442337 ， http://wiki.vipkid.com.cn/pages/viewpage.action?pageId=76428181
+> 主要是声音的区别，可参考 
