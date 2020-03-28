@@ -70,7 +70,7 @@ export const enum ComponentType {
 ## 自定义组件 
 只有自定义组件可以有动画数据和动作脚本数据。只有自定义组件可以作为场景。
 
-关于动画数据，详见 [**动画文档**](animaition.md)。
+关于动画数据，详见 [**动画文档**](animation.md)。
 
 关于动作脚本数据，详见 [**VFX文档**](action.md)。
 
