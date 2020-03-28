@@ -12,7 +12,7 @@ module.exports = {
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     description: 'VF Engine 中文文档',
-    base: '/',
+    base: '/vf-docs/',
     themeConfig: {
         logo: '/logo.png',
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
