@@ -1075,7 +1075,7 @@ enum TransitionType {
 - 第一个参数是间隔时间，单位是毫秒
 - 第二个参数是执行次数，如果第二个参数是小于等于0， 或者不写第二个参数，则是无限次
 - 第三个参数是回调闭包，这里只能写闭包
-- 如果执行无限次，只能写在[顶层](action.md#vfx的层级结构)
+- 如果执行无限次，只能写在[顶层](action.md#层级结构)
 ``` typescript
 @this = {
     this.on("Add", () => {
@@ -1096,7 +1096,7 @@ enum TransitionType {
 ## 每帧执行
 - 调用方法setEnterFrame
 - 第一个参数是回调闭包，这里只能写闭包
-- 只能写在[顶层](action.md#vfx的层级结构)
+- 只能写在[顶层](action.md#层级结构)
 ``` typescript
 @this = {
     setEnterFrame( ()=> {
