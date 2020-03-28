@@ -1,14 +1,14 @@
 module.exports = {
     title: 'VF Engine',
     head: [
-        ['link', { rel: 'icon', href: '/favicon.png' }],
-        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['link', { rel: 'icon', href: '/vf-docs/favicon.png' }],
+        ['link', { rel: 'manifest', href: '/vf-docs/manifest.json' }],
         ['meta', { name: 'theme-color', content: '#ff6600' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-        ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
-        ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#ff6600' }],
-        ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+        ['link', { rel: 'apple-touch-icon', href: `/vf-docs/icons/apple-touch-icon-152x152.png` }],
+        ['link', { rel: 'mask-icon', href: '/vf-docs/icons/safari-pinned-tab.svg', color: '#ff6600' }],
+        ['meta', { name: 'msapplication-TileImage', content: '/vf-docs/icons/msapplication-icon-144x144.png' }],
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     description: 'VF Engine 中文文档',

@@ -60,4 +60,4 @@ style: {
 
 > [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestButton)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestButton" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestButton" height="500" width="100%"></iframe>
