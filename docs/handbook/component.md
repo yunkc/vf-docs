@@ -1,13 +1,15 @@
 # 组件
-组件：组件是对资源的进一步包装，组件分为基础UI组件，动画组件，媒体组件，npm组件，矢量绘制组件，自定义组件，六大类。
-1. 基础UI组件：包含容器，表格，图片，按钮，单选框，复选框，输入框，滑动条，文本等多种UI组件。
+
+> 组件是对资源的进一步包装，组件分为基础UI组件，动画组件，媒体组件，npm组件，矢量绘制组件，自定义组件，六大类。
+
+1. 基础组件：包含容器，表格，图片，按钮，单选框，连线，文本等多种UI组件。[Link](/gui/label.md)
 2. 动画组件：包含龙骨动画，序列图动画，粒子动画三种动画组件。
 3. 媒体组件：包含视频播放，音频播放，麦克风等媒体相关的组件。
-4. npm组件：根据组件规则定制的外部插件。
+4. 外部组件：根据组件规则定制的外部插件。[Link](/handbook/gui-plugs.html)
 5. 矢量绘制组件：包含svg组件和绘制组件两种。
 6. 自定义组件：组件 + 动画 + 动作行为 = 自定义组件。 自定义组件是一个容器，可以放置所有类型的组件。自定义组件包含动画数据，动作行为脚本数据，和内部变量数据。
 
-组件数据的定义：
+## 组件数据的定义
 ``` typescript
 export interface IComponent {
     id: string;
@@ -17,7 +19,7 @@ export interface IComponent {
     libId?: number;
 }
 ```
-组件的类型：
+## 组件的类型
 ``` typescript
 export const enum ComponentType {
     // UI
@@ -50,7 +52,7 @@ export const enum ComponentType {
 }
 ```
 
-组件的数据实例：
+## 组件数据实例
 ``` json
 "components": {
         "0": {
@@ -65,10 +67,13 @@ export const enum ComponentType {
 }
 ```
 
-#### 自定义组件 
+## 自定义组件 
 只有自定义组件可以有动画数据和动作脚本数据。只有自定义组件可以作为场景。
-关于动画数据，详见 animaition.md[](./animation.md)文档
-关于动作脚本数据，详见 action.md[](./action.md)文档
+
+关于动画数据，详见 [**动画文档**](animaition.md)。
+
+关于动作脚本数据，详见 [**VFX文档**](action.md)。
+
 一个自定义组件的例子：
 ``` json
 "32": {
@@ -169,9 +174,6 @@ export const enum ComponentType {
 }
 ```
 
-#### 除自定义组件外，其他类型的组件都由gui库来实现
-gui库详细文档：
+## 除自定义组件外，其他类型的组件都由gui库来实现
 
-组件 - API 文档 ：https://vipkid-edu.github.io/vf-gui-docs/api/
-
-组件 - 示例文档 ：https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestContainer
+查阅[常用组件](/gui/label.md)

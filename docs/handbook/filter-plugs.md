@@ -63,7 +63,7 @@ void main(void)
         },
 }
 
-// vfx 使用：
+// VFX 使用：
 组件.style.filter.FilterAlpha.alpha = 0.5; 
 
 // json 使用

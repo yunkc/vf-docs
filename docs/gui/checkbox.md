@@ -35,7 +35,7 @@ CheckBox 设置单选或多选
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const checkBox: gui.CheckBox = {
     name: "checkBox",
     type: guiType.checkbox,
@@ -51,7 +51,7 @@ const checkBox: gui.CheckBox = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "checkBox1",
 libId: ComponentId.checkBox,
@@ -81,6 +81,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestCheckBox)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestCheckBox)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestCheckBox" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestCheckBox" height="500" width="100%"></iframe>

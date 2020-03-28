@@ -27,7 +27,7 @@ Rect 可绘制普通或圆角矩形
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const rect: gui.Rect = {
     name: "rect",
     type: guiType.rect,
@@ -39,7 +39,7 @@ const rect: gui.Rect = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "rect",
 libId: ComponentId.rect,
@@ -56,6 +56,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestRect)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestRect)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestRect" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestRect" height="500" width="100%"></iframe>

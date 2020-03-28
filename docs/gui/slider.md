@@ -57,6 +57,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestSlider)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestSlider)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestSlider" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestSlider" height="500" width="100%"></iframe>

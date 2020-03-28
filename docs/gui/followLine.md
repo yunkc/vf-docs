@@ -1,6 +1,6 @@
 # 画线板 FollowLine
 
-FollowLine 画线板，可以擦除以及重制。 
+FollowLine 画线板，可以擦除以及重置。 
 
 > 如果需要网络通信同步画线，还可以输出经过处理的压缩数据。
 
@@ -61,6 +61,6 @@ const followLine: gui.FollowLine = {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestFollowLine)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestFollowLine)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestFollowLine" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestFollowLine" height="500" width="100%"></iframe>

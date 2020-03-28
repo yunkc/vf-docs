@@ -12,7 +12,7 @@ module.exports = {
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     description: 'VF Engine 中文文档',
-    base: '/docs/',
+    base: '/',
     themeConfig: {
         logo: '/logo.png',
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
@@ -29,7 +29,8 @@ module.exports = {
                 collapsable: false, // 可选的, 默认值是 true,
                 sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
-                    '/about/',
+                    '/about/engine.md',
+                    '/about/dev.md',
                 ]
             },
             {
@@ -37,16 +38,18 @@ module.exports = {
                 collapsable: false,
                 sidebarDepth: 1,
                 children: [
-                    '/getstart/',
+                    '/getstart/introduction',
+                    '/getstart/demo',
+                    '/getstart/advanced-demo'
                 ]
             },
             {
-                title: '使用指南',
+                title: '开发指南',
                 collapsable: false,
                 sidebarDepth: 1,
                 children: [
                     '/handbook/option',
-                    '/handbook/data',  
+                    '/handbook/data',
                     '/handbook/resource',
                     '/handbook/component',
                     '/handbook/style',
@@ -54,12 +57,14 @@ module.exports = {
                     '/handbook/sound',
                     '/handbook/var',
                     '/handbook/event',
-                    '/handbook/aciton',
+                    '/handbook/action',
+                    '/handbook/click',
+                    '/handbook/drag',
                     '/handbook/animation',
                     '/handbook/filter',
                     '/handbook/interface',
-                    '/handbook/gui-plugs', 
-                    '/handbook/filter-plugs',              
+                    '/handbook/gui-plugs',
+                    '/handbook/filter-plugs',
                 ]
             },
             {
@@ -67,17 +72,17 @@ module.exports = {
                 collapsable: false,
                 sidebarDepth: 1,
                 children: [
-                    '/gui/label',       
+                    '/gui/label',
                     '/gui/image',
                     '/gui/button',
                     '/gui/checkbox',
                     '/gui/rect',
-                    '/gui/circle',    
-                    '/gui/textInput', 
-                    '/gui/slider', 
-                    '/gui/connectLine',  
-                    '/gui/spriteAnimated',  
-                    '/gui/followLine',  
+                    '/gui/circle',
+                    '/gui/textInput',
+                    '/gui/slider',
+                    '/gui/connectLine',
+                    '/gui/spriteAnimated',
+                    '/gui/followLine',
                 ]
             },
             {

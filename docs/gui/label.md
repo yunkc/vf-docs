@@ -52,7 +52,7 @@ Label 可以绘制一段文本
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const label: gui.Label = {
     name: "label",
     type: guiType.text,
@@ -60,7 +60,7 @@ const label: gui.Label = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "label",
 libId: ComponentId.label,
@@ -83,6 +83,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestLabel)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestLabel)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestLabel" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestLabel" height="500" width="100%"></iframe>

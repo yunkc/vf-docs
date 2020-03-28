@@ -28,7 +28,7 @@ Button 可设置状态皮肤的交互按钮
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const button: gui.Button = {
     name: "button",
     type: guiType.button,
@@ -40,7 +40,7 @@ const button: gui.Button = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "button",
 libId: ComponentId.button,
@@ -58,6 +58,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestButton)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestButton)
 
 <iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestButton" height="500" width="100%"></iframe>

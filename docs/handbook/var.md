@@ -7,7 +7,7 @@
 变量的作用是保存各种类型的数据，参与表达式计算，给方法传递参数。
 
 变量的数据定义如下：
-```
+``` typescript
 export const enum VariableType {
     NUMBER = 'number',
     STRING = 'string',
@@ -25,7 +25,7 @@ export interface IVariableData {
 }
 ```
 全局变量保存在数据的global节点中
-```
+``` json
 "global": {
         "totalPage": {
             "type": "string",
@@ -46,14 +46,14 @@ export interface IVariableData {
         "pageInfo": {
             "type": "object",
             "value": {
-                pageIndex: 1,
-                pageContent:"sayABC"
+                "pageIndex": 1,
+                "pageContent":"sayABC"
             }
         }
     },
 ```
 组件的变量保存在组件的prop节点中
-```
+``` json
 "props": {
     "leftImg": {
         "type": "number",
@@ -77,19 +77,19 @@ export interface IVariableData {
 #### 变量的简单定义法
 变量也支持简单的定义法，直接写值，引擎会根据值的类型判断变量的类型
 例如，上面的例子也可以写成
-```
+``` json
 "global": {
         "totalPage": "noPage",
         "curPage": 0,
         "isOpen": false,
         "pageArr": [0,1,2,3],
         "pageInfo": {
-            pageIndex: 1,
-            pageContent:"sayABC"
+            "pageIndex": 1,
+            "pageContent":"sayABC"
         }
     },
 ```
-```
+``` json
 "props": {
     "leftImg": 0,
     "rightImg": 0,
@@ -99,9 +99,9 @@ export interface IVariableData {
 ```
 
 #### 变量在动作脚本中的定义
-变量除了在数据中可以定义外，还可以在动作脚本中定义，详见 action.md[](./action.md)文档
+变量除了在数据中可以定义外，还可以在动作脚本中定义，详见 [动作脚本VFX 文档](./action.md#定义变量)
 定义变量
-```
+```  typescript
 @this = {
     var $num = 5; //number类型
     var $str = "string"; // 字符串类型

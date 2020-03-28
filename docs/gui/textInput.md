@@ -32,7 +32,7 @@ TextInput 可接收文字输入
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const textInput: gui.TextInput = {
     name: "textInput",
     type: guiType.textInput,
@@ -44,7 +44,7 @@ const textInput: gui.TextInput = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "textInput",
 libId: ComponentId.textInput,
@@ -62,6 +62,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestTextInput)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestTextInput)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestTextInput" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestTextInput" height="500" width="100%"></iframe>

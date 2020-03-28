@@ -25,7 +25,7 @@ Circle 可绘制圆形
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const circle: gui.Circle = {
     name: "circle",
     type: guiType.circle,
@@ -37,7 +37,7 @@ const circle: gui.Circle = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "circle",
 libId: ComponentId.circle,
@@ -50,6 +50,6 @@ libId: ComponentId.circle,
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestCircle)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestCircle)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestCircle" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestCircle" height="500" width="100%"></iframe>

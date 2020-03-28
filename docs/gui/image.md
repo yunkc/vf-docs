@@ -26,7 +26,7 @@ Image 绘制图片
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
-``` ts
+``` typescript
 const image: gui.Image = {
     name: "image",
     type: guiType.image,
@@ -37,7 +37,7 @@ const image: gui.Image = {
 ```
 
 ## 使用
-``` ts
+``` typescript
 {
 id: "image",
 libId: ComponentId.image,
@@ -54,6 +54,6 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestImage)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestImage)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestImage" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestImage" height="500" width="100%"></iframe>

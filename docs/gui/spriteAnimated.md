@@ -110,6 +110,6 @@ const PlayAudio: gui.SpriteAnimated = {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestSpriteAnimated)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestSpriteAnimated)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestSpriteAnimated" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestSpriteAnimated" height="500" width="100%"></iframe>

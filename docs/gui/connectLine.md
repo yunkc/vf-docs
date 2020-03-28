@@ -57,7 +57,7 @@ const ConnectLine: gui.ConnectLine = {
 }
 ```
 
-## vfx 
+## VFX 
 ``` typescript
 this#connectLine1.source = 'this#optionsImg#img';
 this#connectLine1.target = 'this#optionsText#txt';
@@ -76,6 +76,6 @@ else{
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestConnectLine)
+> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestConnectLine)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui-docs/play/#example/TestConnectLine" height="500" width="100%"></iframe>
+<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestConnectLine" height="500" width="100%"></iframe>

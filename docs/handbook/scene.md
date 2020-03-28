@@ -82,7 +82,7 @@ export const enum TransitionType {
 }
 ```
 
-在ts2json工具中添加场景
+在vf-cli工具中添加场景
 ![scenes](../assets/ts2json_scene.png)
 ``` typescript
 import {SceneId, ComponentId} from "./store";
@@ -109,7 +109,7 @@ export default [
 
 
 #### 场景跳转
-使用命令可以跳转场景，详见 action.md[](./action.md)文档
+使用命令可以跳转场景，详见 [动作脚本VFX文档](./action.md)
 切换场景
 ``` typescript
 //例子
