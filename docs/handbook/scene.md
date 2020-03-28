@@ -109,7 +109,7 @@ export default [
 
 
 #### 场景跳转
-使用命令可以跳转场景，详见 [动作脚本VFX文档](./action.md)
+使用命令可以跳转场景，详见 [动作脚本VFX文档](./action.md#切换场景)
 切换场景
 ``` typescript
 //例子
