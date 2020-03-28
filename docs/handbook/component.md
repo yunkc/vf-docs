@@ -174,6 +174,8 @@ export const enum ComponentType {
 }
 ```
 
-## 除自定义组件外，其他类型的组件都由gui库来实现
+## 基础组件(gui)
+
+除自定义组件外，其他类型的组件都由gui库来实现
 
 查阅[常用组件](/gui/label.md)
