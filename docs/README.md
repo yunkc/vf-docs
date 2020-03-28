@@ -29,5 +29,5 @@ vf.play('data.json');
 ```
 
 ::: warning 注意
-VF 引擎是面向`使用者`与`编辑器`友好的，对于互动场景开发者建议直接使用 [vf-cli](/getstart/) 通过 typescript 来编写交互场景。
+VF 引擎是面向`使用者`与`编辑器`友好的，对于互动场景开发者建议直接使用 [vf-cli](/getstart/introduction.md) 通过 typescript 来编写交互场景。
 :::
