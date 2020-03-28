@@ -180,8 +180,6 @@ actionList: `
 }
 </pre>
         </td>
-        <td style="text-align: center;">
-        </td>
         <td style="text-align: center;">if (this#44#42.selectedValue == $91) {} else if (this#44#42.selectedValue != 12)
             {} else {};
         </td>
@@ -288,13 +286,25 @@ actionList: `
     </tr>
     <tr>
         <td>JumpToNextScene</td>
-        <td style="text-align: center;">{"type": 18}</td>
+        <td style="text-align: center;">
+<pre class="language-json">
+{
+    "type": 18
+}
+</pre>
+</td>
         <td style="text-align: center;">jumpToNextScene();</td>
         <td style="text-align: center;">跳转到上一个场景</td>
     </tr>
     <tr>
         <td>JumpToPrevScene</td>
-        <td style="text-align: center;">{"type": 19}</td>
+        <td style="text-align: center;">
+<pre class="language-json">
+{
+    "type": 19
+}
+</pre>
+</td>
         <td style="text-align: center;">jumpToPrevScene();</td>
         <td style="text-align: center;">跳转到下一个场景</td>
     </tr>
@@ -308,7 +318,6 @@ actionList: `
 }
 </pre>
         </td>
-        <td style="text-align: center;">{"type": 20,"value:"scene1"}</td>
         <td style="text-align: center;">jumpToScene("scene1");</td>
         <td style="text-align: center;">跳转到场景xxx</td>
     </tr>
@@ -511,37 +520,77 @@ actionList: `
     </tr>
     <tr>
         <td>Comment</td>
-        <td style="text-align: center;">{"type": 35}</td>
+        <td style="text-align: center;">
+        <pre class="language-json">
+{
+    "type": 35,
+    "value": "this is a comment;"
+}
+</pre></td>
         <td style="text-align: center;">//this is a comment;</td>
         <td style="text-align: center;">注释</td>
     </tr>
     <tr>
         <td>ActionList</td>
-        <td style="text-align: center;">{"type": 36}</td>
+        <td style="text-align: center;"><pre class="language-json">
+{
+    "type": 36,
+    "execute": []
+}
+</pre>
+</td>
         <td style="text-align: center;">@this={};</td>
         <td style="text-align: center;">定义当前组件的VFX</td>
     </tr>
     <tr>
         <td>DefineVariable</td>
-        <td style="text-align: center;">{"type": 37}</td>
-        <td style="text-align: center;">var $name = "sukui";</td>
+        <td style="text-align: center;">
+<pre class="language-json">
+{
+    "type": 37,
+    variableType: "string",
+    value: "myName",
+    varId: "name"
+}
+</pre>
+</td>
+        <td style="text-align: center;">var $name = "myName";</td>
         <td style="text-align: center;">定义变量</td>
     </tr>
     <tr>
         <td>For</td>
-        <td style="text-align: center;">{"type": 38}</td>
+        <td style="text-align: center;">
+<pre class="language-json">
+{
+    "type": 38
+}
+</pre>
+</td>
         <td style="text-align: center;">for ($i in 5 ){};</td>
         <td style="text-align: center;">for循环</td>
     </tr>
     <tr>
         <td>Break</td>
-        <td style="text-align: center;">{"type": 39}</td>
+        <td style="text-align: center;">
+<pre class="language-json">
+{
+    "type": 39
+}
+</pre>
+</td>
         <td style="text-align: center;">break;</td>
         <td style="text-align: center;">跳出循环</td>
     </tr>
     <tr>
         <td>Wait</td>
-        <td style="text-align: center;">{"type": 40, "value": 1000}</td>
+        <td style="text-align: center;">
+<pre class="language-json">
+{
+    "type": 40, 
+    "value": 1000
+}
+</pre>
+</td>
         <td style="text-align: center;">wait(1000);</td>
         <td style="text-align: center;">等待1000毫秒</td>
     </tr>
@@ -576,7 +625,14 @@ actionList: `
     </tr>
     <tr>
         <td>EnterFrame</td>
-        <td style="text-align: center;">{"type": 43, "execute":[]}</td>
+        <td style="text-align: center;">
+        <pre class="language-json">
+{
+    "type": 43,
+    "execute":[]
+}
+</pre>
+</td>
         <td style="text-align: center;">setEnterFrame( ()=&gt; {})</td>
         <td style="text-align: center;">每帧执行</td>
     </tr>
