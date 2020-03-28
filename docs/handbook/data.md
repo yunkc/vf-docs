@@ -127,7 +127,7 @@
             }
          ],
          //动作行为（仅自定义组件）
-         "actions": [
+         "actionList": [
             { //事件表项
                "type": "addToStage",//当加入到舞台时执行
                "execute": [//执行的事件表
