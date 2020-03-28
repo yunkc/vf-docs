@@ -47,8 +47,476 @@ actionList: `
 - 这段VFX表示：当组件准备添加到舞台上时，在控制台输出 "Hello, world"。
 
 
+## VFX的关键字与符号的含义
+
+关键字|含义|备注
+--|:--:|:--:
+this | 当前组件
+global | 全局
+var | 声明变量
+function | 声明函数
+on | 添加监听
+off | 移除监听
+emit | 抛出事件
+trace | 在控制台输出信息
+@ | 组件
+$ | 变量
+# | 当前组件的孩子
+//  |  注释
 
 
+------------------
+最佳实践
+------------------
+
+## 准备添加到舞台时
+- 当组件准备添加到舞台上时执行
+``` typescript
+@this = {
+    this.on("Add", () => {
+        // 此时舞台上看不到组件，用于组件的初始化
+    });
+}
+```
+
+## 添加到舞台时
+- 当组件添加到舞台上后执行 
+``` typescript
+@this = {
+    this.on("Added", () => {
+        // 此时舞台上已经看到组件了。
+    });
+}
+```
+
+## 设置属性
+- 设置组件的属性，假设该组件中包含 一个id是 myText的文本框
+``` typescript
+@this = {
+    this.on("Add", () => {
+        this#myText.text = "hello, world"; // 设置文本框text属性，让文本框显示“hello，world”
+        this#myText.x = 100; //让x轴等于100
+        this#myText.y = $x; //可以使用变量
+        this#myText.scaleX = $scale * 0.1; //可以使用表达式
+    });
+}
+```
+
+## 监听交互事件
+- 监听点击事件，假设该组件中包含 一个id是 myText的文本框
+``` typescript
+@this = {
+    this.on("click", () => {
+        // 点击后的逻辑
+    });
+    this#myText.on("click", () => {
+        // 点击文本框后的逻辑
+    });
+}
+```
+
+## 表达式
+- 表达式  支持运算符 + - * / = %  > < >= <= == === ! != !== && || ()
+``` typescript
+@this = {
+    this.on("Add", () => {
+        this$v2 = 100 * 2 + (this$v1 + 22); // 
+    });
+}
+```
+
+## 条件语句
+``` typescript
+@this = {
+    this.on("Add", () => {
+        if($a > 5 && this#myText.text == "hello, world") {
+            // 满足条件执行
+        } else if ( this.y < 100) {
+            // 满足条件执行
+        } else {
+            // 不满足条件执行
+        }; // 注意不要忘记分号
+    });
+}
+```
+
+## 函数定义
+``` typescript
+@this = {
+    function callme() {  //不带参数的方法
+        // 函数的逻辑
+    };// 注意不要忘记分号
+
+    function callme2($param) {  //带一个参数的方法
+        this.x = this.x + $param; // 函数的逻辑
+    };// 注意不要忘记分号
+
+    function callme3($param1, $param2) { //带多个参数的方法
+        this.x = this.x + $param1 + $param2; // 函数的逻辑
+    };// 注意不要忘记分号
+}
+```
+
+## 调用函数
+``` typescript
+@this = {
+    function callme() {  
+        
+    };
+
+    function callme2($param) {  
+        this.x = this.x + $param; 
+    };
+
+    function callme3($param1, $param2) { 
+        this.x = this.x + $param1 + $param2; 
+    };
+
+    this.on("Add", () => {
+        this.callme();
+        this.callme2(55);
+        this.callme3(34, this$v1);
+    });
+}
+```
+
+## 添加监听
+``` typescript
+@this = {
+    this.on("click", () => {
+        // 点击后的逻辑
+    });
+    this.on("myEvent",()=>{
+        // 添加自定义事件的监听，不能加参数，如果想要添加参数，使用下面的方法
+    });
+
+    // 使用自定义函数作为监听函数，可传递事件的数据
+    this.on("myEvent2", this.onMyEvent);
+    function onMyEvent($data) {
+        trace($data);
+    };
+}
+```
+
+## 添加全局监听
+``` typescript
+@this = {
+    global.on("globalEvent", ()=>{
+        // 监听全局的事件
+    });
+}
+```
+
+## 添加系统监听
+- 系统事件必须包含数据，数据必须是下面结构， 否则会抛出错误
+``` typescript 
+{
+    code: string;
+    level: EventLevel;
+    data: any;
+    target?: any;
+    message?: string;
+    type?: string;
+}
+
+```
+
+``` typescript
+@this = {
+    system.on("systemEvent", this.onSystemEvent);
+    function onSystemEvent($data) {
+        trace($data.code);
+        trace($data.level);
+        trace($data.data);
+    };
+}
+```
+
+##  移除监听
+- 移除监听，移除一个事件的所有监听。
+``` typescript
+@this = {
+    this.on("click", () => {
+        this.off("click");
+        this.off("myEvent");
+        this#myCon.off("myEvent2");
+        global.off("globalEvent");
+        system.off("systemEvent");
+    });
+}
+```
+
+## 播放声音
+- 播放声音调用方法playSound。 该方法包含三个参数
+    + 第一个参数是声音素材的id，支持变量
+    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
+    + 第三个参数是可选参数，用来使用原生API播放声音，参数的类型必须是：
+    ``` typescript 
+    {
+        trackId?: string;
+        useNative?: boolean; 
+        mode?: 'sound' | 'effect';
+    }
+
+```
+
+``` typescript
+@this = {
+    this.on("Add", () => {
+        playSound("sound1", 1, {useNative: true, mode: 'sound'}); 
+    });
+}
+```
+
+## 暂停声音
+- 暂停声音调用方法pauseSound， 该方法包含两个参数
+    + 第一个参数是声音素材的id，支持变量
+    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
+``` typescript
+@this = {
+    this.on("Add", () => {
+        pauseSound("sound1", 1); 
+    });
+}
+```
+
+## 恢复暂停声音
+- 恢复暂停声音调用方法resumeSound， 该方法包含两个参数
+    + 第一个参数是声音素材的id，支持变量
+    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
+``` typescript
+@this = {
+    this.on("Add", () => {
+        resumeSound("sound1", 1); 
+    });
+}
+```
+
+## 播放动画
+- 播放动画调用自定义组件的playAnimation 方法，该方法包含两个参数
+    + 第一个参数动画名，可以是变量
+    + 第二个是可选参数， 播放次数， 如果不写，默认是1次；
+``` typescript
+@this = {
+    this.on("Add", () => {
+        var $anim = "run";
+        this.playAnimation("jump", 10);
+        this#myCom.playAnimation($anim);
+    });
+}
+```
+
+## 切换场景 
+- 切换场景有三个方法，分别是：
+    + jumpToNextScene 跳到下一场景
+        * 第一个参数 可选，过场动画 类型：
+        {
+             type: TransitionType;
+             duration: number;
+        }
+    + jumpToPrevScene 跳到前一场景
+        * 第一个参数 可选，过场动画 类型：
+        {
+             type: TransitionType;
+             duration: number;
+        }
+    + jumpToScene 跳到指定场景
+        * 第一个参数 场景id
+        * 第二个参数 可选，过场动画
+
+- 注意切换场景后，这条语句后面的语句全都不会被执行，因为组件已经被销毁了。这条语句必须在一个代码块的最后一条。
+- 支持的转场特效的类型
+``` typescript
+//转场支持的类型
+enum TransitionType {
+        NONE = 'none',
+        FADE_OUT = 'fadeOut',
+        CIRCLE_WIPE = 'circleWipe', 
+        CROSS_ZOOM = 'crossZoom',
+        DOOM_SCREEN = 'doomScreen',
+        HEART_WIPE = 'heartWipe',
+        LINEAR_BLUR = 'linearBlur',
+        PAGE_CURL = 'pageCurl',
+        TO_TEAR = 'toTear',
+        WIND = 'wind',
+        PAGE_FLIP_RIGHT = 'pageFlipRight',
+        PAGE_FLIP_LEFT = 'pageFlipLeft',
+}
+//例子
+@this = {
+    this.on("click", () => {
+        // 跳到下一场景
+        jumpToNextScene({type: "fadeOut", duration: 1000});
+        // 跳到前一场景
+        jumpToPrevScene();
+        // 跳到场景scene1
+        jumpToScene('scene1',{type: "fadeOut", duration: 1000});
+    });
+}
+```
+
+##  数组操作
+- 支持数组操作包括（pop, push, splice, concat, shift, unshift);
+- random 随机打乱数组的排列顺序
+- length 获取数组长度
+``` typescript
+@this = {
+    this.on("Add", () => {
+        var $arr = [1,2,3,4];
+        $arr.pop();
+        $arr.push(5);
+        $arr.splice(0,1);
+        $arr.random(); //
+        $arr.concat([6,7]);
+        $arr.shift();
+        $arr.unshift(8);
+        this$num = $arr.length;
+    });
+}
+```
+
+## 注释
+``` typescript
+@this = {
+    this.on("Add", () => {
+        // 这是注释
+    });
+}
+```
+
+## 定义变量
+``` typescript
+@this = {
+    var $num = 5; //number类型
+    var $str = "string"; // 字符串类型
+    var $bol = true;  // 布尔型
+    var $obj = {name:"sukui", age:16}; // 对象类型
+    var global$vv = 8; // 定义全局变量
+}
+```
+
+## for循环
+- 使用 for in 语句，循环执行多次。
+- 支持数字，变量和数组
+- 如果是数字，表示循环几次
+- 如果是数组，表示循环数组的长度的次数
+- 如果是变量， 变量必须是数字或者数组。
+``` typescript
+@this = {
+    this.on("Add", () => {
+        for( $i in 5) {
+            trace($i);
+        };
+        var $num = 5;
+        for( $i in $num) {
+            trace($i);
+        };
+        var $arr = [0,1,2,3,4];
+        for($i in $arr) {
+            trace($arr[$i]);
+            if($i == 3) {
+                break;
+            };
+        };
+    });
+}
+```
+
+## 跳转动画
+- 跳转动画调用自定义组件的gotoPlay方法，该方法包含三个参数
+    + 第一个参数表示动画名
+    + 第二个参数表示开始帧数
+    + 第三个参数表示播放次数
+``` typescript
+@this = {
+    this.on("Add", () => {
+        // 播放动画jump， 从第0帧开始播放，播放2次
+        this.gotoPlay("jump", 0, 2);
+    });
+}
+```
+
+## 跳转并停止动画
+- 跳转并停止动画调用自定义组件的gotoStop方法，该方法包含两个参数
+    + 第一个参数表示动画名
+    + 第二个参数表示停止到哪一帧
+``` typescript
+@this = {
+    this.on("Add", () => {
+        // 停止到jump动画的第10帧
+        this.gotoStop("jump", 10);
+    });
+}
+```
+
+## 等待 
+- 调用 wait方法
+- 有一个参数，表示停止多长时间，单位是毫秒
+- 等待会阻塞程序运行
+``` typescript
+@this = {
+    this.on("Add", () => {
+        wait(1000);
+        trace("等待1000毫秒后执行");
+    });   
+}
+``` 
+
+## 延迟执行
+- 调用方法setTimeout
+- 第一个参数是延迟时间，单位是毫秒
+- 第二个参数是回调闭包，这里只能写闭包
+- 延迟执行不会阻塞程序执行。
+``` typescript
+@this = {
+    this.on("Add", () => {
+        setTimeout(2000, ()=> {
+            trace("我等待2000毫秒后执行");
+        });
+        trace("我会先执行");
+    });
+}
+``` 
+
+##  间隔执行
+- 调用方法setInterval
+- 第一个参数是间隔时间，单位是毫秒
+- 第二个参数是执行次数，如果第二个参数是小于等于0， 或者不写第二个参数，则是无限次
+- 第三个参数是回调闭包，这里只能写闭包
+- 如果执行无限次，只能写在[顶层](action.md#层级结构)
+``` typescript
+@this = {
+    this.on("Add", () => {
+        setInterval(1000, 10, ()=>{
+            trace("this is a interval");
+        });
+        // 如果上面的语句 第二个参数是0，或者小于0， 或者不写第二个参数，那么下面的语句永远不执行
+        // 此次上面的语句只能写在顶层，不能写在其他层。
+        trace("我会等 上面的语句执行10后才执行");
+    });
+    // 这里是顶层，只有顶层能写间隔执行，执行无限次。
+    setInterval(1000, ()=>{
+        trace("我会一直执行");
+    });
+}
+``` 
+
+## 每帧执行
+- 调用方法setEnterFrame
+- 第一个参数是回调闭包，这里只能写闭包
+- 只能写在[顶层](action.md#层级结构)
+``` typescript
+@this = {
+    setEnterFrame( ()=> {
+        // 如果这里有wait，相当于每隔1000毫秒执行
+        // wait(1000); 
+        trace("我每帧执行");
+    });
+}
+``` 
+
+------
+------
 ## 动作脚本对应表
 
 <table>
@@ -638,471 +1106,3 @@ actionList: `
     </tr>
     </tbody>
 </table>
-
-## VFX的关键字与符号的含义
-
-关键字|含义|备注
---|:--:|:--:
-this | 当前组件
-global | 全局
-var | 声明变量
-function | 声明函数
-on | 添加监听
-off | 移除监听
-emit | 抛出事件
-trace | 在控制台输出信息
-@ | 组件
-$ | 变量
-# | 当前组件的孩子
-//  |  注释
-
-
-------------------
-最佳实践
-------------------
-
-## 准备添加到舞台时
-- 当组件准备添加到舞台上时执行
-``` typescript
-@this = {
-    this.on("Add", () => {
-        // 此时舞台上看不到组件，用于组件的初始化
-    });
-}
-```
-
-## 添加到舞台时
-- 当组件添加到舞台上后执行 
-``` typescript
-@this = {
-    this.on("Added", () => {
-        // 此时舞台上已经看到组件了。
-    });
-}
-```
-
-## 设置属性
-- 设置组件的属性，假设该组件中包含 一个id是 myText的文本框
-``` typescript
-@this = {
-    this.on("Add", () => {
-        this#myText.text = "hello, world"; // 设置文本框text属性，让文本框显示“hello，world”
-        this#myText.x = 100; //让x轴等于100
-        this#myText.y = $x; //可以使用变量
-        this#myText.scaleX = $scale * 0.1; //可以使用表达式
-    });
-}
-```
-
-## 监听交互事件
-- 监听点击事件，假设该组件中包含 一个id是 myText的文本框
-``` typescript
-@this = {
-    this.on("click", () => {
-        // 点击后的逻辑
-    });
-    this#myText.on("click", () => {
-        // 点击文本框后的逻辑
-    });
-}
-```
-
-## 表达式
-- 表达式  支持运算符 + - * / = %  > < >= <= == === ! != !== && || ()
-``` typescript
-@this = {
-    this.on("Add", () => {
-        this$v2 = 100 * 2 + (this$v1 + 22); // 
-    });
-}
-```
-
-## 条件语句
-``` typescript
-@this = {
-    this.on("Add", () => {
-        if($a > 5 && this#myText.text == "hello, world") {
-            // 满足条件执行
-        } else if ( this.y < 100) {
-            // 满足条件执行
-        } else {
-            // 不满足条件执行
-        }; // 注意不要忘记分号
-    });
-}
-```
-
-## 函数定义
-``` typescript
-@this = {
-    function callme() {  //不带参数的方法
-        // 函数的逻辑
-    };// 注意不要忘记分号
-
-    function callme2($param) {  //带一个参数的方法
-        this.x = this.x + $param; // 函数的逻辑
-    };// 注意不要忘记分号
-
-    function callme3($param1, $param2) { //带多个参数的方法
-        this.x = this.x + $param1 + $param2; // 函数的逻辑
-    };// 注意不要忘记分号
-}
-```
-
-## 调用函数
-``` typescript
-@this = {
-    function callme() {  
-        
-    };
-
-    function callme2($param) {  
-        this.x = this.x + $param; 
-    };
-
-    function callme3($param1, $param2) { 
-        this.x = this.x + $param1 + $param2; 
-    };
-
-    this.on("Add", () => {
-        this.callme();
-        this.callme2(55);
-        this.callme3(34, this$v1);
-    });
-}
-```
-
-## 添加监听
-``` typescript
-@this = {
-    this.on("click", () => {
-        // 点击后的逻辑
-    });
-    this.on("myEvent",()=>{
-        // 添加自定义事件的监听，不能加参数，如果想要添加参数，使用下面的方法
-    });
-
-    // 使用自定义函数作为监听函数，可传递事件的数据
-    this.on("myEvent2", this.onMyEvent);
-    function onMyEvent($data) {
-        trace($data);
-    };
-}
-```
-
-## 添加全局监听
-``` typescript
-@this = {
-    global.on("globalEvent", ()=>{
-        // 监听全局的事件
-    });
-}
-```
-
-## 添加系统监听
-- 系统事件必须包含数据，数据必须是下面结构， 否则会抛出错误
-``` typescript 
-{
-    code: string;
-    level: EventLevel;
-    data: any;
-    target?: any;
-    message?: string;
-    type?: string;
-}
-
-```
-
-``` typescript
-@this = {
-    system.on("systemEvent", this.onSystemEvent);
-    function onSystemEvent($data) {
-        trace($data.code);
-        trace($data.level);
-        trace($data.data);
-    };
-}
-```
-
-##  移除监听
-- 移除监听，移除一个事件的所有监听。
-``` typescript
-@this = {
-    this.on("click", () => {
-        this.off("click");
-        this.off("myEvent");
-        this#myCon.off("myEvent2");
-        global.off("globalEvent");
-        system.off("systemEvent");
-    });
-}
-```
-
-## 播放声音
-- 播放声音调用方法playSound。 该方法包含三个参数
-    + 第一个参数是声音素材的id，支持变量
-    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
-    + 第三个参数是可选参数，用来使用原生API播放声音，参数的类型必须是：
-    ``` typescript 
-    {
-        trackId?: string;
-        useNative?: boolean; 
-        mode?: 'sound' | 'effect';
-    }
-
-```
-
-``` typescript
-@this = {
-    this.on("Add", () => {
-        playSound("sound1", 1, {useNative: true, mode: 'sound'}); 
-    });
-}
-```
-
-## 暂停声音
-- 暂停声音调用方法pauseSound， 该方法包含两个参数
-    + 第一个参数是声音素材的id，支持变量
-    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
-``` typescript
-@this = {
-    this.on("Add", () => {
-        pauseSound("sound1", 1); 
-    });
-}
-```
-
-## 恢复暂停声音
-- 恢复暂停声音调用方法resumeSound， 该方法包含两个参数
-    + 第一个参数是声音素材的id，支持变量
-    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
-``` typescript
-@this = {
-    this.on("Add", () => {
-        resumeSound("sound1", 1); 
-    });
-}
-```
-
-## 播放动画
-- 播放动画调用自定义组件的playAnimation 方法，该方法包含两个参数
-    + 第一个参数动画名，可以是变量
-    + 第二个是可选参数， 播放次数， 如果不写，默认是1次；
-``` typescript
-@this = {
-    this.on("Add", () => {
-        var $anim = "run";
-        this.playAnimation("jump", 10);
-        this#myCom.playAnimation($anim);
-    });
-}
-```
-
-## 切换场景 
-- 切换场景有三个方法，分别是：
-    + jumpToNextScene 跳到下一场景
-        * 第一个参数 可选，过场动画 类型：
-        {
-             type: TransitionType;
-             duration: number;
-        }
-    + jumpToPrevScene 跳到前一场景
-        * 第一个参数 可选，过场动画 类型：
-        {
-             type: TransitionType;
-             duration: number;
-        }
-    + jumpToScene 跳到指定场景
-        * 第一个参数 场景id
-        * 第二个参数 可选，过场动画
-
-- 注意切换场景后，这条语句后面的语句全都不会被执行，因为组件已经被销毁了。这条语句必须在一个代码块的最后一条。
-- 支持的转场特效的类型
-``` typescript
-//转场支持的类型
-enum TransitionType {
-        NONE = 'none',
-        FADE_OUT = 'fadeOut',
-        CIRCLE_WIPE = 'circleWipe', 
-        CROSS_ZOOM = 'crossZoom',
-        DOOM_SCREEN = 'doomScreen',
-        HEART_WIPE = 'heartWipe',
-        LINEAR_BLUR = 'linearBlur',
-        PAGE_CURL = 'pageCurl',
-        TO_TEAR = 'toTear',
-        WIND = 'wind',
-        PAGE_FLIP_RIGHT = 'pageFlipRight',
-        PAGE_FLIP_LEFT = 'pageFlipLeft',
-}
-//例子
-@this = {
-    this.on("click", () => {
-        // 跳到下一场景
-        jumpToNextScene({type: "fadeOut", duration: 1000});
-        // 跳到前一场景
-        jumpToPrevScene();
-        // 跳到场景scene1
-        jumpToScene('scene1',{type: "fadeOut", duration: 1000});
-    });
-}
-```
-
-##  数组操作
-- 支持数组操作包括（pop, push, splice, concat, shift, unshift);
-- random 随机打乱数组的排列顺序
-- length 获取数组长度
-``` typescript
-@this = {
-    this.on("Add", () => {
-        var $arr = [1,2,3,4];
-        $arr.pop();
-        $arr.push(5);
-        $arr.splice(0,1);
-        $arr.random(); //
-        $arr.concat([6,7]);
-        $arr.shift();
-        $arr.unshift(8);
-        this$num = $arr.length;
-    });
-}
-```
-
-## 注释
-``` typescript
-@this = {
-    this.on("Add", () => {
-        // 这是注释
-    });
-}
-```
-
-## 定义变量
-``` typescript
-@this = {
-    var $num = 5; //number类型
-    var $str = "string"; // 字符串类型
-    var $bol = true;  // 布尔型
-    var $obj = {name:"sukui", age:16}; // 对象类型
-    var global$vv = 8; // 定义全局变量
-}
-```
-
-## for循环
-- 使用 for in 语句，循环执行多次。
-- 支持数字，变量和数组
-- 如果是数字，表示循环几次
-- 如果是数组，表示循环数组的长度的次数
-- 如果是变量， 变量必须是数字或者数组。
-``` typescript
-@this = {
-    this.on("Add", () => {
-        for( $i in 5) {
-            trace($i);
-        };
-        var $num = 5;
-        for( $i in $num) {
-            trace($i);
-        };
-        var $arr = [0,1,2,3,4];
-        for($i in $arr) {
-            trace($arr[$i]);
-            if($i == 3) {
-                break;
-            };
-        };
-    });
-}
-```
-
-## 跳转动画
-- 跳转动画调用自定义组件的gotoPlay方法，该方法包含三个参数
-    + 第一个参数表示动画名
-    + 第二个参数表示开始帧数
-    + 第三个参数表示播放次数
-``` typescript
-@this = {
-    this.on("Add", () => {
-        // 播放动画jump， 从第0帧开始播放，播放2次
-        this.gotoPlay("jump", 0, 2);
-    });
-}
-```
-
-## 跳转并停止动画
-- 跳转并停止动画调用自定义组件的gotoStop方法，该方法包含两个参数
-    + 第一个参数表示动画名
-    + 第二个参数表示停止到哪一帧
-``` typescript
-@this = {
-    this.on("Add", () => {
-        // 停止到jump动画的第10帧
-        this.gotoStop("jump", 10);
-    });
-}
-```
-
-## 等待 
-- 调用 wait方法
-- 有一个参数，表示停止多长时间，单位是毫秒
-- 等待会阻塞程序运行
-``` typescript
-@this = {
-    this.on("Add", () => {
-        wait(1000);
-        trace("等待1000毫秒后执行");
-    });   
-}
-``` 
-
-## 延迟执行
-- 调用方法setTimeout
-- 第一个参数是延迟时间，单位是毫秒
-- 第二个参数是回调闭包，这里只能写闭包
-- 延迟执行不会阻塞程序执行。
-``` typescript
-@this = {
-    this.on("Add", () => {
-        setTimeout(2000, ()=> {
-            trace("我等待2000毫秒后执行");
-        });
-        trace("我会先执行");
-    });
-}
-``` 
-
-##  间隔执行
-- 调用方法setInterval
-- 第一个参数是间隔时间，单位是毫秒
-- 第二个参数是执行次数，如果第二个参数是小于等于0， 或者不写第二个参数，则是无限次
-- 第三个参数是回调闭包，这里只能写闭包
-- 如果执行无限次，只能写在[顶层](action.md#层级结构)
-``` typescript
-@this = {
-    this.on("Add", () => {
-        setInterval(1000, 10, ()=>{
-            trace("this is a interval");
-        });
-        // 如果上面的语句 第二个参数是0，或者小于0， 或者不写第二个参数，那么下面的语句永远不执行
-        // 此次上面的语句只能写在顶层，不能写在其他层。
-        trace("我会等 上面的语句执行10后才执行");
-    });
-    // 这里是顶层，只有顶层能写间隔执行，执行无限次。
-    setInterval(1000, ()=>{
-        trace("我会一直执行");
-    });
-}
-``` 
-
-## 每帧执行
-- 调用方法setEnterFrame
-- 第一个参数是回调闭包，这里只能写闭包
-- 只能写在[顶层](action.md#层级结构)
-``` typescript
-@this = {
-    setEnterFrame( ()=> {
-        // 如果这里有wait，相当于每隔1000毫秒执行
-        // wait(1000); 
-        trace("我每帧执行");
-    });
-}
-``` 
