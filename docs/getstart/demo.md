@@ -20,8 +20,8 @@ const assets: Assets = {
 export default assets
 ```
 
-## 编写组件
-**在 `/src/components.ts` 里创建了三个组件：**
+## 编写元件
+**在 `/src/components.ts` 里创建了三个元件：**
 
 1. 一个名叫 `dino` 的图片类型组件， 这个组件引用了 `dinoImage`这个图片资源, 并使其水平居中
 ```typescript
