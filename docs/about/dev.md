@@ -11,8 +11,8 @@
 - 便于**跨端**或**跨应用**使用，可以根据数据描述在不同端不同项目中以原生方式自实现渲染或生产流程。
 - [数据格式](../handbook/data.md)是明文公开的，设计期间我们几乎参考了相关行业中所有方案，希望**推进和共建行业标准**。
 
-**当然**为了便于开发者，我们也提供了<Badge text="vf-cli" vertical="middle"/>工具，
-您可以像TS编程一样编写互动场景数据。[>> 快速上手](../getstart/introduction.md)
+**当然**为了便于开发者，我们也提供了[<Badge text="vf-cli" vertical="middle"/>](https://github.com/vipkid-edu/vf-cli)工具，
+您可以像TS编程一样编写互动场景。[>> 快速上手](../getstart/introduction.md)
 
 ### 数据使用
 ---
@@ -20,5 +20,5 @@
 后面我们也计划提供 <Badge text="vf-vue" vertical="middle"/>、<Badge text="vf-react" vertical="middle"/> ... 欢迎提交共建！
 
 ::: tip 注意：
-建议将[引擎文件夹]()整体放在CDN上，使用只需要引入<Badge text="vf.js" vertical="middle"/>。VF运行起来会自动下载运行目录下的依赖文件。
+建议将[引擎文件夹]()整体放在CDN上，使用只需要引入[<Badge text="vf.js" vertical="middle"/>](https://github.com/vipkid-edu/vf.js)。VF运行起来会自动下载运行目录下的依赖文件。
 :::
