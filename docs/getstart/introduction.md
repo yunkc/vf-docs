@@ -17,7 +17,7 @@ VF-CLI 是个脚手架，便于开发者快速使用 VF 上手。
 **将 VF-CLI 安装到全局:**
 
 ```shell script
-npm install -g vf-cli
+npm install -g @vf.js/cli
 ```
 > 安装的过程中，如果提示权限问题，可能会需要你用到 ```sudo npm install -g vf-cli``` 方式安装
     
@@ -43,9 +43,6 @@ vf init hello-world
 ```shell script
 cd hello-world/ && npm i && npm run start
 ```
-> 未来可能会增加自动安装和启动
-
-**启动一个 http-server 后，便可以在浏览器看到如下效果图:**
 
 ![image](../assets/vf-hello.png)
 
