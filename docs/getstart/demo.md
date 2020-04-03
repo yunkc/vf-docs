@@ -23,7 +23,7 @@ export default assets
 ## 编写元件
 **在 `/src/components.ts` 里创建了三个元件：**
 
-1. 一个名叫 `dino` 的图片类型组件， 这个组件引用了 `dinoImage`这个图片资源, 并使其水平居中
+1. 一个名叫 `dino` 的图片类型组件， 这个元件引用了 `dinoImage`这个图片资源, 并使其水平居中
 ```typescript
 // components.ts
 
@@ -41,7 +41,7 @@ const dino: gui.Image = {
 }
 ```
 
-2. 一个名叫 title 的文本类型组件
+2. 一个名叫 title 的文本类型元件
 ```typescript
 // components.ts
 
@@ -52,7 +52,7 @@ const title: gui.Text = {
 }
 ```
 
-3. 创建一个自定义组件，将上面的 dino 、title 引用到这个自定义组件的里面
+3. 创建一个自定义元件，将上面的 dino 、title 引用到这个自定义元件的里面
 ```typescript
 // components.ts
 
@@ -81,7 +81,7 @@ const root: gui.Custom = {
     `
 };
 ```
-4. 最后一步，将 `src/components.ts` 里的组件导出
+4. 最后一步，将 `src/components.ts` 里的元件导出
 ```javascript
 export default { root, title, dino }
 ```
@@ -89,13 +89,13 @@ export default { root, title, dino }
 **小结**
 
 为了易于理解，我们将`components.ts`文件拆分成了三小块，基本上可以理解为:
-1. 创建图片组件 
-2. 创建文本组件
-3. 创建自定义组件并实体化前面两个组件
-4. 将组件导出
+1. 创建图片元件 
+2. 创建文本元件
+3. 创建自定义元件并实体化前面两个元件
+4. 将元件导出
 
 ::: tip 提示
-`gui` 和`guiType` 是 VF 内置的组件和组件类型， 在我们开发的时候基本都在和它们打交道，了解更多类型请参阅 [使用指南-组件](/handbook/component) 或 [常用组件](/gui/Label)
+`gui` 和`guiType` 是 VF 内置的元件和元件类型， 在我们开发的时候基本都在和它们打交道，了解更多类型请参阅 [使用指南-组件](/handbook/component) 或 [常用组件](/gui/Label)
 :::
  
 ::: tip 提示
