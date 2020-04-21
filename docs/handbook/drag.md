@@ -14,7 +14,8 @@
 |  dragBounces | boolean | 开启回弹 |
 |  dropGroup | string | 设置分组，拖动目标时设置  |
 |  droppable | boolean | 开启掉落接收 |
-
+|  dragMoveCursor | string | 拖拽移动时鼠标样式 |
+|  actionData | string | 当前操作数据 |
 > 设置 `droppable = true` 后，可接收拖动组件。
 
 ## 事件
@@ -29,6 +30,9 @@
 |  DRAG_START_BEFORE | 拖动开始前触发 | event,target |
 |  DRAG_END_BEFORE | 拖动结束前触发 | event,target |
 
+> DRAG_START，DRAG_MOVE，DRAG_END，DRAG_TARGET 事件会触发并改变 `actionData` 值。
+
+> 通过传送与设置 `actionData` 值达到多端同步操作。
 
 ## 开启拖动
 

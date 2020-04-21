@@ -33,6 +33,7 @@ createVF(option,player=>{
 | width | number | 0 | 默认100%撑满容器宽度 |
 | height | number | 0 | 默认100%撑满容器高度 |
 | debug | boolean | false | 调试模式 |
+| libs | array |  | 关联的库，设置后会自动加载相关js文件 |
 | language | 设置语言 | string |  ["en-us", "zh-cn", "ja-JP", ....] |
 | vfvars | object |  | 外部自定义参数。 |
 | ------ | ------ | ------ | ------ |
@@ -41,3 +42,36 @@ createVF(option,player=>{
 | menu | boolean | true | 显示右键菜单。 |
 | quality | string |  | 显示质量 |
 | logAdvancedTrace | boolean | false | 显示堆栈调用跟踪日志 |
+
+## 扩展
+
+vfvars 可自定义参数，vf默认使用了`cdns`,`plugs`字段。
+
+#### cdns
+
+可配置资源域名,可只配`default`，其他域名为预留，为了更好加速CDN设置。资源加载失败会下标递增重试。
+
+```
+{
+    default: [
+        'https://cdn1.***.com/',
+        'https://cdn2.***..com/',
+    ],
+    image: [
+        'https://image.***.com/',
+        'https://image.***.com/',
+    ],
+    media: [
+        `https://media.***.com/`,
+        'https://media.***.com/',
+    ],
+    wx: [
+        'https://wx.***.com/',
+        'https://wx.***.com/',
+    ],
+}
+```
+
+#### plugs
+
+内部使用，忽。
