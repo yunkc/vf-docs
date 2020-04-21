@@ -15,17 +15,31 @@ features:
 footer: MIT Licensed | Copyright © 2020-present VIPKID EDU Front-end Technology Team.
 ---
 
+### 安装
+
+### NPM
+```
+  npm i @vf.js/launcher --save-dev
+```
+
+#### CDN Script
+```
+<script src="http://unpkg.com/@vf.js/launcher/dist/launcher.min.js"></script>
+```
+
 ### 使用过程像数 1, 2, 3 一样容易
 
 ``` js {10}
-// 1.设置插入页面的div容器
-const container = document.getElementById("vf-container");
 
-// 2.新建实例
-const vf = new VF(container);
+// 1. ES6方式引入，CDN Script方式不需要写
+import {createVF} from '@vf.js/launcher';
 
-// 3.启动实例
-vf.play('data.json');
+// 2.设置插入页面的div容器
+createVF({container:document.getElementById("vf-container")},player=>{
+  // 3.启动实例
+  vf.play('data.json');
+});
+
 ```
 
 ::: warning 注意
