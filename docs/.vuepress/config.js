@@ -83,6 +83,7 @@ module.exports = {
                     '/gui/connectLine',
                     '/gui/spriteAnimated',
                     '/gui/followLine',
+                    '/gui/Tracing',
                 ]
             },
             {
