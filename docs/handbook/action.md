@@ -247,50 +247,65 @@ $ | 变量
 ```
 
 ## 播放声音
-- 播放声音调用方法playSound。 该方法包含三个参数
-    + 第一个参数是声音素材的id，支持变量
-    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
-    + 第三个参数是可选参数，用来使用原生API播放声音，参数的类型必须是：
-    ``` typescript 
+- 播放声音调用方法playSound。 该方法包含配置对象
+    + assetId 声音素材的id，支持变量
+    + trackId 音轨id，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
+    + time 声音开始播放的延迟时间
+    + offset 声音开始播放的偏移位置，进度
+    + length 要播放声音的长度
+    + mode 标注声音的类型，默认sound。
+    
+参数类型：
+
+``` typescript 
     {
-        trackId?: string;
-        useNative?: boolean; 
+        assetId: number | any[];
+        trackId: string;
+        time?: number;
+        offset?: number;
+        length?: number;
         mode?: 'sound' | 'effect';
     }
 
 ```
-
+使用：
 ``` typescript
 @this = {
     this.on("Add", () => {
-        playSound("sound1", 1, {useNative: true, mode: 'sound'}); 
+        this#play.on('click',() => {
+            playSound({assetId:1, trackId:1});
+        });
     });
 }
 ```
 
 ## 暂停声音
 - 暂停声音调用方法pauseSound， 该方法包含两个参数
-    + 第一个参数是声音素材的id，支持变量
-    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
+    + assetId 声音素材的id，支持变量
+    + trackId 音轨id，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
 ``` typescript
 @this = {
     this.on("Add", () => {
-        pauseSound("sound1", 1); 
+        pauseSound({assetId:1, trackId:1}); 
     });
 }
 ```
 
 ## 恢复暂停声音
 - 恢复暂停声音调用方法resumeSound， 该方法包含两个参数
-    + 第一个参数是声音素材的id，支持变量
-    + 第二个参数是音轨 trackId，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
+    + assetId 声音素材的id，支持变量
+    + trackId 音轨id，相同的trackId同时只能播放一个声音，关于音轨参考[声音文档](sound.md)
 ``` typescript
 @this = {
     this.on("Add", () => {
-        resumeSound("sound1", 1); 
+        resumeSound({assetId:1, trackId:1}); 
     });
 }
 ```
+
+## 扩展声音组件
+如果需要细致的操控音频能力，可参考常用组件 [音频] 。
+> 开发中
 
 ## 播放动画
 - 播放动画调用自定义组件的playAnimation 方法，该方法包含两个参数
