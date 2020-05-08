@@ -7,3 +7,7 @@
 - 音轨在VFX中用trackId表示。
 - 播放声音需要使用动作脚本 详见 [动作脚本VFX文档](./action.md#播放声音)
 
+# 示例
+
+[源码](https://github.com/vipkid-edu/vf-examples/tree/master/audio)
+
