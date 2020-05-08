@@ -254,6 +254,7 @@ $ | 变量
     + offset 声音开始播放的偏移位置，进度
     + length 要播放声音的长度
     + mode 标注声音的类型，默认sound。
+> 如果音频类型是useNative形式的，不支持`time`,`offset`,`length`.
     
 参数类型：
 
