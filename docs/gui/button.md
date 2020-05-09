@@ -31,7 +31,7 @@ Button 可设置状态皮肤的交互按钮
 ``` typescript
 const button: gui.Button = {
     name: "button",
-    type: guiType.button,
+    type: guiType.Button,
     up: Asset.up,
     down: Asset.down,
     move: Asset.move,

@@ -37,7 +37,7 @@ export const enum Operate {
 ``` typescript
 const followLine: gui.FollowLine = {
     name: "followLine",
-    type: guiType.followLine
+    type: guiType.FollowLine
 };
 ```
 

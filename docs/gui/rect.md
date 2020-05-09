@@ -30,7 +30,7 @@ Rect 可绘制普通或圆角矩形
 ``` typescript
 const rect: gui.Rect = {
     name: "rect",
-    type: guiType.rect,
+    type: guiType.Rect,
     color:0xffffff,
     lineColor: 0xff00cc,
     lineWidth: 1,

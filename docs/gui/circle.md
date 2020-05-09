@@ -28,7 +28,7 @@ Circle 可绘制圆形
 ``` typescript
 const circle: gui.Circle = {
     name: "circle",
-    type: guiType.circle,
+    type: guiType.Circle,
     color:0xffffff,
     lineColor: 0xff00cc,
     lineWidth: 1,

@@ -29,7 +29,7 @@ Image 绘制图片
 ``` typescript
 const image: gui.Image = {
     name: "image",
-    type: guiType.image,
+    type: guiType.Image,
     fillMode: "scale",
     scale9Grid: [20, 20, 20, 20],
     src: Asset.SelectedBoard,

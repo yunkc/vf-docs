@@ -38,7 +38,7 @@ CheckBox 设置单选或多选
 ``` typescript
 const checkBox: gui.CheckBox = {
     name: "checkBox",
-    type: guiType.checkbox,
+    type: guiType.CheckBox,
     up: Asset.up,
     down: Asset.down,
     move: Asset.move,

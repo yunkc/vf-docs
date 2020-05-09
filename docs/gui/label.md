@@ -55,7 +55,7 @@ Label 可以绘制一段文本
 ``` typescript
 const label: gui.Label = {
     name: "label",
-    type: guiType.text,
+    type: guiType.Label,
 };
 ```
 

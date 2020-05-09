@@ -35,7 +35,7 @@ TextInput 可接收文字输入
 ``` typescript
 const textInput: gui.TextInput = {
     name: "textInput",
-    type: guiType.textInput,
+    type: guiType.TextInput,
     up: Asset.up,
     down: Asset.down,
     move: Asset.move,

@@ -31,7 +31,7 @@ Slider 滑动条/进度条
 ``` typescript
 const slider: gui.Slider = {
     name: "slider",
-    type: guiType.slider,
+    type: guiType.Slider,
     thumb: Asset.thumb,
     track: Asset.track,
     tracklight: Asset.tracklight,
