@@ -26,7 +26,7 @@ createVF(option,player=>{
 | container | HTMLElement | document.element | 要包含VF的父级容器 |
 | id | string | auto | VF实例的唯一标示，默认会自动生成 |
 | src | string |  | 模板的数据或模板路径 |
-| scaleMode | string | showAll | showAll | noScale | cover | contain |
+| scaleMode | string | showAll | showAll ， noScale ， cover ， contain |
 | wmode | string | transparent | 显示模式, transparent透明  |
 | bgcolor | string |  | 背景色，wmode非transparent时生效 |
 | frameRate | number | 30 | 帧率 |
@@ -42,6 +42,13 @@ createVF(option,player=>{
 | menu | boolean | true | 显示右键菜单。 |
 | quality | string |  | 显示质量 |
 | logAdvancedTrace | boolean | false | 显示堆栈调用跟踪日志 |
+
+## 适配选项
+
+1. noScale 不对内容进行任何缩放，保持原始的1:1比例。如果播放器窗口比内容小，则可能进行一些裁切。
+1. showAll 非溢出居中，显示全部内容。水平或垂直“两侧”可能会不够宽而留有黑边。
+1. contain 非溢出，显示全部内容，水平或垂直“一侧”方向有黑边。
+1. cover 溢出居中，某些部分也许无法显示在播放器视口。
 
 ## 扩展
 
