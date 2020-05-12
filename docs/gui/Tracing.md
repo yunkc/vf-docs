@@ -7,31 +7,35 @@ Tracing 可引导用户学习写字或字母
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-> 待补充
-
+| mode |number | 0 | 设置模式（0-笔画检测  1-教学模式  2-自动播放） |
+| traceSprite |string,number,Texture |  | 文字图|
+| renderBgSprite |string,number,Texture |  | 渲染背景图，设置后渲染模式为镂空模式|
+| tracePoints |point[[{x,y},{x,y}] |  | 文字笔画轨迹点|
+| debug |boolean|  | 开启debug|
 ## 事件
 
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
-> 待补充
+| CHANGE | 完成一个笔画绘制 | event,target,data |
+| COMPLETE | 全部绘制完成 | event,target,data |
 
 ## 样式
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-> 待补充
+
 
 
 > [基础样式](/handbook/style.html#样式)
 
 ## 定义
 ``` typescript
-> 待补充
+
 ```
 
 ## 使用
 ``` typescript
-> 待补充
+
 ```
 
 ## 示例
