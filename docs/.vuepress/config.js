@@ -85,7 +85,8 @@ module.exports = {
                     '/gui/followLine',
                     '/gui/Tracing',
                     '/gui/textChoice',
-                    '/gui/textFillBlanks'
+                    '/gui/textFillBlanks',
+                    '/gui/ScrollBar'
                 ]
             },
             {
