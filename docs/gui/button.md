@@ -58,7 +58,7 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestButton)
+> [弹出](https://codesandbox.io/embed/pensive-kowalevski-ptlsg?fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.ts&theme=dark)
 
 <iframe
      src="https://codesandbox.io/embed/pensive-kowalevski-ptlsg?fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.ts&theme=dark"

@@ -84,6 +84,8 @@ module.exports = {
                     '/gui/spriteAnimated',
                     '/gui/followLine',
                     '/gui/Tracing',
+                    '/gui/textChoice',
+                    '/gui/textFillBlanks'
                 ]
             },
             {
