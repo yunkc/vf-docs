@@ -31,7 +31,7 @@ Button 可设置状态皮肤的交互按钮
 ``` typescript
 const button: gui.Button = {
     name: "button",
-    type: guiType.button,
+    type: guiType.Button,
     up: Asset.up,
     down: Asset.down,
     move: Asset.move,
@@ -58,6 +58,12 @@ style: {
 
 > `运行 ⌘ + Enter` 查看修改后的效果
 
-> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestButton)
+> [弹出](https://codesandbox.io/embed/pensive-kowalevski-ptlsg?fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.ts&theme=dark)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestButton" height="500" width="100%"></iframe>
+<iframe
+     src="https://codesandbox.io/embed/pensive-kowalevski-ptlsg?fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.ts&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="pensive-kowalevski-ptlsg"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
