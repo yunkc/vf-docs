@@ -19,7 +19,7 @@ Audio 音频播放
 
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
-| canplaythrough | 当浏览器可在不因缓冲而停顿的情况下进行播放时 | target |
+| canplaythrough | 当浏览器预计能够在不停下来进行缓冲的情况下持续播放指定的音频/视频时，会发生 canplaythrough 事件 | target |
 | play | 当音频已开始或不再暂停时 | target |
 | pause | 当音频已暂停时 | target |
 | timeupdate | 当目前的播放位置已更改时 | target |
