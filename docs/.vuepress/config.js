@@ -62,7 +62,6 @@ module.exports = {
                     '/handbook/drag',
                     '/handbook/animation',
                     '/handbook/filter',
-                    '/handbook/system-sound',
                     '/handbook/interface',
                     '/handbook/gui-plugs',
                     '/handbook/filter-plugs',
