@@ -40,6 +40,7 @@ createVF(option,player=>{
 | play | boolean | true | 是否自动播放。 |
 | loop | boolean | false | 是否循环播放。 |
 | menu | boolean | true | 显示右键菜单。 |
+| resolution | number | 1 | 设置解析度，一般 `window.devicePixelRatio || 1` |
 | quality | string |  | 显示质量 |
 | logAdvancedTrace | boolean | false | 显示堆栈调用跟踪日志 |
 
