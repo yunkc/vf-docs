@@ -35,13 +35,8 @@ createVF(option,player=>{
 | debug | boolean | false | 调试模式 |
 | libs | array |  | 关联的库，设置后会自动加载相关js文件 |
 | language | 设置语言 | string |  ["en-us", "zh-cn", "ja-JP", ....] |
-| vfvars | object |  | 外部自定义参数。 |
-| ------ | ------ | ------ | ------ |
-| play | boolean | true | 是否自动播放。 |
-| loop | boolean | false | 是否循环播放。 |
-| menu | boolean | true | 显示右键菜单。 |
 | resolution | number | 1 | 设置解析度，一般 `window.devicePixelRatio || 1` |
-| logAdvancedTrace | boolean | false | 显示堆栈调用跟踪日志 |
+| vfvars | object |  | 外部自定义参数。 |
 
 ## 适配选项
 
