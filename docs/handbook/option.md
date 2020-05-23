@@ -33,6 +33,7 @@ createVF(option,player=>{
 | width | number | 0 | 默认100%撑满容器宽度 |
 | height | number | 0 | 默认100%撑满容器高度 |
 | debug | boolean | false | 调试模式 |
+| showFPS | boolean | false | 是否显示FPS，web环境有效 |
 | libs | array |  | 关联的库，设置后会自动加载相关js文件 |
 | language | 设置语言 | string |  ["en-us", "zh-cn", "ja-JP", ....] |
 | resolution | number | 1 | 设置解析度，一般 `window.devicePixelRatio || 1` |
