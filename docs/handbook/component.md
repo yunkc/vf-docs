@@ -22,35 +22,26 @@ export interface IComponent {
 ## 组件的类型
 ``` typescript
 export const enum ComponentType {
-    // UI
-    CONTAINER = 'container',
-    TABLE = 'table',
-    IMAGE = 'Image',
-    BUTTON = 'Button',
-    RADIO = 'CheckBox',
-    CHECKBOX = 'CheckBox',
-    INPUT = 'input',
-    SLIDER = 'slider',
-    TEXT = 'Text',
-    RECT = 'Rect',
-    CIRCLE = 'Circle',
-    // ANI
-    DRAGONBONES = 'dragonbones',
-    PARTICLE = 'particle',
-    SHEET = 'sheet',
-    // MEDIA
-    VIDEO = 'video',
-    AUDIO = 'audio',
-    MICROPHONE = 'microphone',
-    // NPM
-    NPM = 'npm',
-    // VECTOR
-    SVG = 'svg',
-    GRAPHIC = 'graphic',
-    // CUSTOM
-    CUSTOM = 'custom',
+    Custom = 'custom',
+    Rect = 'Rect',
+    Text = 'Label',
+    Image = 'Image',
+    Slider = 'Slider',
+    Circle = 'Circle',
+    Button = 'Button',
+    CheckBox = 'CheckBox',
+    TextInput = 'TextInput',
+    ScrollBar = 'ScrollBar',
+    Evaluater = 'Evaluater',
+    FollowLine = 'FollowLine',
+    ConnectLine = 'ConnectLine',
+    SpriteAnimated = 'SpriteAnimated',
+    Tracing = 'Tracing',
+    TextChoice = 'TextChoice',
+    TextFillBlanks = 'TextFillBlanks',
 }
 ```
+> 类型文档并不能即时更新，如果有新的组件，可直接填写相关类型
 
 ## 组件数据实例
 ``` json

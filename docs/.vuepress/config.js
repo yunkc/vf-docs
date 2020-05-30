@@ -82,11 +82,11 @@ module.exports = {
                     '/gui/slider',
                     '/gui/connectLine',
                     '/gui/spriteAnimated',
+                    '/gui/ScrollBar',
                     '/gui/followLine',
                     '/gui/Tracing',
                     '/gui/textChoice',
                     '/gui/textFillBlanks',
-                    '/gui/ScrollBar'
                 ]
             },
             {
