@@ -18,29 +18,29 @@
 
 >滤镜效果均需要设备支持webgl才能生效.
 
- [调整滤镜](/handbook/filters/filterAdjustment)
+ [调整滤镜](./filters/filterAdjustment)
 
- [高级气球滤镜](/handbook/filters/filterAdvancedBloom)
+ [高级气球滤镜](./filters/filterAdvancedBloom)
 
- [透明滤镜](/handbook/filters/filterAlpha)
+ [透明滤镜](./filters/filterAlpha)
 
- [Ascii滤镜](/handbook/filters/filterAscii)
+ [Ascii滤镜](./filters/filterAscii)
 
- [倒角滤镜](/handbook/filters/filterBevel)
+ [倒角滤镜](./filters/filterBevel)
 
- [气球滤镜](/handbook/filters/filterBloom)
+ [气球滤镜](./filters/filterBloom)
 
- [模糊滤镜](/handbook/filters/filterBlur)
+ [模糊滤镜](./filters/filterBlur)
 
- [液化滤镜](/handbook/filters/filterBulgePinch)
+ [液化滤镜](./filters/filterBulgePinch)
 
- [色彩矩阵滤镜](/handbook/filters/filterColorMatrix)
+ [色彩矩阵滤镜](./filters/filterColorMatrix)
 
- [Fxaa抗锯齿滤镜](/handbook/filters/filterFxaa)
+ [Fxaa抗锯齿滤镜](./filters/filterFxaa)
 
- [高斯模糊滤镜](/handbook/filters/filterKawaseBlur)
+ [高斯模糊滤镜](./filters/filterKawaseBlur)
 
- [躁点滤镜](/handbook/filters/filterNoise)
+ [躁点滤镜](./filters/filterNoise)
 
 
 插件扩展滤镜，参考[滤镜插件开发](filter-plugs.html)
