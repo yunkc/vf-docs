@@ -18,7 +18,7 @@
 ## 示例
 
 <iframe
-     src="https://codesandbox.io/embed/noisefilter-29b5w?fontsize=14&hidenavigation=1&theme=dark"
+     src="https://codesandbox.io/embed/noisefilter-29b5w?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="noisefilter"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
