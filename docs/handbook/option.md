@@ -32,16 +32,15 @@ createVF(option,player=>{
 | frameRate | number | 30 | 帧率 |
 | width | number | 0 | 默认100%撑满容器宽度 |
 | height | number | 0 | 默认100%撑满容器高度 |
-| debug | boolean | false | 调试模式 |
+| debug | boolean | false | 调试模式，移动设备显示vConsole |
+| showFPS | boolean | false | 是否显示FPS，web环境有效 |
 | libs | array |  | 关联的库，设置后会自动加载相关js文件 |
 | language | 设置语言 | string |  ["en-us", "zh-cn", "ja-JP", ....] |
+| resolution | number | 1 | 设置解析度，一般 `window.devicePixelRatio || 1` |
+| forceCanvas | boolean | false | 使用canvas渲染 |
+| realFPS | boolean | true | 默认使用基于时间的动画，false基于帧动画 |
+| useCustomErrorPanel | boolean | false | 使用自定义错误面板，默认关闭 |
 | vfvars | object |  | 外部自定义参数。 |
-| ------ | ------ | ------ | ------ |
-| play | boolean | true | 是否自动播放。 |
-| loop | boolean | false | 是否循环播放。 |
-| menu | boolean | true | 显示右键菜单。 |
-| quality | string |  | 显示质量 |
-| logAdvancedTrace | boolean | false | 显示堆栈调用跟踪日志 |
 
 ## 适配选项
 

@@ -19,7 +19,7 @@ footer: MIT Licensed | Copyright © 2020-present VIPKID EDU Front-end Technology
 
 ### NPM
 ```
-  npm i @vf.js/launcher --save-dev
+  npm i @vf.js/launcher
 ```
 
 #### CDN Script

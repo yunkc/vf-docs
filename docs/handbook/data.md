@@ -76,8 +76,6 @@
             6.自定义组件"custom"
          */
          "type": "custom",
-         //关联资源
-         "assets": [0,1],
          //默认字段以及属性，每种组件的属性不相同，另附表说明
          "props": {
             //自定义参数数据 "number|string|boolean|array|object"

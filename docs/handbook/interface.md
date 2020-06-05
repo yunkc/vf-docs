@@ -27,7 +27,13 @@ onDispose(): void;
 ### 播放（播放地址|播放数据|恢复播放）
 play(src?: any): void;
 
+### 播放携带动态数据
+playData(src?: any, data:any): void;
+
 ### 卸载
+
+> 如果参数为true，卸载canvas标签
+
 dispose(boolean?: boolean): void;
 
 ### 暂停

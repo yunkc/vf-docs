@@ -1,11 +1,4 @@
-# 声音
-- 声音使用音轨来播放。
-- 一个音轨同一时间只能播放一个声音。
-- 如果一个音轨同时播放第二个声音，当前的声音就会停止播放。
-- 如果想同时播放多个声音就用多个音轨去播放。
-- 如果想播放一个声音时立刻停止其他声音，就用同一个音轨去播放。
-- 音轨在VFX中用trackId表示。
-
+## 声音
 
 ## 播放声音
 - 播放声音调用方法playSound。 该方法包含配置对象
@@ -66,8 +59,8 @@
 ```
 
 ## 扩展声音组件
-如果需要细致的操控音频能力，可参考常用组件 [音频](/gui/audio) 。
-
+如果需要细致的操控音频能力，可参考常用组件 [音频] 。
+> 开发中
 
 ## 示例
 
@@ -78,4 +71,3 @@
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
 </iframe>
-

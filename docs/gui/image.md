@@ -50,10 +50,12 @@ style: {
 
 ## 示例
 
-> 示例使用的编程方式，在vf中，通过配置方式会有写法差异
+> 可点击左上角菜单，查看其他定义类
 
-> `运行 ⌘ + Enter` 查看修改后的效果
-
-> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestImage)
-
-<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestImage" height="500" width="100%"></iframe>
+<iframe
+     src="https://codesandbox.io/embed/image-g4eec?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="image"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
