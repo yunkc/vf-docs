@@ -2,6 +2,14 @@
 
 引擎创建后，可获取的相关周期函数以及可调用API
 
+::: tip 提示💡
+如引擎版本大于 engine >= 0.4.4 可在引擎完成初始化后，立即跳转场景，无需加载首个场景。
+```
+player.play(url);
+player.switchToSceneId(sceneId); // switchToSceneIndex(index)
+```
+:::
+
 ## 周期函数
 
 ### 日志与错误时的回调
@@ -13,8 +21,15 @@ onInit(): void;
 ### 数据初始化完成（资源加载完成）
 onReady(): void;
 
-### 场景创建完成
+### 场景创建开始
+::: tip 提示💡
+engine >= 0.4.4
+:::
 onSceneCreate(): void;
+
+
+### 场景创建完成
+onSceneLoad(): void;
 
 ### 消息
 onMessage(msg: IEvent): void;
@@ -54,5 +69,11 @@ switchToNextScene(transition?: ITransitionData): void;
 ### 切换上一个场景
 switchToPrevScene(transition?: ITransitionData): void;
 
-### 切换特定场景
+### ID切换场景
 switchToSceneId(sceneId: string, transition?: ITransitionData): void;
+
+### 索引切换场景
+::: tip 提示💡
+engine >= 0.4.4
+:::
+switchToSceneIndex(index: number, transition?: ITransitionData): void;
