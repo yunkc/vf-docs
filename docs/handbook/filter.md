@@ -42,6 +42,51 @@
 
  [躁点滤镜](./filters/filterNoise)
 
+ [颜色过载滤镜](./filters/filterColorOverlay)
+
+ [颜色替换滤镜](./filters/filterColorReplace)
+
+ [卷积滤镜](./filters/filterConvolution)
+
+ [破纱窗滤镜](./filters/filterCrossHatch)
+
+ [阴极射线滤镜](./filters/filterCRT)
+
+ [点滤镜](./filters/filterDot)
+
+ [浮雕滤镜](./filters/filterEmboss)
+
+ [电子脉冲滤镜](./filters/filterGlitch)
+
+ [发光滤镜](./filters/filterGlow)
+
+ [圣光滤镜](./filters/filterGodray)
+
+ [动感模糊滤镜](./filters/filterMotionBlur)
+
+ [双色替换滤镜](./filters/filterMultiColorReplace)
+
+ [老电影滤镜](./filters/filterOldFilm)
+
+ [描边滤镜](./filters/filterOutline)
+
+ [像素化滤镜](./filters/filterPixelate)
+
+ [雷达模糊滤镜](./filters/filterRadialBlur)
+
+ [反射滤镜](./filters/filterReflection)
+
+ [RGB分离滤镜](./filters/filterRGBSplit)
+
+ [冲击波滤镜](./filters/filterShockwave)
+
+ [笔刷滤镜](./filters/filterTiltShift)
+
+ [扭曲滤镜](./filters/filterTwist)
+
+ [径向模糊滤镜](./filters/filterZoomBlur)
+
+ 
 
 插件扩展滤镜，参考[滤镜插件开发](filter-plugs.html)
 
