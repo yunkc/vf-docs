@@ -55,14 +55,10 @@ libId: ComponentId.audio,
 
 ## 示例
 
-> 示例使用的编程方式，在vf中，通过配置方式会有写法差异
-s/audio-7bqb7
-> [弹出](https://codesandbox.io/embed/audio-7bqb7?fontsize=14&hidenavigation=1&theme=dark)
-
 <iframe
-     src="https://codesandbox.io/embed/scrollbar-4iu78?fontsize=14&hidenavigation=1&theme=dark"
+     src="https://codesandbox.io/embed/audio-7bqb7?fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.ts&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="ScrollBar"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+     title="Audio"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
