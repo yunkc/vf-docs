@@ -2,6 +2,8 @@
 
 开启拖动 `dragOption.draggable = true` 后，有接收拖动事件能力。
 
+> 自定义组件 `custom` 需实例化时设置`dragOption`属性。 
+
 ## dragOption参数
 
 #### 拖动
