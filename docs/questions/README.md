@@ -1,5 +1,12 @@
 # 常见问题
 
+## 版本更新日志
+
+[日志列表](https://github.com/vipkid-edu/vf.js/releases)
+
+## 稳定版与测试版本
+> 版本号最后一位是奇数为测试版本，非稳定版本。
+
 ## json中的宽高应该设置多少
 > json中顶层属性width,height为设计尺寸，按美术规格填写。
 
