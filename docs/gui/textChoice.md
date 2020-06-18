@@ -126,11 +126,11 @@ const root: gui.Custom = {
 
 > [弹出](https://codesandbox.io/embed/textchoice-ezggp?fontsize=14&hidenavigation=1&theme=dark)
 >
- <iframe
-     src="https://codesandbox.io/embed/textchoice-ezggp?fontsize=14&hidenavigation=1&theme=dark"
+<iframe
+     src="https://codesandbox.io/embed/textchoiceexample-8dy4v?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="TextChoice"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+     title="textChoiceExample"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
