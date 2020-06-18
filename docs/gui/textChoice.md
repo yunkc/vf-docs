@@ -3,6 +3,13 @@
 
 TextChoice 可实现文本混排类选择题模板
 
+## 库信息
+库地址:
+> https://s.vipkidstatic.com/vf/plugin/TextChoice/0.0.1.js
+
+类名
+> TextChoice 
+
 ## 属性
 
 | 属性名 | 属性类型 | 默认值 | 说明 |

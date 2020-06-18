@@ -3,6 +3,13 @@
 
 TextFillBlanks 可实现文本混排类填空题模板
 
+## 库信息
+库地址:
+> https://s.vipkidstatic.com/vf/plugin/TextFillBlanks/0.0.1.js
+
+类名
+> TextFillBlanks 
+
 ## 属性
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
