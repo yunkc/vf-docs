@@ -63,4 +63,10 @@ const followLine: gui.FollowLine = {
 
 > [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestFollowLine)
 
-<iframe src="https://vipkid-edu.github.io/vf-gui/play/#example/TestFollowLine" height="500" width="100%"></iframe>
+<iframe
+     src="https://codesandbox.io/embed/followlineexample-sr9f2?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="followLineExample"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
