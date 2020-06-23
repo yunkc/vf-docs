@@ -12,3 +12,6 @@
 
 ## json中怎么绑定显示组件
 > 有些组件需要绑定显示组件，比如画线，可以通过设置其 source = 'this#child#child' 形式，source类型为字符串。
+
+## 常规的渲染流程
+![image](../assets/001.png)
