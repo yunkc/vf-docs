@@ -495,3 +495,85 @@ Spring | 41
     }
 ]
 ```
+
+## 路径动画
+
+::: warning ⚠️
+VF Engine >= v0.5.71
+:::
+
+可沿着一条曲线或直线运动,数据格式：
+
+增加`type`为`path`的timeline , path属性是一个字符串，格式是 svg 中 path 的 d属性 
+
+* M 表示MoveTo 
+* L 表示LineTo， 
+* Q表示二次贝塞尔曲线 
+* C 表示三次贝塞尔曲线
+
+[path的格式可参考](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths)
+
+注意 路径动画和`x` , `y`轴的动画有冲突，两个不可同时使用。
+
+path的timeline中的frame的值是0-1之间 表示路径的开始和结束。
+
+```
+"timelines": [
+      {
+          "type": "path",
+          "path": "M 60 171 Q 58 181 54 193 Q 26 255 16 277",
+          "loop": true,
+          "frames": [
+              {
+                  "frame": 0,
+                  "curve": [1],
+                  "value": 0
+              },
+              {
+                  "frame": 600,
+                  "value": 1.0
+              }
+          ]
+      },
+]
+```
+### 动画路径示例
+
+> 建设中
+
+
+
+## 动画模板
+
+::: warning ⚠️
+VF Engine >= v0.5.71
+:::
+
+在某些课件中，许多图片具有相同的动画，之前的格式，一个动画需要写好多遍，引入动画模板
+可以在动画模板中定义一组动画，在其他组件中使用，可以达到一次定义多次使用的目的。
+
+数据格式 增加 animationTemplate 节点。类型是 {[id: string]: ISubAnimation};
+
+动画的数据修改
+之前 
+export interface IAnimation {
+    name: string;
+    duration?: number;
+    autoPlay?: boolean;
+    loop?: boolean;
+    children: { [id: string]: (ISubAnimation) };
+}
+修改后
+export interface IAnimation {
+    name: string;
+    duration?: number;
+    autoPlay?: boolean;
+    loop?: boolean;
+    children: { [id: string]: (ISubAnimation | string) };
+}
+
+IAnimation中的children 即可以是动画的定义，也可以是一个动画模板的名字
+
+### 动画模版示例
+
+> 建设中
