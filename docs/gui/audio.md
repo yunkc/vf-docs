@@ -57,7 +57,7 @@ libId: ComponentId.audio,
 
 <iframe
      src="https://codesandbox.io/embed/audio-7bqb7?fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.ts&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:720px; border:0; border-radius: 4px; overflow:hidden;"
      title="Audio"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
