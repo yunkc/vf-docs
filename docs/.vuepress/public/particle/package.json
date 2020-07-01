@@ -24,6 +24,6 @@
 		"plugin": true
 	},
 	"dependencies": {
-		"semver": "~4.0.3"
+		"semver": "~7.3.2"
 	}
 }
