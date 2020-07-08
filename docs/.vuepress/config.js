@@ -86,6 +86,7 @@ module.exports = {
                     '/gui/audio.md',
                     '/gui/followLine',
                     '/gui/Tracing',
+                    '/gui/video',
                     '/gui/textChoice',
                     '/gui/textFillBlanks',
                 ]

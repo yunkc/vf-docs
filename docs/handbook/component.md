@@ -37,6 +37,7 @@ export const enum ComponentType {
     ConnectLine = 'ConnectLine',
     SpriteAnimated = 'SpriteAnimated',
     Tracing = 'Tracing',
+    Video = 'Video',
     TextChoice = 'TextChoice',
     TextFillBlanks = 'TextFillBlanks',
 }

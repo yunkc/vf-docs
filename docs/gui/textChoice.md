@@ -3,6 +3,13 @@
 
 TextChoice 可实现文本混排类选择题模板
 
+## 库信息
+库地址:
+> https://s.vipkidstatic.com/vf/plugin/TextChoice/0.0.1.js
+
+类名
+> TextChoice 
+
 ## 属性
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
@@ -128,7 +135,7 @@ const root: gui.Custom = {
 >
 <iframe
      src="https://codesandbox.io/embed/textchoiceexample-8dy4v?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:720px; border:0; border-radius: 4px; overflow:hidden;"
      title="textChoiceExample"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
