@@ -69,7 +69,7 @@ createVF(option,player=>{
 { 
     container: document.getElementById("vf-container") , 
     debug: true,
-    loading:{position:'center',image:'//www.baidu.com/img/flexible/logo/pc/result@2.png'}
+    loading:{position:'center',image:'result.png'}
 }
 ```
 
