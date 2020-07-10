@@ -53,6 +53,10 @@ createVF(option,player=>{
 
 ## loading
 
+::: warning ⚠️
+VF Engine >= v0.5.71
+:::
+
 设置初始化引擎的loading样式
 
 ```
