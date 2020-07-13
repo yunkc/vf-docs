@@ -84,9 +84,9 @@ module.exports = {
                     '/gui/spriteAnimated',
                     '/gui/ScrollBar',
                     '/gui/audio.md',
+                    '/gui/video',
                     '/gui/followLine',
                     '/gui/Tracing',
-                    '/gui/video',
                     '/gui/textChoice',
                     '/gui/textFillBlanks',
                 ]

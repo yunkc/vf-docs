@@ -1,5 +1,9 @@
 # 视频 Video
 
+::: warning ⚠️
+VF Engine >= v0.5.71
+:::
+
 Video 视频播放
 
 > src 支持 number | string
