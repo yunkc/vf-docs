@@ -51,7 +51,7 @@ createVF(option,player=>{
 1. cover 溢出居中，某些部分也许无法显示在播放器视口。
 
 
-## loading
+## Loading
 
 ::: warning ⚠️
 VF Engine >= v0.5.71
