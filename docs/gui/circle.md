@@ -49,7 +49,7 @@ libId: ComponentId.circle,
 
 ## 示例
 
-> 可点击左上角菜单，查看其他定义类111
+> 可点击左上角菜单，查看其他定义类
 
 <iframe
      src="https://codesandbox.io/embed/circle-pk7rs?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
