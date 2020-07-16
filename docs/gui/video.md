@@ -21,6 +21,10 @@ Video 视频播放
 | duration | number |  | (只读) 返回视频总长度
 | volume | 0-1 | 1 | 设置或返回视频的音量 |
 
+::: warning ⚠️ 受部分浏览器劫持，部分参数无法成功修改。
+受影响参数 ：controls、muted、volume值的改变
+:::
+
 
 ## 事件
 
