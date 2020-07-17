@@ -48,6 +48,8 @@ Label 可以绘制一段文本
 | dropShadowColor |  number  | 0x000000 | 设置投影填充色 |
 | dropShadowDistance |  number  | 5 | 设置投影深度 |
 | breakWords |  boolean  | true | 设置词换行 |
+| textDecoration | ‘None‘ , ‘Overline‘ , ‘LineThrough‘ , ’UnderLine‘ | None | 下划线类型 |
+| textDecorationColor | number | 0x000000 | 下划线颜色 |
 
 > [基础样式](/handbook/style.html#样式)
 
