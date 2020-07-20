@@ -469,6 +469,72 @@ enum TransitionType {
 }
 ``` 
 
+::: warning ⚠️
+VF Engine >= v0.6.1
+:::
+## 获取系统时间  
+- 在表达式中使用常量Date的属性可以获取到系统时间
+- Date的属性有以下几种
+  - time 当前时间戳，单位是毫秒;
+  - year 当前的年份;
+  - month 当前的月份;
+  - day 当前的日期;
+  - hour 当前的小时;
+  - minute 当前的分钟;
+  - second 当前的秒;
+  - millisecond 当前的毫秒;
+``` typescript
+this.on("Add", () => {
+        var $a = 0;
+        $a = Date.time;
+        $a = Date.year;
+        $a = Date.month;
+        $a = Date.day;
+        $a = Date.hour;
+        $a = Date.minute;
+        $a = Date.second;
+        $a = Date.millisecond;
+    });
+``` 
+
+::: warning ⚠️
+VF Engine >= v0.6.1
+:::
+## 字符串方法 
+- 字符串支持以下几种方法
+  - indexOf  查找子字符串的位置
+  - replace 字符串替换
+  - split 字符串分割;
+  - substr 截取子字符串;
+  - substring 截取子字符串;
+``` typescript
+this.on("Add", () => {
+        var $a = 'hello world';
+        var $b = '';
+        $b = $a.indexOf('l');
+        $b = $a.indexOf('l', 1);
+        $b = $a.replace('e', 'b');
+        $b = $a.split(',');
+        $b = $a.substr(1, 4);
+        $b = $a.substring(1, 4);
+    });
+``` 
+
+::: warning ⚠️
+VF Engine >= v0.6.1
+:::
+## 字符串转换成数字 
+- parseInt 字符串转换为整数
+- parseFloat 字符串转换为浮点数
+- 
+``` typescript
+this.on("Add", () => {
+        var $a = 1;
+        var $b = 1.0;
+        $a = parseInt('123');
+        $b = parseFloat('1.23');
+    });
+``` 
 ------
 ------
 ## 动作脚本对应表
@@ -1057,6 +1123,74 @@ enum TransitionType {
 </td>
         <td style="text-align: center;">setEnterFrame( ()=&gt; {})</td>
         <td style="text-align: center;">每帧执行</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td style="text-align: center;">
+            <pre class="language-json">
+            {
+                "type": 6,
+                "express: [
+                    [1, [], 'a'],
+                    [5, '="],
+                    [3, 0]
+                ]
+            }
+            </pre>
+        </td>
+        <td style="text-align: center;">$a = Date.time;</td>
+        <td style="text-align: center;">获取系统时间</td>
+    </tr>
+    <tr>
+        <td>String</td>
+        <td style="text-align: center;">
+            <pre class="language-json">
+            {
+                "type": 6,
+                "express: [
+                    [1, [], 'b'],
+                    [5, '="],
+                    [12, [], "str", "indexOf", [0, "t"]]
+                ]
+            }
+            </pre>
+        </td>
+        <td style="text-align: center;">$b = $a.indexOf('t');</td>
+        <td style="text-align: center;">字符串方法</td>
+    </tr>
+    <tr>
+        <td>parseInt</td>
+        <td style="text-align: center;">
+            <pre class="language-json">
+            {
+                "type": 6,
+                "express: [
+                    [1, [], 'b'],
+                    [5, '="],
+                    [13, [0, "123"]]
+                ]
+            }
+            </pre>
+        </td>
+        <td style="text-align: center;">$b = parseInt('123');</td>
+        <td style="text-align: center;">字符串转成整数</td>
+    </tr>
+    <tr>
+        <td>parseFloat</td>
+        <td style="text-align: center;">
+            <pre class="language-json">
+            {
+                "type": 6,
+                "express: [
+                    [1, [], 'b'],
+                    [5, '="],
+                    [14, [0, "1.23"]]
+                ]
+            }
+            </pre>
+        </td>
+        <td style="text-align: center;">$b = parseFloat('1.23');</td>
+        <td style="text-align: center;">字符串转成浮点数</td>
     </tr>
     </tbody>
 </table>
