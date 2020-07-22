@@ -50,6 +50,8 @@ Label 可以绘制一段文本
 | breakWords |  boolean  | true | 设置词换行 |
 | textDecoration | ‘None‘ , ‘Overline‘ , ‘LineThrough‘ , ’UnderLine‘ | None | 下划线类型 |
 | textDecorationColor | number | 0x000000 | 下划线颜色 |
+| linearGradientType | ‘vertical’ , ‘horizontal‘ | ‘vertical’ | 线性渐变方向 |
+| linearGradientStops |  number[]  |  | 线性渐变颜色截止比例   (数组元素区间0~1  不填默认均匀分布) |
 
 > [基础样式](/handbook/style.html#样式)
 

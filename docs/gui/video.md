@@ -13,7 +13,7 @@ Video 视频播放
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | src | number , string |  | 设置视频源，url、
-| controls | boolean | true | 设置或返回是否显示默认播放组件
+| autoplay | boolean | false | 设置或返回视频是否自动播放
 | loop | boolean | false | 设置或返回视频是否应在结束时重新播放
 | muted | boolean | false | 设置或返回视频是否静音
 | poster | number , string |  | 设置视频初始海报
@@ -23,7 +23,7 @@ Video 视频播放
 
 ::: warning ⚠️ 
 1：此控件支持的视频格式由所运行系统的视频播放器决定，为了让所有支持的平台都能正确播放视频，推荐使用 mp4 格式的视频。<br>
-2：受部分浏览器劫持，部分参数无法成功修改。受影响参数 ：controls、muted、volume值的改变<br>
+2：受部分浏览器劫持，部分参数无法成功修改。受影响参数 ：muted、volume值的改变<br>
 :::
 
 
@@ -37,6 +37,7 @@ Video 视频播放
 | ended | 视频已经播放到达结束点 | target |
 | loadeddata | 视频首帧已经加载 | target |
 | durationchange | duration 属性的值改变时触发 | target |
+| paused | 视频暂停时触发 | target |
 
 
 ## 方法
@@ -45,7 +46,7 @@ Video 视频播放
 | --- | --- | --- | 
 | play | 开始播放视频 | () |
 | pause | 暂停当前播放的视频 | () |
-| requestFullScreen | 进入全屏模式 | () |
+| requestFullScreen | 进入全屏模式  (注：全屏模式按照当前stage大小适配，而非整个屏幕大小) | () |
 | exitFullscreen | 退出全屏模式 | () |
 
 ## 定义
