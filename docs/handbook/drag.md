@@ -50,7 +50,7 @@
             "type": "Label",
             "dragOption":{
                 "draggable": true,
-                "dropGroup": "group1",
+                "dragGroup": "group1",
                 "collision": true
             }
             
