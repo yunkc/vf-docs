@@ -14,12 +14,15 @@
 |  dragRestrictAxis | x,y | 限制拖动轴 |
 |  dragBoundary | boolean | 限定移动边界，父级 |
 |  dragBounces | boolean | 开启回弹 |
-|  dropGroup | string | 设置分组，拖动目标时设置  |
 |  droppable | boolean | 开启掉落接收 |
+|  dropGroup | string | 设置分组，拖动目标时设置  |
+|  collision | boolean | 是否开启碰撞检测（默认不开启）  |
 |  dragMoveCursor | string | 拖拽移动时鼠标样式 |
 |  actionData | string | 当前操作数据 |
 
 > 设置 `droppable = true` 后，可接收拖动组件，接收必须为`custom`。
+> 
+> 掉落条件默认为鼠标在掉落容器位置抬起。设置 `collision = true`后，掉落条件为拖拽元素与掉落容器产生碰撞。
 
 ## 事件
 
@@ -47,7 +50,8 @@
             "type": "Label",
             "dragOption":{
                 "draggable": true,
-                "dropGroup": "group1"
+                "dragGroup": "group1",
+                "collision": true
             }
             
         }
