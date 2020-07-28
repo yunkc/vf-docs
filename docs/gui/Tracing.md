@@ -30,12 +30,27 @@ Tracing 可引导用户学习写字或字母
 
 ## 定义
 ``` typescript
-
+const tracing: gui.Tracing = {
+  type: guiType.Tracing,
+  debug: true,
+  traceSprite: AssetId.fan,
+  renderBgSprite: AssetId.maskBg,
+  tracePoints: tracePoints,
+  lineTexture: AssetId.maskBg,
+  mode: 0
+};
 ```
 
 ## 使用
 ``` typescript
-
+      {
+      id: "tracing1",
+      libId: Ids.tracing,
+      x: 0,
+      y: 100,
+      width: 260,
+      height: 260
+    }
 ```
 
 ## 示例
