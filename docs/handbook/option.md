@@ -79,7 +79,15 @@ VF Engine >= v0.5.71
 
 ## 扩展
 
-vfvars 可自定义参数，vf默认使用了`cdns`,`plugs`字段。
+vfvars 可自定义参数，vf默认使用了`cdns`,`plugs` 字段。
+
+vfvars: {
+    isMaster:true|false // 角色
+    syncInteractiveFlag: true|false //是否需要同步数据
+    useNativeAudio: true|false //使用端播放声音
+    cdns: {} //设置CDN
+    plugs: {} //内部插件
+}
 
 #### cdns
 
