@@ -3,6 +3,13 @@
 
 Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
+## 插件地址
+
+> [//s.vipkidstatic.com/vf/plugin/spine/0.0.2.js]()
+
+## 类名
+> Spine 
+
 ## 属性
 
 | 属性名 | 属性类型 | 默认值 | 说明 |

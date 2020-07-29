@@ -86,6 +86,7 @@ module.exports = {
                     '/gui/audio.md',
                     '/gui/video',
                     '/gui/particles',
+                    '/gui/spine',
                     '/gui/followLine',
                     '/gui/Tracing',
                     '/gui/textChoice',
