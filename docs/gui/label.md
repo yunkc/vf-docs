@@ -55,6 +55,12 @@ Label 可以绘制一段文本
 
 > [基础样式](/handbook/style.html#样式)
 
+::: warning ⚠️ font加载注意事项 
+1：目前font加载支持ttf，woff，woff2三种格式,受浏览器兼容影响，推荐使用ttf格式。<br>
+2：受ios11版本浏览器规范限制，font资源名不可以使用纯数字或纯数字类型字符串<br>
+3：ios9及以下版本，第一次使用font才会加载，不能确定加载完成时间。需要业务层按照需求实现（如使用前，预留足够的加载时间，创建使用目标字体的临时文本）。<br>
+:::
+
 ## 定义
 ``` typescript
 const label: gui.Label = {
