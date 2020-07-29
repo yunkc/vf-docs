@@ -14,9 +14,9 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| ske_json |any | 无 | spine动画数据(.json) |
-| ske_atlas |any | 无 | spine动画数据(.atlas) |
-| ske_tex |any | 无 | spine动画数据(.png) |
+| sourceSke |any | 无 | spine动画数据(.json) |
+| sourceAtlas |any | 无 | spine动画数据(.atlas) |
+| sourceTex |any | 无 | spine动画数据(.png) |
 | autoPlay |boolean | false | 是否自动播放 |
 | animationName |string | 无 | 动画名字 |
 | loop |boolean | 无 | 是否循环播放 |
