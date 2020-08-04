@@ -53,6 +53,7 @@
 | visible | boolean | true | 设置隐藏元素 |
 | visibility | boolean | true |  设置隐藏元素 |
 | backgroundColor | number |  | 设置元素背景色 |
+| backgroundRadius | number | 0 | 设置元素背景圆角 |
 | backgroundImage | string,Texture |  | 设置元素背景图像 |
 | backgroundPositionX | number | 0 | 设置元素背景图像X轴位置 |
 | backgroundPositionY | number | 0 | 设置元素背景图像Y轴位置 |
