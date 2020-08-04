@@ -78,6 +78,7 @@ module.exports = {
                     '/gui/checkbox',
                     '/gui/rect',
                     '/gui/circle',
+                    '/gui/star',
                     '/gui/textInput',
                     '/gui/slider',
                     '/gui/connectLine',
