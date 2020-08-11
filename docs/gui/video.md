@@ -16,16 +16,15 @@ Video 视频播放
 | autoplay | boolean | false | 设置或返回视频是否自动播放
 | loop | boolean | false | 设置或返回视频是否应在结束时重新播放
 | muted | boolean | false | 设置或返回视频是否静音
-| poster | number , string |  | 设置视频初始海报
 | currentTime | number |  | 设置或返回视频当前播放进度
 | duration | number |  | (只读) 返回视频总长度
 | volume | 0-1 | 1 | 设置或返回视频的音量 |
 
 ::: warning ⚠️ 
-1：此控件支持的视频格式由所运行系统的视频播放器决定，为了让所有支持的平台都能正确播放视频，推荐使用 mp4 格式的视频。<br>
+1：理论支持mp4、m4v、webm、ogg、ogv、h264、avi、mov， 受各浏览器兼容问题，推荐使用 mp4 格式的视频。<br>
 2：受部分浏览器劫持，部分参数无法成功修改。受影响参数 ：muted、volume值的改变<br>
-3：部分浏览器自动播放需要手势触发，或者静音播放。
-4：部分设备兼容性问题，会显示controls标签，且视频播放会强制在最上层。
+3：部分浏览器自动播放需要手势触发，或者静音播放。<br>
+4：部分设备兼容性问题，会显示controls标签，且视频播放会强制在最上层。<br>
 :::
 
 
