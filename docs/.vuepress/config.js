@@ -91,6 +91,7 @@ module.exports = {
                     '/gui/video',
                     '/gui/particles',
                     '/gui/spine',
+                    '/gui/matter',
                     '/gui/followLine',
                     '/gui/Tracing',
                     '/gui/textChoice',
