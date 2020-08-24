@@ -61,22 +61,45 @@ const matter = {
     type: 'Matter',
     name: 'Matter',
     options:{
-        gravityScale: 1
+            positionIterations: 6,  //(选填)执行每个更新的位置迭代次数.值越高仿真效果越好，性能为代价 
+            velocityIterations: 4, // (选填)执行每个更新的速度迭代次数。值越高，仿真的质量越高，性能为代价
+            constraintIterations: 2,// (选填)执行每个更新的约束迭代次数.值越高仿真效果越好，性能为代价
+            enableSleeping: false,     //(选填)是否支持休眠
+            timestamp: 0,  //(选填)更新时间戳
+            timeScale: 1,  //(选填)时间缩放比例
+            gravityX: 0; //(选填)重力x轴分量
+            gravityY: 1, //(选填)重力y轴分量
+            gravityScale: 0.001, //(选填)重力缩放
+            mouseConstraint: false //(选填)鼠标干预
     },
     bodies: [
             {
                 id: 0,
-                shape: ShapeEnum.rectangle,
-                width: 200, 
-                height: 32,
-                displayObject: 'this#rect',
-                x: 200,
-                y: 200,
-                isStatic: true
+                shape: 'rectangle',  //  (必填)形状 --rectangle, circle, polygon, vertices
+                width: 200,          // (必填)刚体宽度
+                height: 32,          //(必填)刚体高度
+                displayObject: 'this#rect',  //(必填)显示对象
+                x: 200,    //(必填)坐标x
+                y: 200,    //(必填)坐标y
+                isStatic: true,  //(选填)是否静态刚体
+                isSensor: false,  //(选填)是否传感器，传感器只感知碰撞，不做碰撞拦截
+                restitution: 0, //(选填)弹力
+                friction: 0.001, //(选填)摩擦力
+                frictionStatic: 1, //(选填)静摩擦
+                frictionAir: 0.01,  //(选填)空气摩擦（空气浮力）
+                group: -1,  // (选填)碰撞分组
+                mask: 0xffffff,  //(选填)碰撞掩码
+                category: 1, //(选填)碰撞类别
+                collision: true, //(选填)是否开启碰撞检测
+                density: 0.001,  //(选填)密度
+                forceX: 0, //(选填)x轴受力
+                forceY: 0, //(选填)y轴受力
+                torque: 0, //(选填)转向力（扭矩）
+                timeScale: 1  //(选填)时间缩放
             },
             {
                 id: 1,
-                shape: ShapeEnum.rectangle,
+                shape: 'rectangle',
                 width: 1000,
                 height: 20,
                 displayObject: 'this#title',
@@ -87,8 +110,18 @@ const matter = {
             },
             {
                 id: 2,
-                shape: ShapeEnum.circle,
+                shape: 'circle',  //(必填)圆
+                radius: 10,       //(必填)刚体半径
+                displayObject: 'this#circle',
+                x: 160,
+                y: 210,
+                group: -5
+            },
+            {
+                id: 3,
+                shape: 'polygon',  //(必填)正多边型
                 radius: 10,
+                sides: 5,  //(必填)正多边型边数
                 displayObject: 'this#circle',
                 x: 160,
                 y: 210,
@@ -97,12 +130,14 @@ const matter = {
     ],
     constraints: [
             {
-                ids: [301],
-                bodies: [0, 2],
-                stiffness: 1,
-                pointBX: -50,
-                pointBY: 0,
-                length: 0
+                ids: [301],      //(必填)约束的id数组
+                bodies: [0, 2],  //(必填)约束的body数组， 分别表示bodyA、bodyB，如果多余2个，则表示两两之前互相约束
+                stiffness: 1,    //(必填)约束力  1-完全约束
+                pointAX: -50,    //(选填)bodyA约束点相对于锚点的偏移
+                pointAY: 0,      //(选填)bodyA约束点相对于锚点的偏移
+                pointBX: -50,    //(选填)bodyB约束点相对于锚点的偏移
+                pointBY: 0,      //(选填)bodyB约束点相对于锚点的偏移
+                length: 0        //(选填)约束的长度
             }
     ]
 ```
