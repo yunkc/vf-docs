@@ -131,7 +131,7 @@ const matter = {
     constraints: [
             {
                 ids: [301],      //(必填)约束的id数组
-                bodies: [0, 2],  //(必填)约束的body数组， 分别表示bodyA、bodyB，如果多余2个，则表示两两之前互相约束
+                bodies: [0, 2],  //(必填)约束的body数组， 分别表示bodyA、bodyB，如果多余2个，则表示两两之间互相约束
                 stiffness: 1,    //(必填)约束力  1-完全约束
                 pointAX: -50,    //(选填)bodyA约束点相对于锚点的偏移
                 pointAY: 0,      //(选填)bodyA约束点相对于锚点的偏移
