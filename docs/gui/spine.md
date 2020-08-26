@@ -14,13 +14,16 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| sourceSke |any | 无 | spine动画数据(.json) |
-| sourceAtlas |any | 无 | spine动画数据(.atlas) |
-| sourceTex |any | 无 | spine动画数据(.png) |
+| source |any | 无 | spine动画数据(.json) |
 | autoPlay |boolean | false | 是否自动播放 |
 | animationName |string | 无 | 动画名字 |
 | loop |boolean | 无 | 是否循环播放 |
 | timeScale |number | 无 | 动画速率|
+
+如source无效，可使用下面参数尝试
+| sourceSke |any | 无 | spine动画数据(.json) |
+| sourceAtlas |any | 无 | spine动画数据(.atlas) |
+| sourceTex |any | 无 | spine动画数据(.png) |
 
 ## 方法
 | 方法名 | 参数 | 返回值 | 说明 |
