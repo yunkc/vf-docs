@@ -5,7 +5,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
 ## 插件地址
 
-> [//s.vipkidstatic.com/vf/plugin/spine/0.0.3.js]()
+> [//s.vipkidstatic.com/vf/plugin/spine/0.0.4.js]()
 
 ## 类名
 > Spine 
@@ -58,7 +58,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 const assets: Assets = {
     [Ids.spine]:{
         type: AssetType.js,
-        url: "//s.vipkidstatic.com/vf/plugin/spine/0.0.3.js",
+        url: "//s.vipkidstatic.com/vf/plugin/spine/0.0.4.js",
         name: "Spine",
     },
 }
