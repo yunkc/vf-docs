@@ -8,7 +8,7 @@ Ellipse 可绘制椭圆
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| lineColor | number | 0 | 设置边框颜色 |
+| lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | width | number | 0 | 椭圆宽 |
 | height | number | 0 | 椭圆高 |

@@ -27,7 +27,7 @@ Label 可以绘制一段文本
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| color |  number , number[] | 0x000000 | 设置字体颜色，16进制，如果是数组会有过渡效果 |
+| color |  number , number[] | 0xffffff | 设置字体颜色，16进制，如果是数组会有过渡效果 |
 | letterSpacing | number |  | 设置字符间距 |
 | wordWrap | boolean | false | 设置自动换行 |
 | wordWrapWidth | number |  | 设置换行宽度，多行文本 |

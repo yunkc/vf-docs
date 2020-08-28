@@ -10,7 +10,7 @@ Circle 可绘制圆形
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | radius | number | 0 | 设置圆半径 |
-| lineColor | number | 0 | 设置边框颜色 |
+| lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
 | color | number | | 设置填充色 |
