@@ -8,11 +8,10 @@ Star 可绘制星型或正多边形
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| radius | number | 0 | 设置外半径 |
-| innerRadius | number | radius/2 | 设置内半径 |
+| innerRadius | number | 0.5 | 设置内外半径比值 |
 | triangleNum | number | 5 | 设置角数 |
 | fillStar | boolean | false | 是否填充 |
-| lineColor | number | 0 | 设置边框颜色 |
+| lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
 | color | number | | 设置填充色 |

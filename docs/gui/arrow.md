@@ -9,10 +9,10 @@ Arrow 可绘制箭头
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | radius | number | 0 | 设置圆角 |
-| lineColor | number | 0 | 设置边框颜色 |
+| lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
-| fullArrow | boolean | | 设置箭头填充 |
+| color | number | | 设置填充色 |
 | anchorX | 0-1 |  | 设置内部X坐标 |
 | anchorY | 0-1 |  | 设置内部Y坐标 |
 

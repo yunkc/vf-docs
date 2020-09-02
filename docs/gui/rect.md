@@ -11,7 +11,7 @@ Rect 可绘制普通或圆角矩形
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | radius | number | 0 | 设置圆角 |
-| lineColor | number | 0 | 设置边框颜色 |
+| lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | color | number | | 设置填充色 |
 | anchorX | 0-1 |  | 设置内部X坐标 |
