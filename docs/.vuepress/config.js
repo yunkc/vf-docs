@@ -96,6 +96,7 @@ module.exports = {
                     '/gui/Tracing',
                     '/gui/textChoice',
                     '/gui/textFillBlanks',
+                    '/gui/device',
                 ]
             },
             {
