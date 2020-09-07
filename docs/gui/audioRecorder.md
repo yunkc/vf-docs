@@ -14,8 +14,10 @@ AudioRecorder  录音组件,支持录音、获取blob、获取原始buffer、播
 ## 属性
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
+| --- | --- | --- | --- | --- |
 | blob | Blob | 无 | 返回编码为wav后的blob |
-| buffer | Float32Array | 无 | 返回录音的原始数据 |
+| originBuffer | Float32Array | 无 | 返回录音的原始数据 |
+| wavBuffer | ArrayBuffer | 无 | 返回录音wav编码后的数据 |
 | volume | number | 无 | 返回录音的实时音量 |
 | byteTimeDomainData | Unit8Array | 无 | 返回录音的实时波形时域数据，长度为2048 |
 
