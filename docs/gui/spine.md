@@ -71,9 +71,7 @@ const assets: Assets = {
 }
 const spine = {
     type: "Spine",
-    ske_json: Ids.ske_json,
-    ske_atlas: Ids.ske_atlas,
-    ske_tex: Ids.ske_tex,
+    source: Ids.ske_json,
     autoPlay: true,
     animationName: "breathe",
     loop: true,
