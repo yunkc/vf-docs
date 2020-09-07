@@ -129,3 +129,41 @@ new vf.gui.Tween(image).to({ rotation: -85 }, 2000)
 ```
 vf.gui.Tween.to(image,{ rotation: -85 },2000).start();
 ```
+
+## 事件
+
+事件有添加，就要有卸除，避免造成泄漏，一般移除卸载onRelease方法中
+
+点击事件类型： vf.gui.Interaction.TouchMouseEvent.xxxx
+拖拽事件类型： vf.gui.Interaction.ComponentEvent.DRAG_XXXX
+
+### 事件监听
+```
+const rect = new vf.gui.Rect();
+rect.interactabled = true;
+rect.on(vf.gui.Interaction.TouchMouseEvent.onClick, this.onClick, this);
+
+private onClick(e: vf.gui.Interaction.InteractionEvent) {
+    console.log(e.type);
+}
+```
+### 事件移除
+```
+rect.off(vf.gui.Interaction.TouchMouseEvent.onClick, this.onClick, this)
+```
+### 移除全部事件
+```
+rect.offAll();
+```
+
+## 坐标转换
+
+事件中的坐标为全局坐标，如果转换为本地坐标，可执行下面的方法：
+```
+private onClick(e: vf.gui.Interaction.InteractionEvent) {
+    console.log(vf.gui.Utils.toLocal(e.data.global,e.target));
+}
+```
+
+### 方法
+vf.gui.Utils.toLocal(全局坐标，本地显示对象)
