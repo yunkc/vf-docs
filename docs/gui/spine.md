@@ -7,6 +7,10 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
 > [//s.vipkidstatic.com/vf/plugin/spine/0.0.4.js]()
 
+## 最低版本
+
+需使用Spine工具3.8.9x版本导出资源配置
+
 ## 类名
 > Spine 
 
