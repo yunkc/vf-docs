@@ -113,6 +113,8 @@ async function load(){
 
 ## 缓动动画
 ```
+// Tween(对象)).to({ 属性: 目标值 }, 持续时间)
+
 new vf.gui.Tween(image).to({ rotation: -85 }, 2000)
             .repeat(Infinity)[可选，重复次数]
             .easing(vf.gui.Easing.Linear.None)[可选，加速度函数]
