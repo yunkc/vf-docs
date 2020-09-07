@@ -60,6 +60,14 @@ async function load(){
 
 ```
 
+### 获取已经加载的GUI或插件模块
+```
+    const plugClass = vf.utils.getGuiModule('plugClassName');
+    if(plugClass){
+        return new plugClass();
+    }
+```
+
 ## 获取文件后缀名
 
 `VF版本 >= v0.8.0`
@@ -103,3 +111,19 @@ async function load(){
 
 本接口在APP端中可使用。
 
+## 缓动动画
+```
+new vf.gui.Tween(image).to({ rotation: -85 }, 2000)
+            .repeat(Infinity)[可选，重复次数]
+            .easing(vf.gui.Easing.Linear.None)[可选，加速度函数]
+            .yoyo(true) [可选，反转动画]
+            .delay(0) [可选，延迟播放，毫秒]
+            .on(vf.gui.Tween.Event.update,(obj: any) => {})[可选，动画事件]
+            .start();
+
+```
+
+### 快速使用
+```
+vf.gui.Tween.to(image,{ rotation: -85 },2000).start();
+```
