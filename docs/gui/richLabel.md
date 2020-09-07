@@ -70,7 +70,7 @@ const assets: Assets = {
 
 > 可点击左上角菜单，查看其他定义类
 
-<iframe src="https://codesandbox.io/embed/richlabelexample-ocnb8?fontsize=14&hidenavigation=1&theme=dark"
+   <iframe src="https://codesandbox.io/embed/richlabelexample-ocnb8?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
      style="width:100%; height:720px; border:0; border-radius: 4px; overflow:hidden;"
      title="richLabelExample"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
