@@ -65,6 +65,7 @@ module.exports = {
                     '/handbook/interface',
                     '/handbook/gui-plugs',
                     '/handbook/filter-plugs',
+                    '/handbook/project'
                 ]
             },
             {
