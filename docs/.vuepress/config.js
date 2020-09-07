@@ -90,6 +90,7 @@ module.exports = {
                     '/gui/ScrollBar',
                     '/gui/audio.md',
                     '/gui/video',
+                    '/gui/audioRecorder',
                     '/gui/particles',
                     '/gui/spine',
                     '/gui/matter',
