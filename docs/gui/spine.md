@@ -5,7 +5,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
 ## 插件地址
 
-> [//s.vipkidstatic.com/vf/plugin/spine/0.0.4.js]()
+> [//s.vipkidstatic.com/vf/plugin/spine/0.0.5.js]()
 
 ## 最低版本
 
@@ -38,6 +38,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 | pause | 无 | 无 | 暂停动画，可用play（）恢复 |
 | gotoAndStopByFrame | frame:number | 无 | 跳转并停止到固定帧 |
 | gotoAndPlayByFrame | frame:number | 无 | 从某一帧开始播放 |
+| setSkinByName | 无 | 无 | 设置皮肤，皮肤需要内置与配置文件中 |
 
 
 
@@ -65,7 +66,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 const assets: Assets = {
     [Ids.spine]:{
         type: AssetType.js,
-        url: "//s.vipkidstatic.com/vf/plugin/spine/0.0.4.js",
+        url: "//s.vipkidstatic.com/vf/plugin/spine/0.0.5.js",
         name: "Spine",
     },
 }
