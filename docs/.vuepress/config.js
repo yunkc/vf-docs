@@ -116,13 +116,13 @@ module.exports = {
                 collapsable: true,
                 sidebarDepth: 1,
                 children: [
-                    '/update/v0.8.0.md',
-                    '/update/v0.7.2.md',
-                    '/update/v0.6.28.md',
-                    '/update/v0.5.74.md',
-                    '/update/v0.4.0.md',
-                    '/update/v0.3.31.md',
-                    '/update/v0.1.3.md',
+                    '/update/v0.8.0',
+                    '/update/v0.7.2',
+                    '/update/v0.6.28',
+                    '/update/v0.5.74',
+                    '/update/v0.4.0',
+                    '/update/v0.3.31',
+                    '/update/v0.1.3',
                 ]
             }
         ]
