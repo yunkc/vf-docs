@@ -37,7 +37,7 @@ const circle: gui.Circle = {
     color:0xffffff,
     lineColor: 0xff00cc,
     lineWidth: 1,
-    radius:100
+    width:100
 };
 ```
 
