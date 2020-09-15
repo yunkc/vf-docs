@@ -35,6 +35,10 @@ RichLabel 可以绘制一段样式不同的文本
 | dropShadowDistance |  number  | 5 | 设置投影深度 |
 | href |  string  | "" | 事件 |
 
+## 方法
+| 函数名 | 参数 | 函数返回值 | 说明 |
+| release |  |  | 销毁 |
+
 ## 样式
 
 (style属性)
