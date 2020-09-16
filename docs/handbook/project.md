@@ -186,6 +186,33 @@ let timeLine = new vf.gui.TimeLine({
     timeLine = null;
 ```
 
+## 路径动画
+``` js
+    const p = "M60 171Q58 181 54 193Q26 255 16 277Q22 349 32 371Q10 457 66 477"; //svg格式 M：moveto L：lineto Q：二次贝塞尔曲线 C：三次贝塞尔曲线
+    const p1 = new vf.gui.NumberFrame(); 
+    p1.time = 0;    //时间戳
+    p1.ease = vf.gui.Easing.Quartic.InOut; //p1到p2的移动线性函数
+    p1.value = 0;   //起始值   （0，1）
+    const p2 = new vf.gui.NumberFrame();
+    p2.ease = vf.gui.Easing.Quartic.In;//p2到p3的移动线性函数
+    p2.time = 1000;
+    p2.value = 0.8;
+    const p3 = new vf.gui.NumberFrame();
+    p3.time = 3000;
+    p3.value = 1;
+    // pa.totalTime = 30000;
+    const path = vf.gui.Animation.play("path", //动画类型
+                                        sprite, //对象
+                                        { frames: [p1, p2, p3], loop: false, path: p }, //参数
+                                        -1, //路径动画此参数无效
+                                        () => { //loop === false时的完成回调
+                                            console.log("播放完成");
+                                        });
+    //销毁
+    path.release(); //或者 vf.gui.Animation.releaseAll();  清除所有动画
+
+```
+
 ## 事件
 
 事件有添加，就要有卸除，避免造成泄漏，一般移除卸载onRelease方法中
