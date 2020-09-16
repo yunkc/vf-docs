@@ -130,9 +130,9 @@ new vf.gui.Tween(image).to({ rotation: -85 }, 2000)
 vf.gui.Tween.to(image,{ rotation: -85 },2000).start();
 ```
 
-## 动画控制轴
-```
-// TimeLine().to(对象，持续时间，{ 属性: 目标值 },时间轴位置(毫秒))
+## 时间轴动画
+``` js
+// TimeLine().to(对象，持续时间，{ 属性: 目标值 },放置时间轴位置(毫秒))
 
 let timeLine = new vf.gui.TimeLine({
             repeat: 2, [可选，重复次数吗，-1为无限循环，默认为0]
@@ -152,9 +152,16 @@ let timeLine = new vf.gui.TimeLine({
             onUpdateParams:null,[可选]
         }).to(image, 1000, {
                 x: 200, ease: vf.gui.Easing.Linear.None,
-                onUpdate: function () {}
+                onStart: () => {},[可选，正向开始播放回调]
+                onUpdate: () => {},[可选，帧播放回调]
+                onComplete: () => {},[可选，正向播放完成回调]
+                onReverseComplete: () => {},[可选，逆向播放完成回调]
+                onStartParams:null,[可选]
+                onUpdateParams:null,[可选]
+                onCompleteParams:null,[可选]
+                onReverseCompleteParams:null,[可选]
             }, 0)
-            .to(image, 500, { alpha: 0 }, -1000)
+            .to(image, 500, { alpha: 0 }, 1000)
             .to(image1, 500, {
                 y: 800, ease: vf.gui.Easing.Cubic.InOut,
                 onUpdate: function () {}
@@ -165,7 +172,7 @@ let timeLine = new vf.gui.TimeLine({
             .to(image1, 2000, { scaleX: 0.5 }, 4000);
 
 ```
-```
+``` js
     //播放
     timeLine.play();
     //跳转（不改变当前播放状态）
