@@ -81,6 +81,7 @@ module.exports = {
                     '/gui/circle',
                     '/gui/star',
                     '/gui/polygon',
+                    '/gui/pathGraphics',
                     '/gui/arrow',
                     '/gui/ellipse',
                     '/gui/isosceles',
