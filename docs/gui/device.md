@@ -9,7 +9,7 @@ Deviceorientation 陀螺仪信息
 
 ## 插件地址
 
-> [//s.vipkidstatic.com/vf/plugin/device/0.0.3.js]()
+> [//s.vipkidstatic.com/vf/plugin/device/0.0.5.js]()
 
 ## 类名
 > Deviceorientation 
@@ -70,7 +70,7 @@ Deviceorientation 陀螺仪信息
 const assets: Assets = {
   Deviceorientation: {
     type: AssetType.js,
-    url: "https://s.vipkidstatic.com/vf/plugin/device/0.0.3.js",
+    url: "https://s.vipkidstatic.com/vf/plugin/device/0.0.5.js",
     name: "Deviceorientation"
   }
 }

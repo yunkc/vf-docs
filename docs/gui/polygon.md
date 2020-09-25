@@ -1,8 +1,6 @@
-# 矩形 Rect
+# 正多边形 Polygon
 
-Rect 可绘制普通或圆角矩形
-
-> 圆角值 < width/2
+Polygon 可绘制正多边形
 
 > 不设置 lineWidth 或 color 矩形不可见
 
@@ -10,9 +8,10 @@ Rect 可绘制普通或圆角矩形
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| radius | number | 0 | 设置圆角 |
+| triangleNum | number | 5 | 设置角数 |
 | lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
+| lineType | "full" , "dash" | "full" | 虚线or实线 |
 | color | number | | 设置填充色 |
 | anchorX | 0-1 |  | 设置内部X坐标 |
 | anchorY | 0-1 |  | 设置内部Y坐标 |
@@ -32,21 +31,21 @@ Rect 可绘制普通或圆角矩形
 
 ## 定义
 ``` typescript
-const rect: gui.Rect = {
-    name: "rect",
-    type: guiType.Rect,
+const star: gui.Polygon = {
+    name: "polygon",
+    type: guiType.Polygon,
     color:0xffffff,
     lineColor: 0xff00cc,
     lineWidth: 1,
-    radius:10
+    triangleNum:10
 };
 ```
 
 ## 使用
 ``` typescript
 {
-id: "rect",
-libId: ComponentId.rect,
+id: "polygon",
+libId: ComponentId.polygon,
 style: {
     width: 100,
     height: 100
@@ -58,10 +57,9 @@ style: {
 
 > 可点击左上角菜单，查看其他定义类
 
-<iframe
-     src="https://codesandbox.io/embed/rect-m0yft?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
+   <iframe src="https://codesandbox.io/embed/polygonexample-4u5y2?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
      style="width:100%; height:720px; border:0; border-radius: 4px; overflow:hidden;"
-     title="rect"
+     title="polygonExample"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+   ></iframe>

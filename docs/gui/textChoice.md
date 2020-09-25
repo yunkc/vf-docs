@@ -5,7 +5,7 @@ TextChoice 可实现文本混排类选择题模板
 
 ## 库信息
 库地址:
-> https://s.vipkidstatic.com/vf/plugin/TextChoice/0.0.1.js
+> https://s.vipkidstatic.com/vf/plugin/TextChoice/0.0.7.js
 
 类名
 > TextChoice 
@@ -38,7 +38,7 @@ TextChoice 可实现文本混排类选择题模板
 const assets: Assets = {
     [Ids.textChoice]:{
         type: AssetType.JS,
-        url: "//s.vipkidstatic.com/vf/plugin/TextChoice/0.0.2.js",
+        url: "//s.vipkidstatic.com/vf/plugin/TextChoice/0.0.7.js",
         name: "TextChoice",
     }
 }

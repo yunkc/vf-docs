@@ -38,6 +38,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 | pause | 无 | 无 | 暂停动画，可用play（）恢复 |
 | gotoAndStopByFrame | frame:number | 无 | 跳转并停止到固定帧 |
 | gotoAndPlayByFrame | frame:number | 无 | 从某一帧开始播放 |
+| setSkinByName | skinName:string | 无 | 设置皮肤，皮肤需要内置与配置文件中 |
 
 
 
@@ -71,9 +72,7 @@ const assets: Assets = {
 }
 const spine = {
     type: "Spine",
-    ske_json: Ids.ske_json,
-    ske_atlas: Ids.ske_atlas,
-    ske_tex: Ids.ske_tex,
+    source: Ids.ske_json,
     autoPlay: true,
     animationName: "breathe",
     loop: true,

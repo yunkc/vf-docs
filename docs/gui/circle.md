@@ -9,7 +9,8 @@ Circle 可绘制圆形
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| radius | number | 0 | 设置圆半径 |
+| width | number | 0 | 圆直径为width/height小值 |
+| height | number | 0 | 圆直径为width/height小值 |
 | lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
@@ -24,6 +25,10 @@ Circle 可绘制圆形
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
 
+## 方法
+| 函数名 | 参数 | 函数返回值 | 说明 |
+| drawGraph |  |  | 绘制图形 |
+
 ## 样式
 
 > [基础样式](/handbook/style.html#样式)
@@ -36,7 +41,7 @@ const circle: gui.Circle = {
     color:0xffffff,
     lineColor: 0xff00cc,
     lineWidth: 1,
-    radius:100
+    width:100
 };
 ```
 

@@ -103,7 +103,27 @@ const PlayAudio: gui.SpriteAnimated = {
 }
 }
 ```
+## 编程方式
 
+``` js
+const animationData = [
+    {
+        texture: vf.Texture;
+        time: number;
+    },
+    {
+        texture: vf.Texture;
+        time: number;
+    },
+    {
+        texture: vf.Texture;
+        time: number;
+    }
+]
+
+const sp = new vf.gui.SpriteAnimated();
+sp.src = animationData;
+```
 
 ## 示例
 

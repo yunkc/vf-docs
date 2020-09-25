@@ -44,12 +44,13 @@ Video 视频播放
 
 ## 方法
 
-| 事件名  | 说明 | 参数 |
+| 方法名  | 说明 | 参数 |
 | --- | --- | --- | 
 | play | 开始播放视频 | () |
 | pause | 暂停当前播放的视频 | () |
 | requestFullScreen | 进入全屏模式  (注：全屏模式按照当前stage大小适配，而非整个屏幕大小) | () |
 | exitFullscreen | 退出全屏模式 | () |
+| release | 销毁 | () |
 
 ## 定义
 ``` typescript

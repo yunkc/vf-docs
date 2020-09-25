@@ -65,6 +65,7 @@ module.exports = {
                     '/handbook/interface',
                     '/handbook/gui-plugs',
                     '/handbook/filter-plugs',
+                    '/handbook/signal',
                     '/handbook/project'
                 ]
             },
@@ -80,10 +81,13 @@ module.exports = {
                     '/gui/rect',
                     '/gui/circle',
                     '/gui/star',
+                    '/gui/polygon',
+                    '/gui/pathGraphics',
                     '/gui/arrow',
                     '/gui/ellipse',
                     '/gui/isosceles',
                     '/gui/textInput',
+                    '/gui/richLabel',
                     '/gui/slider',
                     '/gui/connectLine',
                     '/gui/spriteAnimated',
@@ -107,6 +111,21 @@ module.exports = {
                 sidebarDepth: 0,
                 children: [
                     '/questions/',
+                ]
+            },
+            {
+                title: '更新列表',
+                collapsable: true,
+                sidebarDepth: 1,
+                children: [
+                    '/update/v0.9.x',
+                    '/update/v0.8.0',
+                    '/update/v0.7.2',
+                    '/update/v0.6.28',
+                    '/update/v0.5.74',
+                    '/update/v0.4.0',
+                    '/update/v0.3.31',
+                    '/update/v0.1.3',
                 ]
             }
         ]

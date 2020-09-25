@@ -215,20 +215,44 @@ export default {
 然后在入口 html 文件初始化 VF，启动一个 http-server 服务，简单配置后便可以在浏览器查看运行效果了
 ```html
 <body>
-  <div id="vf-container"/>
+  <div id="vf-container" style="width:1000px;height:700px" />
   <script>
-      const vf = new VF({
-          bgcolor: '0xffffff',
-          engineVersion: "0.0.42", // 引擎版本号，可以在这里手动更新引擎
-          src: './vf-json/index.json', // VF引擎需要的 JSON 数据， 一般为 *.ts 文件生成后的 json 路径
-          container: document.querySelector('#vf-container'), // 将 VF 挂载到指定容器 
-      });
+        const VF_CONFIG = {
+        debug: true,
+        bgcolor: '0xffffff',
+        container: document.querySelector('#vf-container'), // 将 VF 挂载到指定容器 
+      }
+      createVF(VF_CONFIG, function (player) {
+          player.onReady = function() {
+            console.log("onReady"); //初始化完成
+          }
+
+          player.onSceneCreate = function() {
+            console.log("onSceneCreate"); //资源加载完成
+          }
+
+          player.onMessage = function(msg) {
+            console.log("onMessage ==>", msg);
+          }
+
+          player.onError = function(evt) {
+            console.log("onError ==>", evt);
+          }
+
+          player.onDispose = function() {
+            console.log("onDispose");
+          }
+
+          player.play('./vf-json/index.json')
+        });
   </script>
 </body>
 ```
 
 ::: tip 提示
 了解更多有关 VF 引擎配置的信息，请访问 [VF配置选项](/handbook/option) 或 [VF接口](/handbook/interface)
+
+注意设置vf-container窗口的大小来确定最终视窗
 :::
 
 **最终效果展示:**

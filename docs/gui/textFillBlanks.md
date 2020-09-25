@@ -5,7 +5,7 @@ TextFillBlanks 可实现文本混排类填空题模板
 
 ## 库信息
 库地址:
-> https://s.vipkidstatic.com/vf/plugin/TextFillBlanks/0.0.1.js
+> https://s.vipkidstatic.com/vf/plugin/TextFillBlanks/0.0.16.js
 
 类名
 > TextFillBlanks 
@@ -45,7 +45,7 @@ TextFillBlanks 可实现文本混排类填空题模板
 const assets: Assets = {
     [Ids.textFillBlanks]:{
         type: AssetType.JS,
-        url: "//s.vipkidstatic.com/vf/plugin/TextFillBlanks/0.0.2.js",
+        url: "//s.vipkidstatic.com/vf/plugin/TextFillBlanks/0.0.16.js",
         name: "TextFillBlanks",
     },
 }

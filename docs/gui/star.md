@@ -10,7 +10,6 @@ Star 可绘制星型或正多边形
 | --- | --- | --- | --- | --- |
 | innerRadius | number | 0.5 | 设置内外半径比值 |
 | triangleNum | number | 5 | 设置角数 |
-| fillStar | boolean | false | 是否填充 |
 | lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
@@ -22,6 +21,11 @@ Star 可绘制星型或正多边形
 
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
+
+## 方法
+| 函数名 | 参数 | 函数返回值 | 说明 |
+| drawGraph |  |  | 绘制图形 |
+| release |  |  | 销毁 |
 
 ## 样式
 
