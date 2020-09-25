@@ -41,7 +41,7 @@ Label 可以绘制一段文本
 | fontSize | number | 22 | 设置字体大小 |
 | fontStyle | ‘normal" , ‘italic‘ , ‘oblique‘ | normal |设置文字或字体斜体样式 |
 | fontVariant | ‘normal‘ , ‘small-caps‘ | normal | 设置普通或小型大写字母字体 |
-| fontWeight |  ‘normal’ , 'bold' , 'bolder' , 'lighter' , number  | normal | 设置字体粗细 |
+| fontWeight |  ‘normal’ , 'bold' , 'bolder' , 'lighter' , 'n100' ,'n200',<br> 'n300','n400','n500','n600','n700','n800','n900'  | normal | 设置字体粗细 (例：fontWeight = ‘normal’ as any)|
 | padding |  number  |  | 设置填充值 |
 | stroke |  string , number  |  | 设置描边颜色 |
 | strokeThickness |  number  | 0 | 设置描边笔触粗细 |

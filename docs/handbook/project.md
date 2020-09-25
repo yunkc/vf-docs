@@ -249,4 +249,13 @@ private onClick(e: vf.gui.Interaction.InteractionEvent) {
 ```
 
 ### 方法
+
+全局 to 本地
+```
 vf.gui.Utils.toLocal(全局坐标，本地显示对象)
+```
+
+本地 to 全局
+```
+vf.gui.Utils.toGlobal(本地坐标，本地显示对象)
+```
