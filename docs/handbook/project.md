@@ -121,7 +121,8 @@ new vf.gui.Tween(image).to({ rotation: -85 }, 2000)
             .yoyo(true) [可选，反转动画]
             .delay(0) [可选，延迟播放，毫秒]
             .on(vf.gui.Tween.Event.update,(obj: any) => {})[可选，动画事件]
-            .start();
+            .start();//计算delay的播放
+            //.play(); //立即播放 忽略delay
 
 ```
 
