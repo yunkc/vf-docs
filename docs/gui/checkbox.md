@@ -21,7 +21,7 @@ CheckBox 设置单选或多选
 | downAndSelected | number,string |  | 设置选中时鼠标按钮图片 |
 | moveAndSelected | number,string | | 设置选中时鼠标移动时图片 |
 | disabledAndSelected | number,string |  | 设置选中时不可用图片 |
-| moveEvent | boolean | false | 是否监听move事件，默认不开启 |
+| useMoveEvent | boolean | false | 是否监听move事件，默认不开启 |
 
 ## 事件
 
