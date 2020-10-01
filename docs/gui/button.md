@@ -11,6 +11,7 @@ Button 可设置状态皮肤的交互按钮
 | down | number,string |  | 设置鼠标按钮图片 |
 | move | number,string | | 设置鼠标移动时图片 |
 | disabled | number,string |  | 设置不可用时图片 |
+| moveEvent | boolean | false | 是否监听move事件，默认不开启 |
 
 ## 事件
 
