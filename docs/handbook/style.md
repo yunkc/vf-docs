@@ -25,8 +25,7 @@
 | filterBlur | number |  | 设置模糊强度，更多滤镜，参考插件-滤镜 |
 | filterGrayscale | number |  | 设置灰度，更多滤镜，参考插件-滤镜 |
 | style | number,string |  | 设置对象的样式与布局，参考样式属性 |
-
-> 使用方式 buton.x = 100  
+| hitArea | object | 设置点击热区{x,y,width,height,type} | 设置热区(按钮无效) [参考示例](/handbook/style.html#hitarea)|
 
 ## 样式
 
@@ -126,4 +125,15 @@ enum BLEND_MODES {
     ERASE,
     XOR
 }
+```
+
+## hitArea
+
+```  
+img.x = 100  
+img.hitArea.x = 0  
+img.hitArea.y = 0  
+img.hitArea.width = 100  
+img.hitArea.height = 100  
+img.hitArea.type = 'ellipse' or 'rect' 
 ```
