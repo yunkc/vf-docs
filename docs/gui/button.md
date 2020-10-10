@@ -12,6 +12,7 @@ Button 可设置状态皮肤的交互按钮
 | move | number,string | | 设置鼠标移动时图片 |
 | disabled | number,string |  | 设置不可用时图片 |
 | useMoveEvent | boolean | false | 是否监听move事件，默认不开启 |
+| textOffsetY | number | 0 | 按钮文本水平偏移值 |
 
 ## 事件
 
