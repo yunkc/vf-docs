@@ -14,6 +14,7 @@ ConnectLine 连线，可以作为连线题,通过简单绑定源组件与目标�
 | --- | --- | --- | --- | --- |
 | play | 1,2 | 1 |  设置`1`触发画线，线条从source->target。设置`2`线条从target->source  |
 | autoPlay | boolean | true | 设置自动画线 |
+| speed | number | 500 | 设置画线速度，毫秒 |
 | source | DisplayObject,string |  | 设置源 |
 | sourcePostion | LinePostion | | 设置源位置或偏移坐标 |
 | target | DisplayObject,string |  | 设置目标 |
