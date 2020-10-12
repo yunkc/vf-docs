@@ -4,8 +4,55 @@
 
 ## 使用 Launcher 创建实例
 
-暂缺
+1. 安装依赖包 npm i launcher --save-dev
 
+1. 配置 `tsconfig.json` 中的 types字段,增加vf相关库
+    ```
+    "types": [
+        "@vf.js/vf",
+        "@vf.js/gui",
+    ],      
+    ```
+
+1. index.html中引入 launcher.min.js 或代码中 `import {createVF} from launcher`
+    ```
+    // 以index.html引入方式为例
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>vf-engine</title>
+    </head>
+    <body>
+        <script src='node_modules/@vf.js/launcher/dist/launcher.js'></script>
+        <div id="vfApp" style="width: 100%; height: 100%; position: absolute;margin:0;overflow: hidden;"></div>
+    </body>
+    <script type="module">
+        createVF({
+            container: document.getElementById("vfApp"),  // 需要放置的容器
+            debug: true,
+            showFPS: false,
+            resolution: window.devicePixelRatio || 1,
+            exclude:['player'], // 必填
+            width:1366, // 设计尺寸
+            height:768, // 设计尺寸
+            libs:["./dist/main.js"], // 你项目编译后的入口文件,需申明全局变量，如 `Main`, 也可通过其他方式引入，此处可不写。
+        }, function (engine) {
+
+            // 示例 1
+            const label = new vf.gui.Label();
+            label.text = "hello world";
+            engine.uiStage.addChild(label);
+
+            // 示例 2， 通过独立文件 main.js
+            var main = new Main(engine);
+            // 初始化你的项目，engine 中的类型为 EngineAPI. 具体查看 'node_modules/@vf.js/launcher/launcher.d.ts
+        });
+
+    </script>
+
+    </html>
+    ```
 ## 配置CDN
 
 `VF版本 >= v0.8.0`
