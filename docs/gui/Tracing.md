@@ -12,6 +12,15 @@ Tracing 可引导用户学习写字或字母
 | renderBgSprite |string,number,Texture |  | 渲染背景图，设置后渲染模式为镂空模式|
 | tracePoints |point[[{x,y},{x,y}] |  | 文字笔画轨迹点|
 | debug |boolean|  | 开启debug|
+| lineWidth |number| 10 | 笔画宽度|
+| lineColor |number| 0xff0000 | 笔画颜色|
+| lineTexture |string | number |  | 笔触位图|
+| precision |number| 20 | 检测精度|
+
+## 方法
+| 方法名 | 参数 | 返回值 | 说明 |
+| setData | data:string |  | 设置笔画，字符串类型，一般用于笔画的双端同步|
+
 ## 事件
 
 | 事件名  | 说明 | 参数 |
