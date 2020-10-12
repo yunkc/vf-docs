@@ -7,13 +7,16 @@ Tracing 可引导用户学习写字或字母
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
+| width |number | 0 | 组件宽度 |
+| height |number | 0 | 组件高度 |
 | mode |number | 0 | 设置模式（0-笔画检测  1-教学模式  2-自动播放  3-严格模式  4-填充模式） |
-| traceSprite |string,number,Texture |  | 文字图(如不传文字图，需要设置组件width、height,以便确定接收点击事件范围，触发画线操作)|
+| traceSprite |string,number,Texture |  | 文字图|
 | renderBgSprite |string,number,Texture |  | 渲染背景图，设置后渲染模式为镂空模式|
-| tracePoints |point[[{x,y},{x,y}] |  | 文字笔画轨迹点|
+| tracePoints |point[][] |  | 文字笔画轨迹点,二维数组|
 | debug |boolean|  | 开启debug|
 | lineWidth |number| 10 | 笔画宽度|
 | lineColor |number| 0xff0000 | 笔画颜色|
+| lineOpacity |number |  | 笔画透明度|
 | lineTexture |string | number |  | 笔触位图|
 | precision |number| 20 | 检测精度|
 
