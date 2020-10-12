@@ -7,8 +7,8 @@ Tracing 可引导用户学习写字或字母
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| mode |number | 0 | 设置模式（0-笔画检测  1-教学模式  2-自动播放） |
-| traceSprite |string,number,Texture |  | 文字图|
+| mode |number | 0 | 设置模式（0-笔画检测  1-教学模式  2-自动播放  3-严格模式  4-填充模式） |
+| traceSprite |string,number,Texture |  | 文字图(如不传文字图，需要设置组件width、height,以便确定接收点击事件范围，触发画线操作)|
 | renderBgSprite |string,number,Texture |  | 渲染背景图，设置后渲染模式为镂空模式|
 | tracePoints |point[[{x,y},{x,y}] |  | 文字笔画轨迹点|
 | debug |boolean|  | 开启debug|
@@ -16,8 +16,8 @@ Tracing 可引导用户学习写字或字母
 
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
-| CHANGE | 完成一个笔画绘制 | event,target,data |
-| COMPLETE | 全部绘制完成 | event,target,data |
+| CHANGE | 完成一个笔画绘制 | target,data |
+| COMPLETE | 全部绘制完成(填充模式完成每个点都会触发) | target,data |
 
 ## 样式
 
