@@ -19,6 +19,24 @@
     ```
 
 1. index.html 中引入 launcher.min.js 或代码中 `import { createVF } from launcher`
+
+    main.js
+    ```
+        var MainTest = /** @class */ (function () {
+
+            function MainTest(engine) {
+                const label = new vf.gui.Label();
+                label.text = "hello world";
+                label.style.justifyContent = 'center';
+                label.style.alignContent = 'center';
+                label.style.fontSize = 34;
+                engine.uiStage.addChild(label);
+            }
+            return MainTest;
+        }());
+    ```
+
+    index.html
     ```
     <!DOCTYPE html>
     <html lang="en">
@@ -39,10 +57,12 @@
             exclude:['player'], // 必填
             width:1366, // 设计尺寸
             height:768, // 设计尺寸
-            // libs:["./dist/main.js"], // 你项目编译后的入口文件,需申明全局变量，如 `Main`, 也可通过其他方式引入，此处可不写。
+            // libs:["main.js"], // 你项目编译后的入口文件,需申明全局变量，如 `MainTest`, 也可通过其他方式引入，此处可不写。
         }, function (engine) {
+            // 初始化你的项目，engine 中的类型为 EngineAPI. 具体查看 'node_modules/@vf.js/launcher/launcher.d.ts
 
-            // 示例 1
+
+            // 示例 1, 直接回调函数中创建
             const label = new vf.gui.Label();
             label.text = "hello world";
             label.style.justifyContent = 'center';
@@ -50,9 +70,10 @@
             label.style.fontSize = 34;
             engine.uiStage.addChild(label);
 
-            // 示例 2， 通过独立文件 main.js
-            // var main = new Main(engine);
-            // 初始化你的项目，engine 中的类型为 EngineAPI. 具体查看 'node_modules/@vf.js/launcher/launcher.d.ts
+
+            // 示例 2， 通过在`libs`中设置加载文件 main.js 后进行创建
+            // var main = new MainTest(engine);
+            
         });
 
     </script>
