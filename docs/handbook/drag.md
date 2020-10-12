@@ -16,6 +16,7 @@
 |  dragBounces | boolean | 开启回弹 |
 |  droppable | boolean | 开启掉落接收 |
 |  dropGroup | string | 设置分组，拖动目标时设置  |
+|  dropGroup | string | 设置分组，接收分组，接收`dropGroup`  |
 |  collision | boolean | 是否开启碰撞检测（默认不开启）  |
 |  dragMoveCursor | string | 拖拽移动时鼠标样式 |
 |  actionData | string | 当前操作数据 |
