@@ -78,9 +78,17 @@ system.on('sendCustomEvent',this.onCustonEvent);
 syncManager.sendHeartEvent()
 ```
 
+## 自动心跳
+vf引擎同步木块默认开启自动心跳，以便维持一个自动执行的状态。自动心跳每0.5s发送一次，默认发送10次。触发机制为:
+1.场景加载成功后，默认发送心跳
+2.场景恢复历史状态后，默认发送心跳
+3.场景中有点击（鼠标按下、鼠标抬起）操作时，默认发送心跳
+```
+syncManager.autoHeartEvent = false; //关闭自动心跳
+```
 
 ## 注意事项
 
 1. 凡是需要输入操作的组件，也就是`interactable=true`的组件，都需要一个`唯一`的`id`，否则无法同步。
 1. 事件回调方法两个参数：（target,event）,其中event.signalling标识是否为信令触发，如果有需求，业务上以此变量来做分区。
-1. 不能使用js原生的时间和日期函数，如setTimeout，setInterval，new Date（）等。可使用vf.gui.TickerShare  或  vf.gui.Schedule代替
+2. 不能使用js原生的时间和日期函数，如setTimeout，setInterval，new Date（）等。可使用vf.gui.Scheduler.setTimeout, vf.gui.Scheduler.setInterval, vf.gui.Scheduler.setEnterFrame代替。
