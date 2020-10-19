@@ -335,3 +335,28 @@ vf.gui.Utils.toLocal(全局坐标，本地显示对象)
 ```
 vf.gui.Utils.toGlobal(本地坐标，本地显示对象)
 ```
+
+## svg渐变
+``` js
+const pathA = 'M280,250A200,200,0,1,1,680,250A200,200,0,1,1,280,250Z';
+const pathB = 'M345.47,250L460.94,450L230,450Z M460.94,50L576.41,250L345.47,250Z M576.41,250L691.88,450L460.94,450Z';
+let pasition = new vf.gui.Pasition({
+            from: pathA,//起始svg
+            to: pathB,//终止svg
+            duration: 800, //动画持续时间
+            easing: vf.gui.Easing.Linear.None, //渐变函数
+            mustSvgData: false,
+            onStart: () => {
+                console.log(' on start ');
+            },
+            onUpdate: (path: any) => {
+                //参数path可以直接用于pathGraphics组件，且mustSvgData为false时效率更高
+                console.log(' on Update ');
+            },
+            onEnd: () => {
+                console.log(' on End ');
+            }
+        });
+        pasition.play();
+
+```
