@@ -223,7 +223,7 @@ $ | 变量
 
 ``` typescript
 @this = {
-    system.on("systemEvent", this.onSystemEvent);
+    system.on("onMessage", this.onSystemEvent);
     function onSystemEvent($data) {
         trace($data.code);
         trace($data.level);
@@ -241,7 +241,7 @@ $ | 变量
         this.off("myEvent");
         this#myCon.off("myEvent2");
         global.off("globalEvent");
-        system.off("systemEvent");
+        system.off("onMessage");
     });
 }
 ```
