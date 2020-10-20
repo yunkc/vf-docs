@@ -33,9 +33,14 @@ Alert 弹出框组件，支持自定义样式(图片或颜色值)
 
 ## 方法
 | 函数名 | 参数 | 函数返回值 | 说明 |
+| --- | --- | --- | --- | --- |
 | show | 无 | 无 | 显示弹出框 |
-| close | 无 |  无 | 关闭弹出框 |
+| close |  无 | 无 | 关闭弹出框 |
 
+## 静态方法
+| 函数名 | 参数 | 函数返回值 | 说明 |
+| --- | --- | --- | --- | --- |
+| show | container: DisplayLayoutAbstract, content: string, textAlign: string = 'center', duration: number = 2000, icon?: number、string、vf.Texture, title?: string, buttons?: string[], x?: number, y?: number | Alert | 显示弹出框 |
 
 ## 事件
 
