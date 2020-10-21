@@ -104,6 +104,7 @@ module.exports = {
                     '/gui/textFillBlanks',
                     '/gui/device',
                     '/gui/alert',
+                    '/gui/svgPasition',
                 ]
             },
             {
