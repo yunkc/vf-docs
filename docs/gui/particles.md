@@ -5,7 +5,7 @@ Particles 可实现丰富的粒子效果
 
 ## 插件地址
 
-> [https://s.vipkidstatic.com/vf/plugin/Particles/0.0.1.js]()
+> [https://s.vipkidstatic.com/vf/plugin/Particles/0.0.2.js]()
 
 ## 类名
 > Particles 
@@ -46,7 +46,7 @@ Particles 可实现丰富的粒子效果
 assets:{
     "Particles": {
         "type": "js",
-        "url": "https://s.vipkidstatic.com/vf/plugin/Particles/0.0.1.js",
+        "url": "https://s.vipkidstatic.com/vf/plugin/Particles/0.0.2.js",
         "name": "Particles"
     },
     "Particles_json": {
