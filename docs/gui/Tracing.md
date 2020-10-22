@@ -17,7 +17,7 @@ Tracing 可引导用户学习写字或字母
 | lineWidth |number| 10 | 笔画宽度|
 | lineColor |number| 0xff0000 | 笔画颜色|
 | lineOpacity |number |  | 笔画透明度|
-| lineTexture |string | number |  | 笔触位图|
+| lineTexture |string |  | 笔触位图|
 | precision |number| 20 | 检测精度|
 
 ## 方法

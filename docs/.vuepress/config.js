@@ -103,6 +103,8 @@ module.exports = {
                     '/gui/textChoice',
                     '/gui/textFillBlanks',
                     '/gui/device',
+                    '/gui/alert',
+                    '/gui/svgPasition',
                 ]
             },
             {
