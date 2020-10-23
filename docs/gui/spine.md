@@ -29,6 +29,8 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 | sourceAtlas |any | 无 | spine动画数据(.atlas) |
 | sourceTex |any | 无 | spine动画数据(.png) |
 
+> 独立项目，请在插件加载后，资源加载前执行 `app.loader.use(Spine.loaderUse); `
+
 ## 方法
 | 方法名 | 参数 | 返回值 | 说明 |
 | --- | --- | --- | --- | --- |
