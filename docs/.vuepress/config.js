@@ -120,6 +120,7 @@ module.exports = {
                 collapsable: true,
                 sidebarDepth: 1,
                 children: [
+                    '/update/v1.0.x',
                     '/update/v0.9.x',
                     '/update/v0.8.0',
                     '/update/v0.7.2',
