@@ -3,7 +3,7 @@
 用一套数据格式来描述所有互动场景并可支持未来对功能的扩展，从而覆盖所有教学场景。
 设计理念简而言之就是由`((资源 > 交互组件) + 功能组件) > 场景` 及对应属性组成的一套教学资源数据。
 
-[数据结构![数据结构](../assets/data.png)](https://naotu.baidu.com/file/31d88d6860e2f2d1f1c77a85806ee64f?token=5d508053eb862955)
+[![](../assets/data.png)](https://naotu.baidu.com/file/31d88d6860e2f2d1f1c77a85806ee64f?token=5d508053eb862955)
 
 ### 名词解释
 - [**资源：**](resource.md) 图片、字体、音频、视频、纹理描述、SVG、脚本等资源文件，每个资源对应一个url。例如：jpg的图片，mp3音频文件。

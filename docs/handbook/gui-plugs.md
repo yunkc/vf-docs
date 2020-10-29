@@ -4,15 +4,24 @@
 
 ## 前置工作
 
-1. 下载项目 `git clone https://github.com/vipkid-edu/vf-gui-plug.git`;
-1. 安装 vs code
+1. 克隆项目 `git clone https://github.com/vipkid-edu/vf-gui-plug.git`;
+
+1. 安装 vs code 
+
 1. 安装 vs code 插件 Live Server (也可以安装其他http服务软件)
+
 1. 项目目录执行 npm i
-1. packages 目录中建立相关 ts 文件 , 参考本文下方示例
-1. 修改或添加 ./config/base.js 中 entry 为所需要编译的文件
-1. 执行 npm run dev 开启监听
-1. 修改 index.html 中 importScript 路径为当前修改示例路径。
+
+1. packages 目录中建立相关 ts 文件 , 参考 `TestButton` 示例 , `src/index`中的类名要与目录名一致, 区分大小写。
+
+1. 修改 config.json 中的配置为你的目录名 , 设置后建议重新启动 `vs code` ,避免引用错误
+
+1. 执行 npm run dev 开启编译监听
+
+1. 执行 npm run test 开启测试项目编译监听
+
 1. vs code 中，选择 index.html 右键，选择 open with Live Server 启动服务
+
 
 ## 示例
 

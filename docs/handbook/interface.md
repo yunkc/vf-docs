@@ -2,14 +2,6 @@
 
 引擎创建后，可获取的相关周期函数以及可调用API
 
-::: tip 提示💡
-如引擎版本大于 engine >= 0.5.5 可在引擎完成初始化后，立即跳转场景，无需加载首个场景。
-```
-player.play(url);
-player.switchToSceneId(sceneId); // switchToSceneIndex(index)
-```
-:::
-
 ## 周期函数
 
 ### 日志与错误时的回调
@@ -22,9 +14,6 @@ onInit(): void;
 onReady(): void;
 
 ### 场景创建开始
-::: tip 提示💡
-engine >= 0.5.5
-:::
 onSceneCreate(): void;
 
 
@@ -73,7 +62,39 @@ switchToPrevScene(transition?: ITransitionData): void;
 switchToSceneId(sceneId: string, transition?: ITransitionData): void;
 
 ### 索引切换场景
-::: tip 提示💡
-engine >= 0.5.5
-:::
 switchToSceneIndex(index: number, transition?: ITransitionData): void;
+
+
+## 示例
+
+```js
+
+        var $player = null;
+        createVF({ 
+            container: document.getElementById("vf-container") , 
+        }, function (player) {
+            
+            $player = player;
+            player.onReady = function() {
+                console.log("onReady"); 
+            }
+
+            player.onSceneCreate = function() {
+                console.log("onSceneCreate"); 
+            }
+
+            player.onMessage = function(msg) {
+                console.log("onMessage ==>", msg);
+            }
+
+            player.onError = function(evt) {
+                console.log("onError ==>", evt);
+            }
+
+            player.onDispose = function() {
+                console.log("onDispose");
+            }
+            
+        });
+
+```

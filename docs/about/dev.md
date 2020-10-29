@@ -18,7 +18,3 @@
 ---
 有了场景数据，使用起来是比较方便的，我们提供了最原始的[配置插入](../handbook/option.md)方式和[良好的API]()。当然您可以根据喜好封装成任何形式，比如以其他框架插件的形式使用。
 后面我们也计划提供 <Badge text="vf-vue" vertical="middle"/>、<Badge text="vf-react" vertical="middle"/> ... 欢迎提交共建！
-
-::: tip 注意
-建议将[引擎文件夹]()整体放在CDN上，使用只需要引入[<Badge text="vf.js" vertical="middle"/>](https://github.com/vipkid-edu/vf.js)。VF运行起来会自动下载运行目录下的依赖文件。
-:::
