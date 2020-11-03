@@ -11,7 +11,6 @@ PathGraphics 可绘制路径
 | lineColor | number | 0xffffff | 设置边框颜色 |
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
-| color | number | | 设置填充色 |
 | path | string |  | 路径 |
 | beginPort | number | 0 | 起始端形态 0:无 1:空心圆 2:实心圆 3:空心矩形 4:实心矩形 5:空心箭头 6:实心箭头 7:线 |
 | endPort | number | 0 | 终端形态 同beginPort | 
