@@ -42,8 +42,10 @@ createVF(option,player=>{
 | realFPS | boolean | false | 默认使用基于时间的动画，false基于时间，true基于帧 |
 | vfvars | object |  | 外部自定义参数。 |
 | useCustomErrorPanel | boolean | false | 使用自定义错误面板，默认关闭 |
-| debug | boolean | false | 调试模式，移动设备显示vConsole |
+| debug | boolean | false | 调试模式，显示vConsole图标 |
 | showFPS | boolean | false | 是否显示FPS，web环境有效 |
+| showConsole | boolean | false | 默认打开打开vConsole界面 |
+
 
 ## 适配选项
 
