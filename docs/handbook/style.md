@@ -21,7 +21,7 @@
 | enabled | boolean | true | 禁止当前对象与子对象交互，设置enabled后，interactive* 失效 |
 | visible | boolean | true | 对象显示或隐藏 |
 | blendMode | BLEND_MODES |  | 设置混合模式 |
-| dragOption | BaseDrag |  | 拖动设置，具体可参考拖动章节,[参考示例](https://vipkid-edu.github.io/vf-gui/play/#example/TestDrag) |
+| dragOption | BaseDrag |  | 拖动设置，具体可参考拖动章节,[参考示例](/handbook/drag.html) |
 | filterBlur | number |  | 设置模糊强度，更多滤镜，参考插件-滤镜 |
 | filterGrayscale | number |  | 设置灰度，更多滤镜，参考插件-滤镜 |
 | style | number,string |  | 设置对象的样式与布局，参考样式属性 |
@@ -62,7 +62,7 @@
 | maskPosition | number[] |  | 设置遮罩图位置 [x,y] |
 | maskSize | number[] |  | 设置遮罩大小 |
 | filter |  any | | 设置滤镜，自定义滤镜 |
-| cursor |  string | | 设置鼠标样式，[参考示例](https://vipkid-edu.github.io/vf-gui/play/#example/TestMouseCursor) |
+| cursor |  string | | 设置鼠标样式，需开启`interactabled`,[参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor) |
 | minWidth | number |  | 设置元素的最小宽度 |
 | maxWidth | number |  | 设置元素的最大宽度 |
 | maxHeight | number |  |  设置元素的最小高度 |
@@ -74,7 +74,7 @@
 | gridTemplateRows | number[] | string[] | [string, number, number] |  | 基于 网格行的维度，去定义网格线的名称和网格轨道的尺寸大小  |
 | gridRowGap | number |  |设置行间距 |
 
-> display = 'grid' 模式下，子节点会忽略left,top,right，bottom,width,height等 ,[参考示例](https://vipkid-edu.github.io/vf-gui/play/#example/TestGridLayout)
+> display = 'grid' 模式下，子节点会忽略left,top,right，bottom,width,height等
 
 > display = 'none' 模式下，忽略其他所有style
 
@@ -136,4 +136,10 @@ img.hitArea.y = 0
 img.hitArea.width = 100  
 img.hitArea.height = 100  
 img.hitArea.type = 'ellipse' or 'rect' 
+```
+
+## cursor
+
+```
+img.style.cursor = 'wait'
 ```

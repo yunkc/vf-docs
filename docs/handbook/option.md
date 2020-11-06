@@ -1,5 +1,7 @@
 # 配置选项
 
+创建运行时可选参数，设置诸如背景色、帧率、适配模式等。
+
 ## 配置样例
 
 ``` js
@@ -40,8 +42,10 @@ createVF(option,player=>{
 | realFPS | boolean | false | 默认使用基于时间的动画，false基于时间，true基于帧 |
 | vfvars | object |  | 外部自定义参数。 |
 | useCustomErrorPanel | boolean | false | 使用自定义错误面板，默认关闭 |
-| debug | boolean | false | 调试模式，移动设备显示vConsole |
+| debug | boolean | false | 调试模式，显示vConsole图标 |
 | showFPS | boolean | false | 是否显示FPS，web环境有效 |
+| showConsole | boolean | false | 默认打开打开vConsole界面 |
+
 
 ## 适配选项
 
@@ -53,13 +57,9 @@ createVF(option,player=>{
 
 ## Loading
 
-::: warning ⚠️
-VF Engine >= v0.5.71
-:::
-
 设置初始化引擎的loading样式
 
-```
+```js
  {position: any ;image?: any}
 ```
 位置 position  = 'center' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom' | number[];
@@ -80,7 +80,7 @@ VF Engine >= v0.5.71
 ## 扩展
 
 vfvars 可自定义参数，vf默认使用了`cdns`,`plugs` 字段。
-
+```js
 vfvars: {
     isMaster:true|false // 角色
     syncInteractiveFlag: true|false //是否需要同步数据
@@ -88,12 +88,13 @@ vfvars: {
     cdns: {} //设置CDN
     plugs: {} //内部插件
 }
+```
 
 #### cdns
 
 可配置资源域名,可只配`default`，其他域名为预留，为了更好加速CDN设置。资源加载失败会下标递增重试。
 
-```
+```js
 {
     default: [
         'https://cdn1.***.com/',

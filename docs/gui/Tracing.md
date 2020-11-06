@@ -69,10 +69,6 @@ const tracing: gui.Tracing = {
 
 > 示例使用的编程方式，在vf中，通过配置方式会有写法差异
 
-> `运行 ⌘ + Enter` 查看修改后的效果
-
-> [弹出](https://vipkid-edu.github.io/vf-gui/play/#example/TestTracing)
-
 <iframe
      src="https://codesandbox.io/embed/tracingexample-8m5ry?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
      style="width:100%; height:720px; border:0; border-radius: 4px; overflow:hidden;"

@@ -48,6 +48,7 @@ RichLabel 可以绘制一段样式不同的文本
 | color |  number , number[] | 0x000000 | 设置字体颜色，16进制，如果是数组会有过渡效果 |
 | letterSpacing | number | 0 | 设置字符间距 |
 | textAlign | ‘left‘ , ‘right‘ , ‘center‘ | left | 设置对齐方式 多行文本 |
+| verticalAlign | ‘top‘ , ‘middle‘ , ‘bottom‘ | top | 设置垂直对齐方式 |
 | lineHeight | number |  | 设置行高，多行文本 |
 | fontSize | number | 22 | 设置字体大小 |
 

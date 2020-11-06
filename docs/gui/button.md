@@ -24,6 +24,7 @@ Button 可设置状态皮肤的交互按钮
 |  up | 弹起 | event,target |
 |  down | 按下 | event,target |
 |  move | 移动 | event,target |
+|  double | 双击 | event,target |
 
 ## 样式
 

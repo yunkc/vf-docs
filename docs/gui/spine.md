@@ -5,7 +5,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 
 ## 插件地址
 
-> [//s.vipkidstatic.com/vf/plugin/spine/0.0.11.js]()
+> [//s.vipkidstatic.com/vf/plugin/spine/0.2.2.js]()
 
 ## 最低版本
 
@@ -28,6 +28,8 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 | sourceSke |any | 无 | spine动画数据(.json) |
 | sourceAtlas |any | 无 | spine动画数据(.atlas) |
 | sourceTex |any | 无 | spine动画数据(.png) |
+
+> 独立项目，请在插件加载后，资源加载前执行 `app.loader.use(Spine.loaderUse); `
 
 ## 方法
 | 方法名 | 参数 | 返回值 | 说明 |
@@ -66,7 +68,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 const assets: Assets = {
     [Ids.spine]:{
         type: AssetType.js,
-        url: "//s.vipkidstatic.com/vf/plugin/spine/0.0.11.js",
+        url: "//s.vipkidstatic.com/vf/plugin/spine/0.2.2.js",
         name: "Spine",
     },
 }
