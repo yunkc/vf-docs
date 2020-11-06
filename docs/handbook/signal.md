@@ -10,6 +10,15 @@ APP创建后，可通过设置uiStage的syncInteractiveFlag属性开启同步
     this.uiStage.syncInteractiveFlag = true // 开启
 ```
 
+## 组件设置
+``` js
+    let img = new vf.gui.Image();
+    img.interactabled = true;  //开启事件监听, 默认值为false
+    img.id = 'img1';  //设置唯一id，默认值为‘’
+    img.syncabled = true;  //组件开启同步，为false时，组件的事件不参与同步，即不会发送信令。默认值为true
+    img.resumeabled = true;  //组件开启恢复时事件，为false时，恢复状态下组件不触发历史信令中的交互事件。默认值为true
+```
+
 ## 发送同步数据
 
 监听onMessage接口获取同步数据。
@@ -62,13 +71,27 @@ $soundData.signalling = true;
 发送 `sendCustomEvent` 事件
 
 ``` js
+//vfx
 system.emit('sendCustomEvent',data);
+
+//js
+this.stage.syncManager.sendCustomEvent({
+    code: code,
+    level: 'command',
+    data: data
+})
 ```
 
 接收 `receiveCustomEvent` 事件
 
 ``` js
-system.on('sendCustomEvent',this.onCustonEvent);
+//vfx
+system.on('receiveCustomEvent',this.onCustomEvent);
+
+//js
+this.stage.on('receiveCustomEvent', data =>{
+    console.log(data.data);
+});
 ```
 
 ## 发送心跳
