@@ -335,3 +335,22 @@ vf.gui.Utils.toLocal(全局坐标，本地显示对象)
 ```
 vf.gui.Utils.toGlobal(本地坐标，本地显示对象)
 ```
+
+## 截屏
+
+```
+stage.screenShots(x: number, y: number, width: number, height: number, endWidth = NaN, endHeight = NaN)：vf.Texture;
+参数：
+    x 截取左上角x
+    y 截取左上角y
+    width 截取实际宽
+    height  截取实际高
+    endWidth 得到纹理实际宽  默认==width
+    endHeight  得到纹理实际高  默认==height
+使用：
+    const img = new vf.gui.Image();
+    uiStage.addChild(img);
+    img.src = uiStage.screenShots(0, 0, 500, 768);
+    img.x = 0;
+    img.y = 400;
+```
