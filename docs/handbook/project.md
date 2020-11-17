@@ -336,6 +336,11 @@ vf.gui.Utils.toLocal(全局坐标，本地显示对象)
 vf.gui.Utils.toGlobal(本地坐标，本地显示对象)
 ```
 
+获取worldTransform
+```
+vf.gui.Utils.toWorldTransform(本地显示对象)
+```
+
 ## 截屏
 
 ```
