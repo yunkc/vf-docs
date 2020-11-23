@@ -34,6 +34,9 @@ RichLabel 可以绘制一段样式不同的文本
 | dropShadowColor |  number  | 0x000000 | 设置投影填充色 |
 | dropShadowDistance |  number  | 5 | 设置投影深度 |
 | href |  string  | "" | 事件 |
+| backGroundColor | number | | 背景框 |
+| lineHeight | number | | 单行行高（以单行最大的为准）
+| textAlign | 'left' 、'right' 、 'center'| left | 单行对齐方式(以行最后值为准)
 
 ## 方法
 | 函数名 | 参数 | 函数返回值 | 说明 |
@@ -41,6 +44,7 @@ RichLabel 可以绘制一段样式不同的文本
 
 ## 样式
 
+(style属性)
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | color |  number , number[] | 0x000000 | 设置字体颜色，16进制，如果是数组会有过渡效果 |
