@@ -35,13 +35,11 @@ createVF(option,player=>{
 | width | number | 0 | 默认100%撑满容器宽度 |
 | height | number | 0 | 默认100%撑满容器高度 |
 | libs | array |  | 关联的库，设置后会自动加载相关js文件 |
-| language | 设置语言 | string |  ["en-us", "zh-cn", "ja-JP", ....] |
 | resolution | number | 1 | 设置解析度，一般 `window.devicePixelRatio || 1` |
 | forceCanvas | boolean | false | 使用canvas渲染 |
 | loading | object |  | 设置loading的位置与图片样式，使用见下方 |
 | realFPS | boolean | false | 默认使用基于时间的动画，false基于时间，true基于帧 |
 | vfvars | object |  | 外部自定义参数。 |
-| useCustomErrorPanel | boolean | false | 使用自定义错误面板，默认关闭 |
 | debug | boolean | false | 调试模式，显示vConsole图标 |
 | showFPS | boolean | false | 是否显示FPS，web环境有效 |
 | showConsole | boolean | false | 默认打开打开vConsole界面 |
