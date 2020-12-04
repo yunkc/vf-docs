@@ -16,6 +16,7 @@ Isosceles 可绘制等腰梯形
 | width | number | 0 | 默认等于上边和下边中的最大值 |
 | height | number | 0 | 梯形高 |
 | color | number | | 设置填充色 |
+| fillAlpha | number | 1 | 设置填充透明度 |
 | anchorX | 0-1 |  | 设置内部X坐标 |
 | anchorY | 0-1 |  | 设置内部Y坐标 |
 

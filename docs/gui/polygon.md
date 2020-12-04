@@ -13,6 +13,7 @@ Polygon 可绘制正多边形
 | lineWidth | number | 0 | 设置边框宽度 |
 | lineType | "full" , "dash" | "full" | 虚线or实线 |
 | color | number | | 设置填充色 |
+| fillAlpha | number | 1 | 设置填充透明度 |
 | anchorX | 0-1 |  | 设置内部X坐标 |
 | anchorY | 0-1 |  | 设置内部Y坐标 |
 
