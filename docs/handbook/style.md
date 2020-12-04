@@ -58,6 +58,7 @@
 | backgroundPositionY | number | 0 | 设置元素背景图像Y轴位置 |
 | backgroundSize | number[] |  | 设置 backgroundImage 后， 规定背景图像的尺寸。 [width,height] |
 | backgroundRepeat |  no-repeat,repeat,no-repeat | no-repeat | 设置 backgroundImage 后，设置是否及如何重复背景图像。 |
+| backgroundAlpha | number | 1 | 设置元素透明度 |
 | maskImage | string,DisplayObject |  | 设置遮罩图,矢量图形需设置其颜色属性后生效 |
 | maskPosition | number[] |  | 设置遮罩图位置 [x,y] |
 | maskSize | number[] |  | 设置遮罩大小 |
