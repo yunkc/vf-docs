@@ -12,7 +12,8 @@ Video 视频播放
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| src | number , string , MediaStream |  | 设置视频源，url、
+| src | number , string , HTMLVideoElement, MediaStream|  | 设置视频源，url、(赋值MediaStream推荐使用srcObject)
+| srcObject | MediaStream |  | 设置视频流
 | poster | number , string |  | 设置海报帧
 | autoplay | boolean | false | 设置或返回视频是否自动播放
 | loop | boolean | false | 设置或返回视频是否应在结束时重新播放
