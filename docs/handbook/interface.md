@@ -16,6 +16,11 @@ onReady(): void;
 ### 场景创建开始
 onSceneCreate(): void;
 
+### 场景加载中
+ 
+版本：v1.4.0+
+
+onSceneLoadProgress(msg:IEvent):void
 
 ### 场景创建完成
 onSceneLoad(): void;
