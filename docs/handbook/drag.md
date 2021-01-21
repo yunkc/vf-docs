@@ -29,13 +29,18 @@
 
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
-|  DRAG_START | 拖动开始时触发 | event,target |
-|  DRAG_MOVE | 拖动中触发 | event,target |
-|  DRAG_END | 拖动结束，未移动到目标触发 | event,target |
-|  DRAG_TARGET | 拖动结束，移动到目标触发 | event,target |
-|  DROP_TARGET | 有组件被拖入后触发 | event,target |
-|  DRAG_START_BEFORE | 拖动开始前触发 | event,target |
-|  DRAG_END_BEFORE | 拖动结束前触发 | event,target |
+|  DRAG_DOWN | 拖动元素按下 | target,event |
+|  DRAG_UP | 拖动元素抬起 | target,event |
+|  DRAG_HOVER | 拖动元素hover | target,event,isHover |
+|  DRAG_MOUSEENTER | 拖动元素鼠标移入 | target,event |
+|  DRAG_MOUSELEAVE | 拖动元素鼠标移出 | target,event |
+|  DRAG_START | 拖动开始时触发 | target,event |
+|  DRAG_MOVE | 拖动中触发 | target,event |
+|  DRAG_END | 拖动结束，未移动到目标触发 | target,event |
+|  DRAG_TARGET | 拖动结束，移动到目标触发 | target,event |
+|  DROP_TARGET | 有组件被拖入后触发 | target,event |
+|  DRAG_START_BEFORE | 拖动开始前触发 | target,event |
+|  DRAG_END_BEFORE | 拖动结束前触发 | target,event |
 
 > DRAG_START，DRAG_MOVE，DRAG_END，DRAG_TARGET 事件会触发并改变 `actionData` 值。
 
