@@ -25,6 +25,8 @@
 |  click | 点击触发，按下到弹起 | event,target |
 |  press | 点击触发，按下或弹起| event,target,bool |
 |  hover | 鼠标移入或移出时 | event,target,bool |
+|  mouseenter | 鼠标移入 | event,target |
+|  mouseleave | 鼠标移出 | event,target |
 |  down | 按下（不推荐） | event,target |
 |  up | 弹起（不推荐） | event,target |
 |  move | 移动（不推荐） | event,target |
