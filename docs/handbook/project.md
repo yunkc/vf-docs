@@ -88,10 +88,27 @@
 ### 路径设置
 
     vf.utils.CDNS.default = [url1,url2];
-    vf.utils.CDNS.image = [url1,url2];
-    vf.utils.CDNS.media = [url1,url2];
 
 加载过程中会自动识别文件扩展名，并调用CDNS对应字段进行加载。
+
+#### 关键字CDN重试
+```
+    // 如果命中customKeys中关键字，加载重试会重试custom，命中失败会走default
+
+    vf.utils.CDNS.customKeys = [];
+    vf.utils.CDNS.custom = [];
+
+    // 自定义域名列表
+    custom: [
+        'https://ic-static-ali.xxxxx.com.cn/',
+        'https://ic-static.xxxxx.com/',
+        'https://ic-static.xxxxx.com.cn/'
+    ],
+    // 自定义域名关键字
+    customKeys: [
+        'ic-static'
+    ]
+```
 
 ### 重试次数 
 
