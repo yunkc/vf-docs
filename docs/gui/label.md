@@ -35,7 +35,7 @@ Label 可以绘制一段文本
 | letterSpacing | number |  | 设置字符间距 |
 | wordWrap | boolean | false | 设置自动换行 |
 | wordWrapWidth | number |  | 设置换行宽度，多行文本 |
-| textAlign | ‘left‘ , ‘right‘ , ‘center‘ | left | 设置对齐方式 多行文本 |
+| textAlign | ‘left‘ , ‘right‘ , ‘center‘ | center | 设置对齐方式 多行文本 |
 | lineHeight | number |  | 设置行高，多行文本 |
 | fontFamily | string , string[] |  | 设置字体，如果是外部字体，需要先嵌入 |
 | fontSize | number | 22 | 设置字体大小 |
