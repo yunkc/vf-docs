@@ -21,6 +21,8 @@ Video 视频播放
 | currentTime | number |  | 设置或返回视频当前播放进度
 | duration | number |  | (只读) 返回视频总长度
 | volume | 0-1 | 1 | 设置或返回视频的音量 |
+| forceElementDraw | boolean | false | 使用DOM方式渲染 |
+
 
 ::: warning ⚠️ 
 1：理论支持mp4、m4v、webm、ogg、ogv、h264、avi、mov， 受各浏览器兼容问题，推荐使用 mp4 格式的视频。<br>
