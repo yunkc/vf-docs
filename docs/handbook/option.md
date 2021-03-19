@@ -43,6 +43,8 @@ createVF(option,player=>{
 | debug | boolean | false | 调试模式，显示vConsole图标 |
 | showFPS | boolean | false | 是否显示FPS，web环境有效 |
 | showConsole | boolean | false | 默认打开打开vConsole界面 |
+| degradeDevice | any | [{name:"iPad2",version:9.3,format:png,scale:80}] | 开启资源降级处理 |
+
 
 
 ## 适配选项
