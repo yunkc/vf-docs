@@ -14,7 +14,12 @@ onInit(): void;
 onReady(): void;
 
 ### 场景创建开始
-onSceneCreate(): void;
+onSceneCreate(msg: vf.IEvent): void;
+
+    场景索引： msg.data.index 
+
+    场景id： msg.data.id 
+
 
 ### 场景加载中
  
@@ -22,8 +27,16 @@ onSceneCreate(): void;
 
 onSceneLoadProgress(msg:IEvent):void
 
+    场景索引： msg.data.index 
+
+    场景id： msg.data.id 
+
 ### 场景创建完成
-onSceneLoad(): void;
+onSceneLoad(msg:IEvent): void;
+
+    场景索引： msg.data.index 
+
+    场景id： msg.data.id 
 
 ### 消息
 onMessage(msg: IEvent): void;
