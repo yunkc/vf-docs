@@ -27,10 +27,6 @@ onSceneCreate(msg: vf.IEvent): void;
 
 onSceneLoadProgress(msg:IEvent):void
 
-    场景索引： msg.data.index 
-
-    场景id： msg.data.id 
-
 ### 场景创建完成
 onSceneLoad(msg:IEvent): void;
 
