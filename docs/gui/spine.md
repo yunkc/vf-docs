@@ -23,7 +23,7 @@ Spine 播放骨骼动画，支持播放、循环、暂停、恢复
 | animationName |string | 无 | 动画名字 |
 | loop |boolean | 无 | 是否循环播放 |
 | timeScale |number | 无 | 动画速率|
-| skinName |string | 无 | 设置皮肤|
+| skinName |string | 无 | 设置皮肤(0.3.1+)|
 
 如source无效，可使用下面参数尝试
 | sourceSke |any | 无 | spine动画数据(.json) |
