@@ -38,8 +38,8 @@
    "fps":30,
    //适配模式 “noScale|showAll|cover|contain”
    "scaleMode":"contain",
-   //场景资源预加载模式 “single|all”
-   "loadMode":"single",
+   //场景资源预加载模式 “single|all｜auto”
+   "loadMode":"all",
    //资源根路径 ["https://xxx.xxxx.xxx/xxx", "file:///xxx/xxx", "../xxx/xx"]
    "baseUrl": "https://xxx.xxxx.xxx",
    //自定义全局变量数据
