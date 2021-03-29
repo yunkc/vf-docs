@@ -13,6 +13,8 @@ Video 视频播放
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | src | number , string , HTMLVideoElement, MediaStream|  | 设置视频源，url、(赋值MediaStream推荐使用srcObject)
+| silent | number , string|  | 设置无声视频源
+| audio | number , string|  | 设置视频对应的音频
 | srcObject | MediaStream |  | 设置视频流
 | poster | number , string |  | 设置海报帧
 | autoplay | boolean | false | 设置或返回视频是否自动播放
@@ -29,6 +31,7 @@ Video 视频播放
 2：受部分浏览器劫持，部分参数无法成功修改。受影响参数 ：muted、volume值的改变<br>
 3：部分浏览器自动播放需要手势触发，或者静音播放。<br>
 4：部分设备兼容性问题，会显示controls标签，且视频播放会强制在最上层。<br>
+5：视频对应的无声视频和音频，目的是在教室环境中做混音。<br>
 :::
 
 
