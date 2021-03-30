@@ -24,6 +24,7 @@ Video 视频播放
 | duration | number |  | (只读) 返回视频总长度
 | volume | 0-1 | 1 | 设置或返回视频的音量 |
 | forceElementDraw | boolean | false | 使用DOM方式渲染 |
+| controls | boolean | true | 是否显示默认播放器
 
 
 ::: warning ⚠️ 
@@ -79,7 +80,7 @@ libId: ComponentId.video,
 
 <iframe
      src="https://codesandbox.io/embed/videoexample-id55d?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents.ts&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:720px; border:0; border-radius: 4px; overflow:hidden;"
      title="videoExample"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
