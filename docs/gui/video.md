@@ -24,6 +24,7 @@ Video 视频播放
 | duration | number |  | (只读) 返回视频总长度
 | volume | 0-1 | 1 | 设置或返回视频的音量 |
 | forceElementDraw | boolean | false | 使用DOM方式渲染 |
+| controls | boolean | true | 是否显示默认播放器
 
 
 ::: warning ⚠️ 
