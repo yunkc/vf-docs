@@ -20,7 +20,6 @@
 |  collision | boolean | 是否开启碰撞检测（默认不开启）  |
 |  dragMoveCursor | string | 拖拽移动时鼠标样式 |
 |  actionData | string | 当前操作数据 |
-|  startOffset | point | 设置开始偏移值 |
 
 
 > 设置 `droppable = true` 后，可接收拖动组件，接收必须为`custom`。
