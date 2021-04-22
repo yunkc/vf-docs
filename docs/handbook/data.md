@@ -57,9 +57,11 @@
          //资源名称
          "name":"",
          //资源类型
-         "type":"text|image|audio|video|font|js",
+         "type":"text|image|audio|video|font|js|sheet",
          //相对baseURL的地址
          "url":"",
+         // 可选参数,指定从特定父级纹理图集中解析资源，此资源不会被下载
+         "parent":"asset_id",
       },
    },
    //组件库，用来存放当前项目中的所有组件
