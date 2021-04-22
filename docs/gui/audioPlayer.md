@@ -4,7 +4,7 @@ AudioPlayer 音频播放器
 
 ## 库信息
 库地址:
-> https://s.vipkidstatic.com/vf/plugin/AudioPlayer/0.0.1.js
+> https://s.vipkidstatic.com/vf/plugin/AudioPlayer/0.0.2.js
 
 类名
 > AudioPlayer 
@@ -16,10 +16,9 @@ AudioPlayer 音频播放器
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
 | src | number , string , arrayBuffer |  | 设置图片源，url、vf资源id、Base64、arrayBuffer |
-| audioPlayerType | 'thumb'、'spread' | thumb |缩略版还是延伸版 |
+| audioPlayerType | 'thumb'、'spread'、'thumbNoPause' | thumb |缩略版还是延伸版 |
 | volume | 0-1 | 1 | 设置或返回音频的音量 |
-| color_0 | number | 0xef7f51 | 区域一色调 |
-| color_1 | number | 0xfbe6dc | 区域二色调 |
+| color | number |  | 色调 |
 
 ## 事件
 
@@ -46,7 +45,7 @@ AudioPlayer 音频播放器
 const assets: Assets = {
     [Ids.audioPlayer]:{
         type: AssetType.JS,
-        url: "//s.vipkidstatic.com/vf/plugin/AudioPlayer/0.0.1.js",
+        url: "//s.vipkidstatic.com/vf/plugin/AudioPlayer/0.0.2.js",
         name: "AudioPlayer",
     }
 }
