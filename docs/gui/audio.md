@@ -13,7 +13,7 @@ Audio 音频播放
 | loop | boolean | false | 设置或返回音频是否应在结束时重新播放 |
 | playbackRate | number | 1 | 属性设置或返回音频的当前播放速度 |
 | volume | 0-1 | 1 | 设置或返回音频的音量 |
-
+| audioGroup | string | '' | 组 |
 
 ## 事件
 

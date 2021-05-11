@@ -1,10 +1,11 @@
-# 音频播放器 AudioPlayer
+# 音频播放器插件 AudioPlayer
 
 AudioPlayer 音频播放器
 
 ## 库信息
 库地址:
-> https://s.vipkidstatic.com/vf/plugin/AudioPlayer/0.0.2.js
+> https://s.vipkidstatic.com/vf/plugin/AudioPlayer/0.0.3.js
+> <br>注: 使用插件0.0.3之后，需对应引擎1.6.0之后的版本
 
 类名
 > AudioPlayer 
@@ -19,7 +20,8 @@ AudioPlayer 音频播放器
 | audioPlayerType | 'thumb'、'spread'、'thumbNoPause' | thumb |缩略版还是延伸版 |
 | volume | 0-1 | 1 | 设置或返回音频的音量 |
 | color | number |  | 色调 |
-
+| duration | number(秒) |  | 音频长度（注意：必须设置属性）| 
+| audioGroup | string | ‘’ | 组 |
 ## 事件
 
 | 事件名  | 说明 | 参数 |
