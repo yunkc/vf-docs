@@ -106,6 +106,7 @@ module.exports = {
                     '/gui/device',
                     '/gui/alert',
                     '/gui/svgPasition',
+                    '/gui/audioPlayer.md',
                 ]
             },
             {

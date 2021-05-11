@@ -224,9 +224,11 @@ vf.gui.Tween.to(image,{ rotation: -85 },2000).start();
 ```
 
 ## 时间轴动画
+::: warning ⚠️
+vf版本>=1.3.3之后，timeline和tween不再支持自定义回调事件，需严格按照如下的回调函数名。
+::: 
 ``` js
-// TimeLine().to(对象，持续时间，{ 属性: 目标值 },放置时间轴位置(毫秒))
-
+// TimeLine().to(对象，持续时间，{ 属性: 目标值 },放置时间轴位置(毫秒))‘
 let timeLine = new vf.gui.TimeLine({
             repeat: 2, [可选，重复次数吗，-1为无限循环，默认为0]
             paused: false,[可选，初始是否暂停，默认为false]
