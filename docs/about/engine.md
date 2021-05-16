@@ -33,16 +33,13 @@ VF默认使用WebGL渲染，初始化时检测到低端设备或不支持的浏�
 
 ## 性能测试
 
-## 100纹理交错测试
-
-
 > 100张256宽高图片,创建 2000 Sprite, 循环添加2000次，保持纹理交错。
 
 
 
 | 引擎 | PC fps/drawcall | iPhone6 fps/drawcall |
 | --- | --- | --- |
-| vf v1.0.0 | 60fps/125dc | 33fps/250dc |
+| VF v1.0.0 | 60fps/125dc | 33fps/250dc |
 | Egret v5.1.0 | 34fps/2000dc | 27fps/2000dc | 
 | Layaair v1.7.13 | 33fps/70dc | 25fps/70dc |
 | Cocos Creator v3.0.0 | 29fps/70dc | 21fps/70dc |
