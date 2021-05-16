@@ -1,6 +1,8 @@
 # 序列帧 SpriteAnimated
 
-SpriteAnimated 序列图动画，支持数组形式设置，或通过TexturePacker等工具生成等，导出时可选pixi
+SpriteAnimated 序列图动画，支持数组形式设置，或通过TexturePacker等工具生成等，导出时可选VF需要的格式。
+
+> VF提供了TexturePacker插件
 
 ## 属性
 
