@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VFX(动作脚本) | VF Engine</title>
+    <meta name="description" content="VF Engine 中文文档">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/vf-docs/favicon.png">
+  <link rel="manifest" href="/vf-docs/manifest.json">
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/vf-docs/vf-docs/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/vf-docs/vf-docs/icons/safari-pinned-tab.svg" color="#ff6600">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/vf-docs/assets/css/0.styles.066d536f.css" as="style"><link rel="preload" href="/vf-docs/assets/js/app.b7d302cc.js" as="script"><link rel="preload" href="/vf-docs/assets/js/2.402d1a55.js" as="script"><link rel="preload" href="/vf-docs/assets/js/49.61143960.js" as="script"><link rel="prefetch" href="/vf-docs/assets/js/10.863c4bed.js"><link rel="prefetch" href="/vf-docs/assets/js/100.6229a666.js"><link rel="prefetch" href="/vf-docs/assets/js/101.8e05c75d.js"><link rel="prefetch" href="/vf-docs/assets/js/102.8ae37697.js"><link rel="prefetch" href="/vf-docs/assets/js/103.b0b335ed.js"><link rel="prefetch" href="/vf-docs/assets/js/104.a363fd08.js"><link rel="prefetch" href="/vf-docs/assets/js/105.b6203ed3.js"><link rel="prefetch" href="/vf-docs/assets/js/106.247786a7.js"><link rel="prefetch" href="/vf-docs/assets/js/107.e923db3a.js"><link rel="prefetch" href="/vf-docs/assets/js/108.0346bc13.js"><link rel="prefetch" href="/vf-docs/assets/js/109.ca0bb241.js"><link rel="prefetch" href="/vf-docs/assets/js/11.2bba0efa.js"><link rel="prefetch" href="/vf-docs/assets/js/110.61f62c88.js"><link rel="prefetch" href="/vf-docs/assets/js/111.6cc27378.js"><link rel="prefetch" href="/vf-docs/assets/js/12.301f3923.js"><link rel="prefetch" href="/vf-docs/assets/js/13.2fed8866.js"><link rel="prefetch" href="/vf-docs/assets/js/14.780d4f70.js"><link rel="prefetch" href="/vf-docs/assets/js/15.1fcc3f9c.js"><link rel="prefetch" href="/vf-docs/assets/js/16.a304e095.js"><link rel="prefetch" href="/vf-docs/assets/js/17.b1fb2de2.js"><link rel="prefetch" href="/vf-docs/assets/js/18.1264bfad.js"><link rel="prefetch" href="/vf-docs/assets/js/19.00ea684b.js"><link rel="prefetch" href="/vf-docs/assets/js/20.388d9594.js"><link rel="prefetch" href="/vf-docs/assets/js/21.5fba85a8.js"><link rel="prefetch" href="/vf-docs/assets/js/22.b5d15315.js"><link rel="prefetch" href="/vf-docs/assets/js/23.44b665f2.js"><link rel="prefetch" href="/vf-docs/assets/js/24.9c1f8a25.js"><link rel="prefetch" href="/vf-docs/assets/js/25.c7b886d1.js"><link rel="prefetch" href="/vf-docs/assets/js/26.00801273.js"><link rel="prefetch" href="/vf-docs/assets/js/27.a2529ebc.js"><link rel="prefetch" href="/vf-docs/assets/js/28.b9773313.js"><link rel="prefetch" href="/vf-docs/assets/js/29.f6c522c9.js"><link rel="prefetch" href="/vf-docs/assets/js/3.b9d80298.js"><link rel="prefetch" href="/vf-docs/assets/js/30.422fb54a.js"><link rel="prefetch" href="/vf-docs/assets/js/31.1207ff0f.js"><link rel="prefetch" href="/vf-docs/assets/js/32.0f2c0ede.js"><link rel="prefetch" href="/vf-docs/assets/js/33.f0c8108a.js"><link rel="prefetch" href="/vf-docs/assets/js/34.690fbfe5.js"><link rel="prefetch" href="/vf-docs/assets/js/35.bea12a79.js"><link rel="prefetch" href="/vf-docs/assets/js/36.aeddaa99.js"><link rel="prefetch" href="/vf-docs/assets/js/37.fdc17b72.js"><link rel="prefetch" href="/vf-docs/assets/js/38.035fb865.js"><link rel="prefetch" href="/vf-docs/assets/js/39.ec87eeca.js"><link rel="prefetch" href="/vf-docs/assets/js/4.9154a0b3.js"><link rel="prefetch" href="/vf-docs/assets/js/40.04d36aa9.js"><link rel="prefetch" href="/vf-docs/assets/js/41.e29e676a.js"><link rel="prefetch" href="/vf-docs/assets/js/42.d5f3ce7b.js"><link rel="prefetch" href="/vf-docs/assets/js/43.7978e9fb.js"><link rel="prefetch" href="/vf-docs/assets/js/44.644c5c04.js"><link rel="prefetch" href="/vf-docs/assets/js/45.f7ec14c0.js"><link rel="prefetch" href="/vf-docs/assets/js/46.c275fd01.js"><link rel="prefetch" href="/vf-docs/assets/js/47.7419976b.js"><link rel="prefetch" href="/vf-docs/assets/js/48.fe80a5a2.js"><link rel="prefetch" href="/vf-docs/assets/js/5.a20bc01e.js"><link rel="prefetch" href="/vf-docs/assets/js/50.30bb79c3.js"><link rel="prefetch" href="/vf-docs/assets/js/51.acb2ed83.js"><link rel="prefetch" href="/vf-docs/assets/js/52.e1650d06.js"><link rel="prefetch" href="/vf-docs/assets/js/53.03178f4d.js"><link rel="prefetch" href="/vf-docs/assets/js/54.462559a1.js"><link rel="prefetch" href="/vf-docs/assets/js/55.0e562809.js"><link rel="prefetch" href="/vf-docs/assets/js/56.b500e708.js"><link rel="prefetch" href="/vf-docs/assets/js/57.7d58c0e3.js"><link rel="prefetch" href="/vf-docs/assets/js/58.4d8e9268.js"><link rel="prefetch" href="/vf-docs/assets/js/59.bff50a78.js"><link rel="prefetch" href="/vf-docs/assets/js/6.1f985ac4.js"><link rel="prefetch" href="/vf-docs/assets/js/60.c15d6a08.js"><link rel="prefetch" href="/vf-docs/assets/js/61.11834b24.js"><link rel="prefetch" href="/vf-docs/assets/js/62.fdccad86.js"><link rel="prefetch" href="/vf-docs/assets/js/63.9fa9268f.js"><link rel="prefetch" href="/vf-docs/assets/js/64.45f01b4d.js"><link rel="prefetch" href="/vf-docs/assets/js/65.caeb648f.js"><link rel="prefetch" href="/vf-docs/assets/js/66.dc6b9df0.js"><link rel="prefetch" href="/vf-docs/assets/js/67.93cf7114.js"><link rel="prefetch" href="/vf-docs/assets/js/68.af5f42e8.js"><link rel="prefetch" href="/vf-docs/assets/js/69.a636a9ff.js"><link rel="prefetch" href="/vf-docs/assets/js/7.65183738.js"><link rel="prefetch" href="/vf-docs/assets/js/70.7ca892aa.js"><link rel="prefetch" href="/vf-docs/assets/js/71.5f088351.js"><link rel="prefetch" href="/vf-docs/assets/js/72.4d96d519.js"><link rel="prefetch" href="/vf-docs/assets/js/73.a65617bc.js"><link rel="prefetch" href="/vf-docs/assets/js/74.4b0d0637.js"><link rel="prefetch" href="/vf-docs/assets/js/75.85632d09.js"><link rel="prefetch" href="/vf-docs/assets/js/76.986101d7.js"><link rel="prefetch" href="/vf-docs/assets/js/77.1724f9d2.js"><link rel="prefetch" href="/vf-docs/assets/js/78.8d0b5fb5.js"><link rel="prefetch" href="/vf-docs/assets/js/79.881df62b.js"><link rel="prefetch" href="/vf-docs/assets/js/8.2ac25640.js"><link rel="prefetch" href="/vf-docs/assets/js/80.de1a1335.js"><link rel="prefetch" href="/vf-docs/assets/js/81.37dad9c1.js"><link rel="prefetch" href="/vf-docs/assets/js/82.3e7ede67.js"><link rel="prefetch" href="/vf-docs/assets/js/83.6ce5e87e.js"><link rel="prefetch" href="/vf-docs/assets/js/84.a26cbcd5.js"><link rel="prefetch" href="/vf-docs/assets/js/85.a55a3da4.js"><link rel="prefetch" href="/vf-docs/assets/js/86.1bc1e1a7.js"><link rel="prefetch" href="/vf-docs/assets/js/87.f5bc9c21.js"><link rel="prefetch" href="/vf-docs/assets/js/88.1b4cfc10.js"><link rel="prefetch" href="/vf-docs/assets/js/89.0a0e67fb.js"><link rel="prefetch" href="/vf-docs/assets/js/9.6c1bfe71.js"><link rel="prefetch" href="/vf-docs/assets/js/90.21974a4a.js"><link rel="prefetch" href="/vf-docs/assets/js/91.564da5f5.js"><link rel="prefetch" href="/vf-docs/assets/js/92.16c0f58f.js"><link rel="prefetch" href="/vf-docs/assets/js/93.3b9ffdff.js"><link rel="prefetch" href="/vf-docs/assets/js/94.674d39e5.js"><link rel="prefetch" href="/vf-docs/assets/js/95.c961aec0.js"><link rel="prefetch" href="/vf-docs/assets/js/96.41ae6190.js"><link rel="prefetch" href="/vf-docs/assets/js/97.bd2ea1eb.js"><link rel="prefetch" href="/vf-docs/assets/js/98.b3935659.js"><link rel="prefetch" href="/vf-docs/assets/js/99.a74ce4db.js">
+    <link rel="stylesheet" href="/vf-docs/assets/css/0.styles.066d536f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vf-docs/" class="home-link router-link-active"><img src="/vf-docs/logo.png" alt="VF Engine" class="logo"> <span class="site-name can-hide">VF Engine</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/vipkid-edu/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/vipkid-edu/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>关于VF</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vf-docs/about/engine.html" class="sidebar-link">引擎介绍</a></li><li><a href="/vf-docs/about/dev.html" class="sidebar-link">如何开发？</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>快速上手</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vf-docs/getstart/introduction.html" class="sidebar-link">安装运行</a></li><li><a href="/vf-docs/getstart/demo.html" class="sidebar-link">示例介绍</a></li><li><a href="/vf-docs/getstart/advanced-demo.html" class="sidebar-link">进阶教程</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>开发指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vf-docs/handbook/option.html" class="sidebar-link">配置选项</a></li><li><a href="/vf-docs/handbook/data.html" class="sidebar-link">数据格式</a></li><li><a href="/vf-docs/handbook/resource.html" class="sidebar-link">资源</a></li><li><a href="/vf-docs/handbook/component.html" class="sidebar-link">组件</a></li><li><a href="/vf-docs/handbook/style.html" class="sidebar-link">属性与样式</a></li><li><a href="/vf-docs/handbook/scene.html" class="sidebar-link">场景</a></li><li><a href="/vf-docs/handbook/sound.html" class="sidebar-link">声音</a></li><li><a href="/vf-docs/handbook/var.html" class="sidebar-link">变量</a></li><li><a href="/vf-docs/handbook/event.html" class="sidebar-link">事件</a></li><li><a href="/vf-docs/handbook/action.html" class="active sidebar-link">VFX(动作脚本)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#使用方式" class="sidebar-link">使用方式</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#层级结构" class="sidebar-link">层级结构</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#创建交互" class="sidebar-link">创建交互</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#vfx的关键字与符号的含义" class="sidebar-link">VFX的关键字与符号的含义</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#最佳实践" class="sidebar-link">最佳实践</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#准备添加到舞台时" class="sidebar-link">准备添加到舞台时</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#添加到舞台时" class="sidebar-link">添加到舞台时</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#设置属性" class="sidebar-link">设置属性</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#监听交互事件" class="sidebar-link">监听交互事件</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#表达式" class="sidebar-link">表达式</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#条件语句" class="sidebar-link">条件语句</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#函数定义" class="sidebar-link">函数定义</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#调用函数" class="sidebar-link">调用函数</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#添加监听" class="sidebar-link">添加监听</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#添加全局监听" class="sidebar-link">添加全局监听</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#添加系统监听" class="sidebar-link">添加系统监听</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#移除监听" class="sidebar-link">移除监听</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#播放动画" class="sidebar-link">播放动画</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#切换场景" class="sidebar-link">切换场景</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#数组操作" class="sidebar-link">数组操作</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#注释" class="sidebar-link">注释</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#定义变量" class="sidebar-link">定义变量</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#for循环" class="sidebar-link">for循环</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#跳转动画" class="sidebar-link">跳转动画</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#跳转并停止动画" class="sidebar-link">跳转并停止动画</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#等待" class="sidebar-link">等待</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#延迟执行" class="sidebar-link">延迟执行</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#间隔执行" class="sidebar-link">间隔执行</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#每帧执行" class="sidebar-link">每帧执行</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#获取系统时间" class="sidebar-link">获取系统时间</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#字符串方法" class="sidebar-link">字符串方法</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#字符串转换成数字" class="sidebar-link">字符串转换成数字</a></li><li class="sidebar-sub-header"><a href="/vf-docs/handbook/action.html#动作脚本对应表" class="sidebar-link">动作脚本对应表</a></li></ul></li><li><a href="/vf-docs/handbook/click.html" class="sidebar-link">交互</a></li><li><a href="/vf-docs/handbook/drag.html" class="sidebar-link">拖动</a></li><li><a href="/vf-docs/handbook/animation.html" class="sidebar-link">动画</a></li><li><a href="/vf-docs/handbook/filter.html" class="sidebar-link">滤镜</a></li><li><a href="/vf-docs/handbook/interface.html" class="sidebar-link">接口</a></li><li><a href="/vf-docs/handbook/gui-plugs.html" class="sidebar-link">组件插件</a></li><li><a href="/vf-docs/handbook/filter-plugs.html" class="sidebar-link">滤镜插件</a></li><li><a href="/vf-docs/handbook/signal.html" class="sidebar-link">同步</a></li><li><a href="/vf-docs/handbook/scheduler.html" class="sidebar-link">定时器</a></li><li><a href="/vf-docs/handbook/project.html" class="sidebar-link">独立项目</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>常用组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vf-docs/gui/label.html" class="sidebar-link">文字 Label</a></li><li><a href="/vf-docs/gui/image.html" class="sidebar-link">图片 Image</a></li><li><a href="/vf-docs/gui/button.html" class="sidebar-link">按钮 Button</a></li><li><a href="/vf-docs/gui/checkbox.html" class="sidebar-link">单/复选框 CheckBox</a></li><li><a href="/vf-docs/gui/rect.html" class="sidebar-link">矩形 Rect</a></li><li><a href="/vf-docs/gui/circle.html" class="sidebar-link">圆形 Circle</a></li><li><a href="/vf-docs/gui/star.html" class="sidebar-link">星形 Star</a></li><li><a href="/vf-docs/gui/polygon.html" class="sidebar-link">正多边形 Polygon</a></li><li><a href="/vf-docs/gui/pathGraphics.html" class="sidebar-link">路径绘制 PathGraphics</a></li><li><a href="/vf-docs/gui/arrow.html" class="sidebar-link">箭头 Arrow</a></li><li><a href="/vf-docs/gui/ellipse.html" class="sidebar-link">椭圆 Ellipse</a></li><li><a href="/vf-docs/gui/isosceles.html" class="sidebar-link">等腰梯形 Isosceles</a></li><li><a href="/vf-docs/gui/textInput.html" class="sidebar-link">输入文本 TextInput</a></li><li><a href="/vf-docs/gui/richLabel.html" class="sidebar-link">富文本 RichLabel</a></li><li><a href="/vf-docs/gui/slider.html" class="sidebar-link">滑动条 Slider</a></li><li><a href="/vf-docs/gui/connectLine.html" class="sidebar-link">连线 ConnectLine</a></li><li><a href="/vf-docs/gui/spriteAnimated.html" class="sidebar-link">序列帧 SpriteAnimated</a></li><li><a href="/vf-docs/gui/ScrollBar.html" class="sidebar-link">滚动条 ScrollBar</a></li><li><a href="/vf-docs/gui/audio.html" class="sidebar-link">音频 Audio</a></li><li><a href="/vf-docs/gui/video.html" class="sidebar-link">视频 Video</a></li><li><a href="/vf-docs/gui/audioRecorder.html" class="sidebar-link">录音组件  AudioRecorder</a></li><li><a href="/vf-docs/gui/particles.html" class="sidebar-link">粒子 Particles</a></li><li><a href="/vf-docs/gui/spine.html" class="sidebar-link">骨骼动画 Spine</a></li><li><a href="/vf-docs/gui/matter.html" class="sidebar-link">物理引擎 Matter</a></li><li><a href="/vf-docs/gui/followLine.html" class="sidebar-link">画线板 FollowLine</a></li><li><a href="/vf-docs/gui/Tracing.html" class="sidebar-link">笔画教学 Tracing</a></li><li><a href="/vf-docs/gui/textChoice.html" class="sidebar-link">文本选择插件 TextChoice</a></li><li><a href="/vf-docs/gui/textFillBlanks.html" class="sidebar-link">文本填空插件 TextFillBlanks</a></li><li><a href="/vf-docs/gui/device.html" class="sidebar-link">设备陀螺仪</a></li><li><a href="/vf-docs/gui/alert.html" class="sidebar-link">弹出框 alert</a></li><li><a href="/vf-docs/gui/svgPasition.html" class="sidebar-link">svg渐变组件 svgPasition</a></li><li><a href="/vf-docs/gui/audioPlayer.html" class="sidebar-link">音频播放器插件 AudioPlayer</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>常见问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vf-docs/questions/" class="sidebar-link">常见问题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>更新列表</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vfx-动作脚本"><a href="#vfx-动作脚本" class="header-anchor">#</a> VFX(动作脚本)</h1> <ul><li>VFX是VF引擎的脚本语言，使用类js语法，表达VF引擎中交互部分的逻辑。</li> <li>VFX只能运行在vf-cli工具中， 不能直接运行在VF引擎中。</li> <li>vf-cli把VFX编译成actionList，actionList运行在VF引擎中。</li> <li>VFX是对VF数据中的actionList中的进一步抽象，可以极大简化交互逻辑的编写工作。</li></ul> <h2 id="使用方式"><a href="#使用方式" class="header-anchor">#</a> 使用方式</h2> <ul><li>使用vf-cli工具，直接把VFX写在vf数据中的actionlist节点下。由vf-cli工具把VFX编译成actionList</li> <li>如果用户希望手写actionList，可以参考下表《actionList支持的命令和VFX的对应表》 中 actionlist的那一列的写法。</li></ul> <h2 id="层级结构"><a href="#层级结构" class="header-anchor">#</a> 层级结构</h2> <ul><li>在VFX中第一个大括号内包围的语句是第一层，也叫顶层。</li> <li>顶层中的语句如果有大括号的，这个大括号中包围的语句是第二层，其他以此类推。</li> <li>VFX中顶层和其他层的执行逻辑不同
+<ul><li>顶层中的语句，每一条语句都会执行，一般起生命周期作用的语句 或一些定义的语句，</li> <li>顶层中的语句不会等上一条语句执行完毕，就会立刻执行下一条语句。</li> <li>其他层的语句顺序执行，只有当上一条语句执行完毕后，才执行下一条语句；</li></ul></li> <li>一个层级说明的例子：</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>actionList<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    @this = {
+        // 这里是第一层，也叫顶层。
+        this.on(&quot;Add&quot;, () =&gt; {
+            // 这里是第二层
+            trace(&quot;Hello, world&quot;);
+        });
+    }
+</span><span class="token template-punctuation string">`</span></span>
+</code></pre></div><h2 id="创建交互"><a href="#创建交互" class="header-anchor">#</a> 创建交互</h2> <ul><li>创建一个自定义组件， 只有自定义组件才能加交互</li> <li>给组件加一个actionList节点，如下：</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>actionList<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    @this = {
+        this.on(&quot;Add&quot;, () =&gt; {
+            trace(&quot;Hello, world&quot;);
+        });
+    }
+</span><span class="token template-punctuation string">`</span></span>
+</code></pre></div><ul><li>每个actionList必须以@this开头；</li> <li>每一句代码必须以分号结束；</li> <li>这段VFX表示：当组件准备添加到舞台上时，在控制台输出 &quot;Hello, world&quot;。</li></ul> <h2 id="vfx的关键字与符号的含义"><a href="#vfx的关键字与符号的含义" class="header-anchor">#</a> VFX的关键字与符号的含义</h2> <table><thead><tr><th>关键字</th> <th style="text-align:center;">含义</th> <th style="text-align:center;">备注</th></tr></thead> <tbody><tr><td>this</td> <td style="text-align:center;">当前组件</td> <td style="text-align:center;"></td></tr> <tr><td>global</td> <td style="text-align:center;">全局</td> <td style="text-align:center;"></td></tr> <tr><td>var</td> <td style="text-align:center;">声明变量</td> <td style="text-align:center;"></td></tr> <tr><td>function</td> <td style="text-align:center;">声明函数</td> <td style="text-align:center;"></td></tr> <tr><td>on</td> <td style="text-align:center;">添加监听</td> <td style="text-align:center;"></td></tr> <tr><td>off</td> <td style="text-align:center;">移除监听</td> <td style="text-align:center;"></td></tr> <tr><td>emit</td> <td style="text-align:center;">抛出事件</td> <td style="text-align:center;"></td></tr> <tr><td>trace</td> <td style="text-align:center;">在控制台输出信息</td> <td style="text-align:center;"></td></tr> <tr><td>@</td> <td style="text-align:center;">组件</td> <td style="text-align:center;"></td></tr> <tr><td>$</td> <td style="text-align:center;">变量</td> <td style="text-align:center;"></td></tr> <tr><td>#</td> <td style="text-align:center;">当前组件的孩子</td> <td style="text-align:center;"></td></tr> <tr><td>//</td> <td style="text-align:center;">注释</td> <td style="text-align:center;"></td></tr></tbody></table> <hr> <h2 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h2> <h2 id="准备添加到舞台时"><a href="#准备添加到舞台时" class="header-anchor">#</a> 准备添加到舞台时</h2> <ul><li>当组件准备添加到舞台上时执行</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 此时舞台上看不到组件，用于组件的初始化</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="添加到舞台时"><a href="#添加到舞台时" class="header-anchor">#</a> 添加到舞台时</h2> <ul><li>当组件添加到舞台上后执行</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Added&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 此时舞台上已经看到组件了。</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="设置属性"><a href="#设置属性" class="header-anchor">#</a> 设置属性</h2> <ul><li>设置组件的属性，假设该组件中包含 一个id是 myText的文本框</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span>#myText<span class="token punctuation">.</span>text <span class="token operator">=</span> <span class="token string">&quot;hello, world&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 设置文本框text属性，让文本框显示“hello，world”</span>
+        <span class="token keyword">this</span>#myText<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment">//让x轴等于100</span>
+        <span class="token keyword">this</span>#myText<span class="token punctuation">.</span>y <span class="token operator">=</span> $x<span class="token punctuation">;</span> <span class="token comment">//可以使用变量</span>
+        <span class="token keyword">this</span>#myText<span class="token punctuation">.</span>scaleX <span class="token operator">=</span> $scale <span class="token operator">*</span> <span class="token number">0.1</span><span class="token punctuation">;</span> <span class="token comment">//可以使用表达式</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="监听交互事件"><a href="#监听交互事件" class="header-anchor">#</a> 监听交互事件</h2> <ul><li>监听点击事件，假设该组件中包含 一个id是 myText的文本框</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 点击后的逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span>#myText<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 点击文本框后的逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="表达式"><a href="#表达式" class="header-anchor">#</a> 表达式</h2> <ul><li>表达式  支持运算符 + - * / = %  &gt; &lt; &gt;= &lt;= == === ! != !== &amp;&amp; || ()</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span>$v2 <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token keyword">this</span>$v1 <span class="token operator">+</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// </span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="条件语句"><a href="#条件语句" class="header-anchor">#</a> 条件语句</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>$a <span class="token operator">&gt;</span> <span class="token number">5</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span>#myText<span class="token punctuation">.</span>text <span class="token operator">==</span> <span class="token string">&quot;hello, world&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 满足条件执行</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>y <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 满足条件执行</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 不满足条件执行</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// 注意不要忘记分号</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="函数定义"><a href="#函数定义" class="header-anchor">#</a> 函数定义</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">callme</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//不带参数的方法</span>
+        <span class="token comment">// 函数的逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">// 注意不要忘记分号</span>
+
+    <span class="token keyword">function</span> <span class="token function">callme2</span><span class="token punctuation">(</span><span class="token parameter">$param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//带一个参数的方法</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">+</span> $param<span class="token punctuation">;</span> <span class="token comment">// 函数的逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">// 注意不要忘记分号</span>
+
+    <span class="token keyword">function</span> <span class="token function">callme3</span><span class="token punctuation">(</span><span class="token parameter">$param1<span class="token punctuation">,</span> $param2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//带多个参数的方法</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">+</span> $param1 <span class="token operator">+</span> $param2<span class="token punctuation">;</span> <span class="token comment">// 函数的逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">// 注意不要忘记分号</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="调用函数"><a href="#调用函数" class="header-anchor">#</a> 调用函数</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">callme</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+        
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">callme2</span><span class="token punctuation">(</span><span class="token parameter">$param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+        <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">+</span> $param<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">callme3</span><span class="token punctuation">(</span><span class="token parameter">$param1<span class="token punctuation">,</span> $param2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">+</span> $param1 <span class="token operator">+</span> $param2<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callme2</span><span class="token punctuation">(</span><span class="token number">55</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callme3</span><span class="token punctuation">(</span><span class="token number">34</span><span class="token punctuation">,</span> <span class="token keyword">this</span>$v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="添加监听"><a href="#添加监听" class="header-anchor">#</a> 添加监听</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 点击后的逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;myEvent&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token comment">// 添加自定义事件的监听，不能加参数，如果想要添加参数，使用下面的方法</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 使用自定义函数作为监听函数，可传递事件的数据</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;myEvent2&quot;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>onMyEvent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">onMyEvent</span><span class="token punctuation">(</span><span class="token parameter">$data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span>$data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="添加全局监听"><a href="#添加全局监听" class="header-anchor">#</a> 添加全局监听</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    global<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;globalEvent&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token comment">// 监听全局的事件</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="添加系统监听"><a href="#添加系统监听" class="header-anchor">#</a> 添加系统监听</h2> <ul><li>系统事件必须包含数据，数据必须是下面结构， 否则会抛出错误</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token punctuation">{</span>
+    code<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    level<span class="token operator">:</span> EventLevel<span class="token punctuation">;</span>
+    data<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+    target<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+    message<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    <span class="token keyword">type</span><span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    system<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;onMessage&quot;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>onSystemEvent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">onSystemEvent</span><span class="token punctuation">(</span><span class="token parameter">$data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span>$data<span class="token punctuation">.</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span>$data<span class="token punctuation">.</span>level<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span>$data<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="移除监听"><a href="#移除监听" class="header-anchor">#</a> 移除监听</h2> <ul><li>移除监听，移除一个事件的所有监听。</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&quot;myEvent&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span>#myCon<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&quot;myEvent2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        global<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&quot;globalEvent&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        system<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&quot;onMessage&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="播放动画"><a href="#播放动画" class="header-anchor">#</a> 播放动画</h2> <ul><li>播放动画调用自定义组件的playAnimation 方法，该方法包含两个参数
+<ul><li>第一个参数动画名，可以是变量</li> <li>第二个是可选参数， 播放次数， 如果不写，默认是1次；</li></ul></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> $anim <span class="token operator">=</span> <span class="token string">&quot;run&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">playAnimation</span><span class="token punctuation">(</span><span class="token string">&quot;jump&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span>#myCom<span class="token punctuation">.</span><span class="token function">playAnimation</span><span class="token punctuation">(</span>$anim<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="切换场景"><a href="#切换场景" class="header-anchor">#</a> 切换场景</h2> <ul><li><p>切换场景有三个方法，分别是：</p> <ul><li>jumpToNextScene 跳到下一场景
+<ul><li>第一个参数 可选，过场动画 类型：
+{
+type: TransitionType;
+duration: number;
+}</li></ul></li> <li>jumpToPrevScene 跳到前一场景
+<ul><li>第一个参数 可选，过场动画 类型：
+{
+type: TransitionType;
+duration: number;
+}</li></ul></li> <li>jumpToScene 跳到指定场景
+<ul><li>第一个参数 场景id</li> <li>第二个参数 可选，过场动画</li></ul></li></ul></li> <li><p>注意切换场景后，这条语句后面的语句全都不会被执行，因为组件已经被销毁了。这条语句必须在一个代码块的最后一条。</p></li> <li><p>支持的转场特效的类型</p></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">//转场支持的类型</span>
+<span class="token keyword">enum</span> TransitionType <span class="token punctuation">{</span>
+        <span class="token constant">NONE</span> <span class="token operator">=</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+        <span class="token constant">FADE_OUT</span> <span class="token operator">=</span> <span class="token string">'fadeOut'</span><span class="token punctuation">,</span>
+        <span class="token constant">CIRCLE_WIPE</span> <span class="token operator">=</span> <span class="token string">'circleWipe'</span><span class="token punctuation">,</span> 
+        <span class="token constant">CROSS_ZOOM</span> <span class="token operator">=</span> <span class="token string">'crossZoom'</span><span class="token punctuation">,</span>
+        <span class="token constant">DOOM_SCREEN</span> <span class="token operator">=</span> <span class="token string">'doomScreen'</span><span class="token punctuation">,</span>
+        <span class="token constant">HEART_WIPE</span> <span class="token operator">=</span> <span class="token string">'heartWipe'</span><span class="token punctuation">,</span>
+        <span class="token constant">LINEAR_BLUR</span> <span class="token operator">=</span> <span class="token string">'linearBlur'</span><span class="token punctuation">,</span>
+        <span class="token constant">PAGE_CURL</span> <span class="token operator">=</span> <span class="token string">'pageCurl'</span><span class="token punctuation">,</span>
+        <span class="token constant">TO_TEAR</span> <span class="token operator">=</span> <span class="token string">'toTear'</span><span class="token punctuation">,</span>
+        <span class="token constant">WIND</span> <span class="token operator">=</span> <span class="token string">'wind'</span><span class="token punctuation">,</span>
+        <span class="token constant">PAGE_FLIP_RIGHT</span> <span class="token operator">=</span> <span class="token string">'pageFlipRight'</span><span class="token punctuation">,</span>
+        <span class="token constant">PAGE_FLIP_LEFT</span> <span class="token operator">=</span> <span class="token string">'pageFlipLeft'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//例子</span>
+@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 跳到下一场景</span>
+        <span class="token function">jumpToNextScene</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">&quot;fadeOut&quot;</span><span class="token punctuation">,</span> duration<span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 跳到前一场景</span>
+        <span class="token function">jumpToPrevScene</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 跳到场景scene1</span>
+        <span class="token function">jumpToScene</span><span class="token punctuation">(</span><span class="token string">'scene1'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">&quot;fadeOut&quot;</span><span class="token punctuation">,</span> duration<span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="数组操作"><a href="#数组操作" class="header-anchor">#</a> 数组操作</h2> <ul><li>支持数组操作包括（pop, push, splice, concat, shift, unshift);</li> <li>random 随机打乱数组的排列顺序</li> <li>length 获取数组长度</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> $arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        $arr<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $arr<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//</span>
+        $arr<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $arr<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $arr<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span>$num <span class="token operator">=</span> $arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="注释"><a href="#注释" class="header-anchor">#</a> 注释</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 这是注释</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="定义变量"><a href="#定义变量" class="header-anchor">#</a> 定义变量</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> $num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">//number类型</span>
+    <span class="token keyword">var</span> $str <span class="token operator">=</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 字符串类型</span>
+    <span class="token keyword">var</span> $bol <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>  <span class="token comment">// 布尔型</span>
+    <span class="token keyword">var</span> $obj <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">&quot;sukui&quot;</span><span class="token punctuation">,</span> age<span class="token operator">:</span><span class="token number">16</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// 对象类型</span>
+    <span class="token keyword">var</span> global$vv <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span> <span class="token comment">// 定义全局变量</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="for循环"><a href="#for循环" class="header-anchor">#</a> for循环</h2> <ul><li>使用 for in 语句，循环执行多次。</li> <li>支持数字，变量和数组</li> <li>如果是数字，表示循环几次</li> <li>如果是数组，表示循环数组的长度的次数</li> <li>如果是变量， 变量必须是数字或者数组。</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span> $i <span class="token keyword">in</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">trace</span><span class="token punctuation">(</span>$i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> $num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span> $i <span class="token keyword">in</span> $num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">trace</span><span class="token punctuation">(</span>$i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> $arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>$i <span class="token keyword">in</span> $arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">trace</span><span class="token punctuation">(</span>$arr<span class="token punctuation">[</span>$i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>$i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="跳转动画"><a href="#跳转动画" class="header-anchor">#</a> 跳转动画</h2> <ul><li>跳转动画调用自定义组件的gotoPlay方法，该方法包含三个参数
+<ul><li>第一个参数表示动画名</li> <li>第二个参数表示开始帧数</li> <li>第三个参数表示播放次数</li></ul></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 播放动画jump， 从第0帧开始播放，播放2次</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">gotoPlay</span><span class="token punctuation">(</span><span class="token string">&quot;jump&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="跳转并停止动画"><a href="#跳转并停止动画" class="header-anchor">#</a> 跳转并停止动画</h2> <ul><li>跳转并停止动画调用自定义组件的gotoStop方法，该方法包含两个参数
+<ul><li>第一个参数表示动画名</li> <li>第二个参数表示停止到哪一帧</li></ul></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 停止到jump动画的第10帧</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">gotoStop</span><span class="token punctuation">(</span><span class="token string">&quot;jump&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="等待"><a href="#等待" class="header-anchor">#</a> 等待</h2> <ul><li>调用 wait方法</li> <li>有一个参数，表示停止多长时间，单位是毫秒</li> <li>等待会阻塞程序运行</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">wait</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;等待1000毫秒后执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="延迟执行"><a href="#延迟执行" class="header-anchor">#</a> 延迟执行</h2> <ul><li>调用方法setTimeout</li> <li>第一个参数是延迟时间，单位是毫秒</li> <li>第二个参数是回调闭包，这里只能写闭包</li> <li>延迟执行不会阻塞程序执行。</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;我等待2000毫秒后执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;我会先执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="间隔执行"><a href="#间隔执行" class="header-anchor">#</a> 间隔执行</h2> <ul><li>调用方法setInterval</li> <li>第一个参数是间隔时间，单位是毫秒</li> <li>第二个参数是执行次数，如果第二个参数是小于等于0， 或者不写第二个参数，则是无限次</li> <li>第三个参数是回调闭包，这里只能写闭包</li> <li>如果执行无限次，只能写在<a href="/vf-docs/handbook/action.html#层级结构">顶层</a></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;this is a interval&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果上面的语句 第二个参数是0，或者小于0， 或者不写第二个参数，那么下面的语句永远不执行</span>
+        <span class="token comment">// 此次上面的语句只能写在顶层，不能写在其他层。</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;我会等 上面的语句执行10后才执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 这里是顶层，只有顶层能写间隔执行，执行无限次。</span>
+    <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;我会一直执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="每帧执行"><a href="#每帧执行" class="header-anchor">#</a> 每帧执行</h2> <ul><li>调用方法setEnterFrame</li> <li>第一个参数是回调闭包，这里只能写闭包</li> <li>只能写在<a href="/vf-docs/handbook/action.html#层级结构">顶层</a></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code>@<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">setEnterFrame</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 如果这里有wait，相当于每隔1000毫秒执行</span>
+        <span class="token comment">// wait(1000); </span>
+        <span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;我每帧执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">⚠️</p> <p>VF Engine &gt;= v0.6.1</p></div> <h2 id="获取系统时间"><a href="#获取系统时间" class="header-anchor">#</a> 获取系统时间</h2> <ul><li>在表达式中使用常量Date的属性可以获取到系统时间</li> <li>Date的属性有以下几种
+<ul><li>time 当前时间戳，单位是毫秒;</li> <li>year 当前的年份;</li> <li>month 当前的月份;</li> <li>day 当前的日期;</li> <li>hour 当前的小时;</li> <li>minute 当前的分钟;</li> <li>second 当前的秒;</li> <li>millisecond 当前的毫秒;</li></ul></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> $a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>time<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>year<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>month<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>day<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>hour<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>minute<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>second<span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> Date<span class="token punctuation">.</span>millisecond<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">⚠️</p> <p>VF Engine &gt;= v0.6.1</p></div> <h2 id="字符串方法"><a href="#字符串方法" class="header-anchor">#</a> 字符串方法</h2> <ul><li>字符串支持以下几种方法
+<ul><li>indexOf  查找子字符串的位置</li> <li>replace 字符串替换</li> <li>split 字符串分割;</li> <li>substr 截取子字符串;</li> <li>substring 截取子字符串;</li></ul></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> $a <span class="token operator">=</span> <span class="token string">'hello world'</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> $b <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> $a<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'l'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> $a<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'l'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> $a<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> $a<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> $a<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> $a<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">⚠️</p> <p>VF Engine &gt;= v0.6.1</p></div> <h2 id="字符串转换成数字"><a href="#字符串转换成数字" class="header-anchor">#</a> 字符串转换成数字</h2> <ul><li>parseInt 字符串转换为整数</li> <li>parseFloat 字符串转换为浮点数</li> <li></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;Add&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> $a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> $b <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">;</span>
+        $a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'123'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $b <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">'1.23'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><hr> <hr> <h2 id="动作脚本对应表"><a href="#动作脚本对应表" class="header-anchor">#</a> 动作脚本对应表</h2> <table><thead><tr><th>type</th> <th style="text-align:center;">actionList</th> <th style="text-align:center;">VFX</th> <th style="text-align:center;">备注</th></tr></thead> <tbody><tr><td>Print</td> <td><pre class="language-json">{
+    &quot;type&quot;: 0,
+    &quot;value&quot;:&quot;Hello, world&quot;
+}
+</pre></td> <td style="text-align:center;">trace(&quot;Hello, world&quot;);</td> <td style="text-align:center;">在控制台输出信息</td></tr> <tr><td>Add</td> <td><pre class="language-json">{
+    &quot;type&quot;: 1,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">this.on(&quot;Add&quot;,()=&gt;{});</td> <td style="text-align:center;">当组件将要添加到舞台上时，执行</td></tr> <tr><td>Added</td> <td><pre class="language-json">{
+    &quot;type&quot;: 2,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">this.on(&quot;Added&quot;,()=&gt;{});</td> <td style="text-align:center;">当组件添加到舞台上之后，执行</td></tr> <tr><td>Remove</td> <td><pre class="language-json">{
+    &quot;type&quot;: 3,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">this.on(&quot;Remove&quot;,()=&gt;{});</td> <td style="text-align:center;">当组件将要移除舞台时，执行</td></tr> <tr><td>SetProperty</td> <td><pre class="language-json">{
+    &quot;type&quot;: 4,
+    &quot;target&quot;: [ 403, 46, 43 ],
+    &quot;property&quot;: &quot;text&quot;,
+    &quot;value&quot;: &quot;item3&quot;
+}
+</pre></td> <td style="text-align:center;">this#403#46#43.text=&quot;item3&quot;;</td> <td style="text-align:center;">设置组件的属性</td></tr> <tr><td>Click</td> <td><pre class="language-json">{
+    &quot;type&quot;: 5,
+    &quot;target&quot;: [ 403, 46, 43 ],
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">this#403#46#43.on('click', ()=&gt;{});</td> <td style="text-align:center;">当点击组件时执行</td></tr> <tr><td>Express</td> <td><pre class="language-json">{
+    &quot;type&quot;: 6,
+    &quot;express&quot;: [ [ 1, [ 403 ], 91 ],[ 5, &quot;=&quot; ],[ 0, &quot;item2&quot; ] ]
+}
+</pre></td> <td style="text-align:center;">this#403$91 = &quot;item2&quot;;</td> <td style="text-align:center;">表达式</td></tr> <tr><td>IfGroup,If,ElseIf,Else,</td> <td><pre class="language-json">{
+    &quot;type&quot;: 7,
+    &quot;execute&quot;: [
+        {
+            &quot;type&quot;: 8,
+            &quot;condition&quot;: [ [ 4, [ 44, 42 ],&quot;selectedValue&quot; ],[ 5, &quot;==&quot; ],[ 1, [], 91 ] ],
+            &quot;execute&quot;: [ ]
+        },
+        {
+            &quot;type&quot;: 9,
+            &quot;condition&quot;:[ [4, [44, 42], &quot;selectedValue&quot; ],[5, &quot;!=&quot;],[0, 12]],
+            &quot;execute&quot;: [ ]
+        },
+        {
+            &quot;type&quot;: 10,
+            &quot;execute&quot;: [ ]
+        }
+    ]
+}
+</pre></td> <td style="text-align:center;">if (this#44#42.selectedValue == $91) {} else if (this#44#42.selectedValue != 12)
+            {} else {};
+        </td> <td style="text-align:center;">if分支判断</td></tr> <tr><td>DefineFunction</td> <td><pre class="language-json">{
+    &quot;type&quot;: 11,
+    &quot;name&quot;: &quot;checkAnswer&quot;,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">function checkAnswer() {};</td> <td style="text-align:center;">定义函数</td></tr> <tr><td>CallFunction</td> <td><pre class="language-json">{
+    &quot;type&quot;: 12,
+    &quot;name&quot;: &quot;checkAnswer&quot;,
+    &quot;target&quot;:[403]
+}
+</pre></td> <td style="text-align:center;">this#403.checkAnswer();</td> <td style="text-align:center;">调用函数</td></tr> <tr><td>AddEventListener</td> <td><pre class="language-json">{
+    &quot;type&quot;: 13,
+    &quot;event&quot;: &quot;CHANGE&quot;,
+    &quot;target&quot;:[403],
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">this#403.on(&quot;CHANGE&quot;, ()=&gt;{});</td> <td style="text-align:center;">添加事件监听</td></tr> <tr><td>RemoveEventListener</td> <td><pre class="language-json">{
+    &quot;type&quot;: 14,
+    &quot;event&quot;: &quot;CHANGE&quot;,
+    &quot;target&quot;:[403]
+}
+</pre></td> <td style="text-align:center;">this#403.off(&quot;CHANGE&quot;);</td> <td style="text-align:center;">移除事件监听</td></tr> <tr><td>EmitEvent</td> <td><pre class="language-json">{
+    &quot;type&quot;: 15,
+    &quot;event&quot;: &quot;CHANGE&quot;,
+    &quot;target&quot;:[403],
+    &quot;eventData&quot;:[1,[],92]
+}
+</pre></td> <td style="text-align:center;">this#403.emit(&quot;CHANGE&quot;, $92);</td> <td style="text-align:center;">抛出事件</td></tr> <tr><td>PlaySound</td> <td><pre class="language-json">{
+    &quot;type&quot;: 16,
+    &quot;value&quot;: &quot;sound0&quot;,
+}
+</pre></td> <td style="text-align:center;">playSound(&quot;sound0&quot;);</td> <td style="text-align:center;">播放声音</td></tr> <tr><td>PlayAnimation</td> <td><pre class="language-json">{
+    &quot;type&quot;: 17,
+    &quot;name&quot;: &quot;default,
+    &quot;times&quot;:1,
+}
+</pre></td> <td style="text-align:center;">this.playAnimation(&quot;default&quot;, 1);</td> <td style="text-align:center;">播放动画</td></tr> <tr><td>JumpToNextScene</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 18
+}
+</pre></td> <td style="text-align:center;">jumpToNextScene();</td> <td style="text-align:center;">跳转到上一个场景</td></tr> <tr><td>JumpToPrevScene</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 19
+}
+</pre></td> <td style="text-align:center;">jumpToPrevScene();</td> <td style="text-align:center;">跳转到下一个场景</td></tr> <tr><td>JumpToScene</td> <td><pre class="language-json">{
+    &quot;type&quot;: 20,
+    &quot;value:&quot;scene1&quot;
+}
+</pre></td> <td style="text-align:center;">jumpToScene(&quot;scene1&quot;);</td> <td style="text-align:center;">跳转到场景xxx</td></tr> <tr><td>ArrayInit</td> <td><pre class="language-json">{
+    &quot;type&quot;: 21,
+    &quot;target&quot;:[1,[],92],
+    &quot;value&quot;:[1,2,3]
+}
+</pre></td> <td style="text-align:center;">$92 = [1,2,3];</td> <td style="text-align:center;">数组赋值</td></tr> <tr><td>ArrayPop</td> <td><pre class="language-json">{
+    &quot;type&quot;: 22,
+    &quot;target&quot;:[1,[],92],
+}
+</pre></td> <td style="text-align:center;">$92.pop();</td> <td style="text-align:center;">数组pop</td></tr> <tr><td>ArrayPush</td> <td><pre class="language-json">{
+    &quot;type&quot;: 23,
+    &quot;target&quot;:[1,[],92],
+    &quot;value&quot;:3
+}
+</pre></td> <td style="text-align:center;">$92.push(3);</td> <td style="text-align:center;">数组push</td></tr> <tr><td>ArraySplice</td> <td><pre class="language-json">{
+    &quot;type&quot;: 24,
+    &quot;target&quot;:[1,[],&quot;91&quot;],
+    &quot;start&quot;:1,
+    &quot;deleteCount&quot;:1,
+    &quot;value&quot;:8
+}
+</pre></td> <td style="text-align:center;">$92.splice(1,1,8);</td> <td style="text-align:center;">数组splice</td></tr> <tr><td>ArrayRandom</td> <td><pre class="language-json">{
+    &quot;type&quot;: 25,
+    &quot;target&quot;:[1,[],&quot;91&quot;]
+}
+</pre></td> <td style="text-align:center;">$91.random();</td> <td style="text-align:center;">打乱数组的顺序</td></tr> <tr><td>ArrayConcat</td> <td><pre class="language-json">{
+    &quot;type&quot;:26,
+    &quot;target&quot;:[1, [-1], &quot;1&quot;],
+    &quot;concatArr&quot;:[1,[],&quot;91&quot;],
+    &quot;value&quot;: [99,98]
+}
+</pre></td> <td style="text-align:center;">global$1 = $91.concat([99,98]);</td> <td style="text-align:center;">数组concat</td></tr> <tr><td>ArrayShift</td> <td><pre class="language-json">{
+    &quot;type&quot;:27,
+    &quot;target&quot;:[1, [-1], &quot;1&quot;]
+}
+</pre></td> <td style="text-align:center;">global$1.shift();</td> <td style="text-align:center;">数组shift</td></tr> <tr><td>ArrayUnshift</td> <td><pre class="language-json">{
+    &quot;type&quot;:28,
+    &quot;target&quot;:[1, [-1], &quot;1&quot;],
+    &quot;value&quot;: 66
+}
+</pre></td> <td style="text-align:center;">global$1.unshift(66);</td> <td style="text-align:center;">数组unshift</td></tr> <tr><td>AddEventListenerCall</td> <td><pre class="language-json">{
+    &quot;type&quot;:29,
+    &quot;event&quot;: &quot;testEmit&quot;,
+    &quot;funName&quot;: &quot;callme&quot;
+}
+</pre></td> <td style="text-align:center;">this.on('testEmit', this.callme);</td> <td style="text-align:center;">添加事件监听回调函数</td></tr> <tr><td>CallProtoFunction</td> <td><pre class="language-json">{
+    &quot;type&quot;: 30,
+    &quot;name&quot;: &quot;testEmit&quot;,
+    &quot;params&quot;: []
+}
+</pre></td> <td style="text-align:center;">this.textEmit();</td> <td style="text-align:center;">调用方法</td></tr> <tr><td>GotoPlay</td> <td><pre class="language-json">{
+    &quot;type&quot;: 31,
+    &quot;name&quot;: &quot;jump&quot;,
+    &quot;frame&quot;: 0,
+    &quot;times&quot;: 1
+}
+</pre></td> <td style="text-align:center;">this.gotoPlay(&quot;jump&quot;, 1);</td> <td style="text-align:center;">播放动画</td></tr> <tr><td>GotoStop</td> <td><pre class="language-json">{
+    &quot;type&quot;: 32,
+    &quot;name&quot;: &quot;jump&quot;,
+    &quot;frame&quot;: 0
+}
+</pre></td> <td style="text-align:center;">this.gotoStop(&quot;jump&quot;, 1);</td> <td style="text-align:center;">停止到某个动画的某一帧</td></tr> <tr><td>PauseSound</td> <td><pre class="language-json">{
+    &quot;type&quot;: 33,
+    &quot;value&quot;: &quot;sound1&quot;,
+    &quot;trackId&quot;: 1
+}
+</pre></td> <td style="text-align:center;">pauseSound(&quot;sound1&quot;, 1);</td> <td style="text-align:center;">暂停声音</td></tr> <tr><td>ResumeSound</td> <td><pre class="language-json">{
+    &quot;type&quot;: 34,
+    &quot;value&quot;: &quot;sound1&quot;,
+    &quot;trackId&quot;: 1
+}
+</pre></td> <td style="text-align:center;">resumeSound(&quot;sound1&quot;, 1);</td> <td style="text-align:center;">恢复播放声音</td></tr> <tr><td>Comment</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 35,
+    &quot;value&quot;: &quot;this is a comment;&quot;
+}
+</pre></td> <td style="text-align:center;">//this is a comment;</td> <td style="text-align:center;">注释</td></tr> <tr><td>ActionList</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 36,
+    &quot;execute&quot;: []
+}
+</pre></td> <td style="text-align:center;">@this={};</td> <td style="text-align:center;">定义当前组件的VFX</td></tr> <tr><td>DefineVariable</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 37,
+    variableType: &quot;string&quot;,
+    value: &quot;myName&quot;,
+    varId: &quot;name&quot;
+}
+</pre></td> <td style="text-align:center;">var $name = &quot;myName&quot;;</td> <td style="text-align:center;">定义变量</td></tr> <tr><td>For</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 38
+}
+</pre></td> <td style="text-align:center;">for ($i in 5 ){};</td> <td style="text-align:center;">for循环</td></tr> <tr><td>Break</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 39
+}
+</pre></td> <td style="text-align:center;">break;</td> <td style="text-align:center;">跳出循环</td></tr> <tr><td>Wait</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 40, 
+    &quot;value&quot;: 1000
+}
+</pre></td> <td style="text-align:center;">wait(1000);</td> <td style="text-align:center;">等待1000毫秒</td></tr> <tr><td>SetTimeout</td> <td><pre class="language-json">{
+    &quot;type&quot;: 41,
+    &quot;value&quot;: 1000,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">setTimeout(2000, ()=&gt; {})；</td> <td style="text-align:center;">延时1000毫秒执行</td></tr> <tr><td>SetInterval</td> <td><pre class="language-json">{
+    &quot;type&quot;: 42,
+    &quot;value&quot;: 1000,
+    &quot;times&quot;: 10,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">setInterval(1000, 10, ()=&gt;{ });</td> <td style="text-align:center;">每隔1000毫秒执行，执行10次</td></tr> <tr><td>EnterFrame</td> <td style="text-align:center;"><pre class="language-json">{
+    &quot;type&quot;: 43,
+    &quot;execute&quot;:[]
+}
+</pre></td> <td style="text-align:center;">setEnterFrame( ()=&gt; {})</td> <td style="text-align:center;">每帧执行</td></tr> <tr><td>Date</td> <td style="text-align:center;"><pre class="language-json">            {
+                &quot;type&quot;: 6,
+                &quot;express: [
+                    [1, [], 'a'],
+                    [5, '=&quot;],
+                    [3, 0]
+                ]
+            }
+            </pre></td> <td style="text-align:center;">$a = Date.time;</td> <td style="text-align:center;">获取系统时间</td></tr> <tr><td>String</td> <td style="text-align:center;"><pre class="language-json">            {
+                &quot;type&quot;: 6,
+                &quot;express: [
+                    [1, [], 'b'],
+                    [5, '=&quot;],
+                    [12, [], &quot;str&quot;, &quot;indexOf&quot;, [0, &quot;t&quot;]]
+                ]
+            }
+            </pre></td> <td style="text-align:center;">$b = $a.indexOf('t');</td> <td style="text-align:center;">字符串方法</td></tr> <tr><td>parseInt</td> <td style="text-align:center;"><pre class="language-json">            {
+                &quot;type&quot;: 6,
+                &quot;express: [
+                    [1, [], 'b'],
+                    [5, '=&quot;],
+                    [13, [0, &quot;123&quot;]]
+                ]
+            }
+            </pre></td> <td style="text-align:center;">$b = parseInt('123');</td> <td style="text-align:center;">字符串转成整数</td></tr> <tr><td>parseFloat</td> <td style="text-align:center;"><pre class="language-json">            {
+                &quot;type&quot;: 6,
+                &quot;express: [
+                    [1, [], 'b'],
+                    [5, '=&quot;],
+                    [14, [0, &quot;1.23&quot;]]
+                ]
+            }
+            </pre></td> <td style="text-align:center;">$b = parseFloat('1.23');</td> <td style="text-align:center;">字符串转成浮点数</td></tr></tbody></table></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">10/19/2020, 6:02:33 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vf-docs/handbook/event.html" class="prev">
+        事件
+      </a></span> <span class="next"><a href="/vf-docs/handbook/click.html">
+        交互
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vf-docs/assets/js/app.b7d302cc.js" defer></script><script src="/vf-docs/assets/js/2.402d1a55.js" defer></script><script src="/vf-docs/assets/js/49.61143960.js" defer></script>
+  </body>
+</html>
