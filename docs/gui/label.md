@@ -31,7 +31,7 @@ Label 可以绘制一段文本
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
 | --- | --- | --- | --- | --- |
-| color |  number , number[] | 0xffffff | 设置字体颜色，16进制，如果是数组会有过渡效果 |
+| fillColor |  number , number[] | [r,g,b,a]或[[r,g,b,a],[r,g,b,a]] | 设置字体填充颜色，可以是二维数组渐变色 |
 | letterSpacing | number |  | 设置字符间距 |
 | wordWrap | boolean | false | 设置自动换行 |
 | wordWrapWidth | number |  | 设置换行宽度，多行文本 |
@@ -43,7 +43,7 @@ Label 可以绘制一段文本
 | fontVariant | ‘normal‘ , ‘small-caps‘ | normal | 设置普通或小型大写字母字体 |
 | fontWeight |  ‘normal’ , 'bold' , 'bolder' , 'lighter' , '100' ,'200',<br> '300','400','500','600','700','800','900'  | normal | 设置字体粗细 (vf.gui.Enum.FontWeight)|
 | padding |  number  |  | 设置填充值 |
-| stroke |  string , number  |  | 设置描边颜色 |
+| stroke |  number[r,g,b,a]  |  | 设置描边颜色 |
 | strokeThickness |  number  | 0 | 设置描边笔触粗细 |
 | dropShadow |  boolean  | false | 设置投影 |
 | dropShadowAlpha |  boolean  | false | 设置投影alpha值  |
@@ -54,8 +54,8 @@ Label 可以绘制一段文本
 | breakWords |  boolean  | true | 设置词换行 |
 | textDecoration | ‘None‘ , ‘Overline‘ , ‘LineThrough‘ , ’UnderLine‘ | None | 下划线类型 |
 | textDecorationColor | number | 0x000000 | 下划线颜色 |
-| linearGradientType | ‘vertical’ , ‘horizontal‘ | ‘vertical’ | 线性渐变方向 |
-| linearGradientStops |  number[]  |  | 线性渐变颜色截止比例   (数组元素区间0~1  不填默认均匀分布) |
+| fillGradientType | 0 , 1 | 0 | 线性渐变方向，0垂直，1水平 |
+| fillGradientStops |  number[]  |  | 线性渐变颜色截止比例   (数组元素区间0~1  不填默认均匀分布) |
 
 > [基础样式](/handbook/style.html#样式)
 

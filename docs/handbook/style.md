@@ -7,7 +7,7 @@
 ## 属性
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | name |string |  | 自定义名字 |
 | uuid |number |  | 唯一id |
 | x | number | 0 | 设置x坐标,通过style.top会覆盖x |
@@ -30,7 +30,7 @@
 ## 样式
 
 | 属性名 | 属性类型 | 默认值 | 说明 |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | top | number,string |  | 设置定位元素的上外边距边界与其容器上边界之间的偏移 |
 | left | number,string |  | 设置定位元素左外边距边界与其容器左边界之间的偏移 |
 | right | number |  | 设置定位元素右外边距边界与其容器右边界之间的偏移 |
@@ -74,7 +74,11 @@
 | gridColumnGap | number |  | 设置列间距  |
 | gridTemplateRows | number[] | string[] | [string, number, number] |  | 基于 网格行的维度，去定义网格线的名称和网格轨道的尺寸大小  |
 | gridRowGap | number |  |设置行间距 |
+| fillColor |  number , number[] | `[r,g,b,a]或[[r,g,b,a],[r,g,b,a]]` | 设置字体或图形填充颜色，可以是二维数组渐变色 |
+| fillGradientType | 0 , 1 | 0 | 设置字体或图形线性渐变方向，0垂直，1水平 |
+| fillGradientStops |  number[]  |  | 设置字体或图形线性渐变颜色截止比例   (数组元素区间0~1  不填默认均匀分布) |
 
+> 
 > display = 'grid' 模式下，子节点会忽略left,top,right，bottom,width,height等
 
 > display = 'none' 模式下，忽略其他所有style
